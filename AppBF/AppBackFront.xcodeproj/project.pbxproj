@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033F7062293BD50700FAC046 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7061293BD50700FAC046 /* TabBarVC.swift */; };
+		033F7066293BD6CD00FAC046 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7065293BD6CD00FAC046 /* HomeVC.swift */; };
+		033F706A293BD75B00FAC046 /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7069293BD75B00FAC046 /* WalletVC.swift */; };
+		033F706E293BD81000FAC046 /* AddNewNFTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F706D293BD81000FAC046 /* AddNewNFTVC.swift */; };
+		033F7072293BD86E00FAC046 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7071293BD86E00FAC046 /* ProfileVC.swift */; };
 		343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9C28D3A07C00956373 /* AppDelegate.swift */; };
 		343B9D9F28D3A07C00956373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9E28D3A07C00956373 /* SceneDelegate.swift */; };
 		343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9DA028D3A07C00956373 /* LoginVC.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		033F7061293BD50700FAC046 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		033F7065293BD6CD00FAC046 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		033F7069293BD75B00FAC046 /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
+		033F706D293BD81000FAC046 /* AddNewNFTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNFTVC.swift; sourceTree = "<group>"; };
+		033F7071293BD86E00FAC046 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBackFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9928D3A07C00956373 /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9C28D3A07C00956373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +52,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033F7060293BD46600FAC046 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				033F7061293BD50700FAC046 /* TabBarVC.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		033F7063293BD68F00FAC046 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				033F7064293BD6A100FAC046 /* VC */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		033F7064293BD6A100FAC046 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				033F7065293BD6CD00FAC046 /* HomeVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		033F7067293BD70500FAC046 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				033F7068293BD73E00FAC046 /* WalletVC */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		033F7068293BD73E00FAC046 /* WalletVC */ = {
+			isa = PBXGroup;
+			children = (
+				033F7069293BD75B00FAC046 /* WalletVC.swift */,
+			);
+			path = WalletVC;
+			sourceTree = "<group>";
+		};
+		033F706B293BD7AD00FAC046 /* AddNewNFT */ = {
+			isa = PBXGroup;
+			children = (
+				033F706C293BD7C900FAC046 /* AddNewNFTVC */,
+			);
+			path = AddNewNFT;
+			sourceTree = "<group>";
+		};
+		033F706C293BD7C900FAC046 /* AddNewNFTVC */ = {
+			isa = PBXGroup;
+			children = (
+				033F706D293BD81000FAC046 /* AddNewNFTVC.swift */,
+			);
+			path = AddNewNFTVC;
+			sourceTree = "<group>";
+		};
+		033F706F293BD82700FAC046 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				033F7070293BD85500FAC046 /* ProfileVC */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		033F7070293BD85500FAC046 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				033F7071293BD86E00FAC046 /* ProfileVC.swift */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
 		343B9D9028D3A07C00956373 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +145,11 @@
 		343B9D9B28D3A07C00956373 /* AppBackFront */ = {
 			isa = PBXGroup;
 			children = (
+				033F706F293BD82700FAC046 /* Profile */,
+				033F706B293BD7AD00FAC046 /* AddNewNFT */,
+				033F7067293BD70500FAC046 /* Wallet */,
+				033F7063293BD68F00FAC046 /* Home */,
+				033F7060293BD46600FAC046 /* TabBarController */,
 				343B9D9C28D3A07C00956373 /* AppDelegate.swift */,
 				343B9D9E28D3A07C00956373 /* SceneDelegate.swift */,
 				343B9DB028D3A48A00956373 /* LoginScreen.swift */,
@@ -80,7 +167,6 @@
 				D978E33D6189D8D932ED539F /* Pods-AppBackFront.debug.xcconfig */,
 				955D46207F36A7BF3BF11B9D /* Pods-AppBackFront.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,8 +292,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033F706E293BD81000FAC046 /* AddNewNFTVC.swift in Sources */,
 				343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */,
 				343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */,
+				033F7072293BD86E00FAC046 /* ProfileVC.swift in Sources */,
+				033F7062293BD50700FAC046 /* TabBarVC.swift in Sources */,
+				033F706A293BD75B00FAC046 /* WalletVC.swift in Sources */,
+				033F7066293BD6CD00FAC046 /* HomeVC.swift in Sources */,
 				343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */,
 				343B9D9F28D3A07C00956373 /* SceneDelegate.swift in Sources */,
 			);
