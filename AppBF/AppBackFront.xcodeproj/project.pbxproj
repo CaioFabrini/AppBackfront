@@ -13,6 +13,7 @@
 		343B9DA628D3A07E00956373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343B9DA528D3A07E00956373 /* Assets.xcassets */; };
 		343B9DA928D3A07E00956373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343B9DA728D3A07E00956373 /* LaunchScreen.storyboard */; };
 		343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9DB028D3A48A00956373 /* LoginScreen.swift */; };
+		3F18C1C6293BD4FA00047FF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F18C1C5293BD4FA00047FF1 /* GoogleService-Info.plist */; };
 		BD25D88990F7828E54D824E8 /* Pods_AppBackFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		343B9DA828D3A07E00956373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		343B9DAA28D3A07E00956373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		343B9DB028D3A48A00956373 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		3F18C1C5293BD4FA00047FF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		955D46207F36A7BF3BF11B9D /* Pods-AppBackFront.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.release.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.release.xcconfig"; sourceTree = "<group>"; };
 		D978E33D6189D8D932ED539F /* Pods-AppBackFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.debug.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,15 +65,32 @@
 		343B9D9B28D3A07C00956373 /* AppBackFront */ = {
 			isa = PBXGroup;
 			children = (
+				3F18C1C3293BD11F00047FF1 /* Login */,
 				343B9D9C28D3A07C00956373 /* AppDelegate.swift */,
 				343B9D9E28D3A07C00956373 /* SceneDelegate.swift */,
-				343B9DB028D3A48A00956373 /* LoginScreen.swift */,
-				343B9DA028D3A07C00956373 /* LoginVC.swift */,
 				343B9DA528D3A07E00956373 /* Assets.xcassets */,
 				343B9DA728D3A07E00956373 /* LaunchScreen.storyboard */,
 				343B9DAA28D3A07E00956373 /* Info.plist */,
+				3F18C1C5293BD4FA00047FF1 /* GoogleService-Info.plist */,
 			);
 			path = AppBackFront;
+			sourceTree = "<group>";
+		};
+		3F18C1C3293BD11F00047FF1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3F18C1C4293BD13800047FF1 /* Screen */,
+				343B9DA028D3A07C00956373 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3F18C1C4293BD13800047FF1 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				343B9DB028D3A48A00956373 /* LoginScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		B2BF8648247392BAC385C1F4 /* Pods */ = {
@@ -80,7 +99,6 @@
 				D978E33D6189D8D932ED539F /* Pods-AppBackFront.debug.xcconfig */,
 				955D46207F36A7BF3BF11B9D /* Pods-AppBackFront.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -154,6 +172,7 @@
 			files = (
 				343B9DA928D3A07E00956373 /* LaunchScreen.storyboard in Resources */,
 				343B9DA628D3A07E00956373 /* Assets.xcassets in Resources */,
+				3F18C1C6293BD4FA00047FF1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
