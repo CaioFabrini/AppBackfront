@@ -11,7 +11,7 @@ enum TabBarVCString: String {
     case imagePencil = "pencil"
     case imageScribble = "scribble"
     case imageTrash = "trash"
-    case imageLogoBF = "bfTabBar"
+    case imageLogoBF = "square.and.arrow.up"
 }
 
 
@@ -32,6 +32,7 @@ class TabBarVC: UITabBarController {
         self.tabBar.backgroundColor = .white
         self.tabBar.isTranslucent = false
         self.tabBar.tintColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
+        self.tabBar.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         
         guard let items = tabBar.items else{return}
         
@@ -41,10 +42,7 @@ class TabBarVC: UITabBarController {
         
         items[2].image = UIImage(systemName: TabBarVCString.imageScribble.rawValue)
         
-        items[4].image = UIImage(systemName: TabBarVCString.imagePencil.rawValue)
+        items[3].image = UIImage(systemName: TabBarVCString.imagePencil.rawValue)
 
     }
-
-
-
 }

@@ -8,11 +8,13 @@
 import UIKit
 
 class HomeVC: UIViewController {
+    
+    let viewModel: HomeViewModel = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        view.backgroundColor = .black
+        self.viewModel.fetch()
     }
 
 }
