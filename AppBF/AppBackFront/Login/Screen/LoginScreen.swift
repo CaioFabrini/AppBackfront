@@ -7,19 +7,45 @@
 
 import UIKit
 
+enum LoginScreenString: String {
+    
+    case subImage = "BGLogin"
+    case logoImage = "BFLogin"
+    case labelLogin = "BF NFT"
+    case labelDescription = "O marketplace de NFTs da Backfront Academy"
+    case loginTF = "Login"
+    case passwordTF = "Senha"
+    case recoverPasswordTitle = "Recuperar Senha?"
+    case subLoginImage = "gradient3"
+    case loginButtonTitle = "Entrar"
+    case signInMetamaskImage = "logo"
+    case signInMetamaskLabelTitle = "Entrar com a Metamask"
+}
+
+protocol LoginScreenProtocol: AnyObject {
+    func actionLoginButton()
+}
+
+
 class LoginScreen: UIView {
+    
+    private weak var delegate: LoginScreenProtocol?
+    
+    func delegate(delegate: LoginScreenProtocol){
+        self.delegate = delegate
+    }
 
     lazy var subImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "BGLogin")
+        image.image = UIImage(named: LoginScreenString.subImage.rawValue )
         return image
     }()
     
     lazy var logoAppImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "BFLogin")
+        image.image = UIImage(named: LoginScreenString.logoImage.rawValue)
         return image
     }()
     
@@ -28,7 +54,7 @@ class LoginScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 40)
-        label.text = "BF NFT"
+        label.text = LoginScreenString.labelLogin.rawValue
         return label
     }()
     
@@ -38,7 +64,7 @@ class LoginScreen: UIView {
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 14)
         label.textAlignment = .center
-        label.text = "O marketplace de NFTs da Backfront Academy"
+        label.text = LoginScreenString.labelDescription.rawValue
         return label
     }()
     
@@ -49,7 +75,7 @@ class LoginScreen: UIView {
         tf.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1.0) /* #343434 */
         tf.borderStyle = .roundedRect
         tf.keyboardType = .emailAddress
-        tf.attributedPlaceholder = NSAttributedString(string: "Login", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)])
+        tf.attributedPlaceholder = NSAttributedString(string: LoginScreenString.loginTF.rawValue, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)])
         tf.textColor = .white
         tf.clipsToBounds = true
         tf.layer.cornerRadius = 12
@@ -66,7 +92,7 @@ class LoginScreen: UIView {
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
         tf.isSecureTextEntry = true
-        tf.attributedPlaceholder = NSAttributedString(string: "Senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)])
+        tf.attributedPlaceholder = NSAttributedString(string: LoginScreenString.passwordTF.rawValue, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)])
         tf.textColor = .white
         tf.clipsToBounds = true
         tf.layer.cornerRadius = 12
@@ -78,7 +104,7 @@ class LoginScreen: UIView {
     lazy var recoverPasswordButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Recuperar Senha?", for: .normal)
+        button.setTitle(LoginScreenString.recoverPasswordTitle.rawValue, for: .normal)
         button.setTitleColor(UIColor(red: 231/255, green: 48/255, blue: 214/255, alpha: 1.0) /* #e730d6 */, for: .normal)
         button.addTarget(self, action: #selector(tappedRecoverPasswordButton), for: .touchUpInside)
         return button
@@ -87,7 +113,7 @@ class LoginScreen: UIView {
     lazy var subLoginImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "gradient3")
+        image.image = UIImage(named:  LoginScreenString.subLoginImage.rawValue )
         image.clipsToBounds = true
         image.layer.cornerRadius = 8
         image.contentMode = .scaleToFill
@@ -97,7 +123,7 @@ class LoginScreen: UIView {
     lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Entrar", for: .normal)
+        button.setTitle(LoginScreenString.loginButtonTitle.rawValue, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.clipsToBounds = true
@@ -135,7 +161,7 @@ class LoginScreen: UIView {
     lazy var signInMetamaskImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "logo")
+        image.image = UIImage(named: LoginScreenString.signInMetamaskImage.rawValue)
         return image
     }()
     
@@ -144,7 +170,7 @@ class LoginScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.text = "Entrar com a Metamask"
+        label.text = LoginScreenString.signInMetamaskLabelTitle.rawValue
         return label
     }()
     
