@@ -147,7 +147,6 @@ class LoginScreen: UIView {
     
     @objc func tappedLoginButton(_ sender: UIButton) {
         self.delegate?.actionLoginButton()
-        //        print(#function)
     }
     
     @objc func tappedRecoverPasswordButton(_ sender: UIButton) {
@@ -198,8 +197,6 @@ class LoginScreen: UIView {
         return self.passwordTextField.text ?? ""
     }
     
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
@@ -210,6 +207,17 @@ class LoginScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func validaTextField() {
+           let email: String = self.loginTextField.text ?? ""
+           let password: String = self.passwordTextField.text ?? ""
+   
+           if !email.isEmpty && !password.isEmpty {
+               self.configButtonEnable(true)
+           }else{
+               self.configButtonEnable(false)
+           }
+       }
+   
     private func addElements() {
         addSubview(subImageView)
         addSubview(logoAppImageView)

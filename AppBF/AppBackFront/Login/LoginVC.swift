@@ -28,18 +28,6 @@ class LoginVC: UIViewController {
         self.alert = Alert(controller: self)
         self.loginScreen?.loginTextField.text = "caio@hotmail.com"
         self.loginScreen?.passwordTextField.text = "1234caio"
-        
-    }
-    
-    public func validaTextField() {
-        let email: String = self.loginScreen?.loginTextField.text ?? ""
-        let password: String = self.loginScreen?.passwordTextField.text ?? ""
-        
-        if !email.isEmpty && !password.isEmpty {
-            self.configButtonEnable(true)
-        }else{
-            self.configButtonEnable(false)
-        }
     }
     
     private func configButtonEnable(_ enanle: Bool) {
@@ -64,13 +52,7 @@ extension LoginVC: UITextFieldDelegate {
         return textField.resignFirstResponder()
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textFieldDidBeginEditing")
-        
-    }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("textFieldDidEndEditing")
         
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
@@ -88,7 +70,6 @@ extension LoginVC: UITextFieldDelegate {
                 self.loginScreen?.loginTextField.layer.borderWidth = 1.5
                 self.loginScreen?.loginTextField.layer.borderColor = UIColor.red.cgColor
             }
-            
             break
         case self.loginScreen?.passwordTextField:
             
@@ -101,7 +82,7 @@ extension LoginVC: UITextFieldDelegate {
         default:
             break
         }
-        self.validaTextField()
+        self.loginScreen?.validaTextField()
     }
 }
 
