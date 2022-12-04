@@ -15,6 +15,7 @@ protocol HomeViewModelDelegate:AnyObject {
 class HomeViewModel {
     
     private let service: HomeService = HomeService()
+    private var nftData: NFTData?
     
     private weak var delegate: HomeViewModelDelegate?
     
@@ -22,21 +23,26 @@ class HomeViewModel {
         self.delegate = delegate
     }
     
-//    private var nftData: NFTData
    
+
     public func fetch() {
         
         self.service.getHome { success, error in
             if let success = success {
-                
-//                self.nftData = success
-//                self.delegate?.success()
+                self.nftData = success
+                self.delegate?.success()
             } else {
                 self.delegate?.error(_message: error?.localizedDescription ?? "")
             }
         }
     }
     
+    public var numberOfRowsInSection: Int {
+        return 10
+    }
     
-
+    public func heightForRowAt(indexPath: IndexPath) -> CGFloat {
+        return 360
+    }
+    
 }

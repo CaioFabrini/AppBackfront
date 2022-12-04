@@ -53,8 +53,8 @@ class HomeScreen: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .yellow        //UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
-    //    TO DO -> register da cell
+        tableView.backgroundColor = .yellow //UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
+        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
         tableView.separatorStyle = .none
         return tableView
     }()
@@ -71,6 +71,16 @@ class HomeScreen: UIView {
         self.viewBackgraund.addSubview(self.searchBar)
         self.viewBackgraund.addSubview(self.collectionView)
         self.addSubview(self.tableView)
+    }
+    
+    public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        self.tableView.delegate = delegate
+        self.tableView.dataSource = dataSource
+    }
+    
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        self.collectionView.delegate = delegate
+        self.collectionView.dataSource = dataSource
     }
     
     

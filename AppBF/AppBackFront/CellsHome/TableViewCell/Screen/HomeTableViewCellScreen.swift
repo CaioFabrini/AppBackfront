@@ -7,12 +7,25 @@
 
 import UIKit
 
+protocol HomeTableViewCellScreenProtocol: AnyObject {
+    func goDescriptionScreen()
+}
+
 class HomeTableViewCellScreen: UIView {
+    
+    
+    weak private var delegate: HomeTableViewCellScreenProtocol?
+    
+    func delegate(delegate: HomeTableViewCellScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     lazy var viewBackgraund: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 18
         return view
     }()
     
@@ -23,6 +36,8 @@ class HomeTableViewCellScreen: UIView {
         image.tintColor = .green
         image.contentMode = .scaleAspectFit
         image.backgroundColor = .red
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 18
         return image
     }()
     
@@ -94,6 +109,35 @@ class HomeTableViewCellScreen: UIView {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
+            
+            self.viewBackgraund.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 340),
+            
+            self.nftImageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor),
+            self.nftImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.nftImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.nftImageView.heightAnchor.constraint(equalToConstant: 270),
+            
+            self.userLabel.topAnchor.constraint(equalTo: self.nftImageView.bottomAnchor, constant: 10),
+            self.userLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            self.userLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            self.userLabel.heightAnchor.constraint(equalToConstant: 48),
+            self.userLabel.widthAnchor.constraint(equalToConstant: 48),
+            
+            self.ownedByLabel.topAnchor.constraint(equalTo: self.nftImageView.bottomAnchor, constant: 20),
+            self.ownedByLabel.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 8),
+            
+            self.userLabel.topAnchor.constraint(equalTo: self.ownedByLabel.bottomAnchor, constant: 5),
+            self.userLabel.leadingAnchor.constraint(equalTo: self.ownedByLabel.trailingAnchor),
+            
+            self.priceLabel.topAnchor.constraint(equalTo: self.nftImageView.bottomAnchor, constant: 20),
+            self.priceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            
+            self.priceValueLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 20),
+            self.priceValueLabel.trailingAnchor.constraint(equalTo: self.priceLabel.trailingAnchor),
+            
             
         ])
     }
