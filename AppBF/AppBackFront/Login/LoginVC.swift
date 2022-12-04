@@ -9,14 +9,12 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-
 class LoginVC: UIViewController {
     
     var loginScreen: LoginScreen?
     var auth: Auth?
     var alert: Alert?
     
-
     override func loadView() {
         loginScreen = LoginScreen()
         view = loginScreen
@@ -42,7 +40,6 @@ class LoginVC: UIViewController {
         }else{
             self.configButtonEnable(false)
         }
-        
     }
     
     private func configButtonEnable(_ enanle: Bool) {

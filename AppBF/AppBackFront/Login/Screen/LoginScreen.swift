@@ -34,7 +34,7 @@ class LoginScreen: UIView {
     func delegate(delegate: LoginScreenProtocol){
         self.delegate = delegate
     }
-
+    
     lazy var subImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -134,7 +134,7 @@ class LoginScreen: UIView {
     }()
     
     lazy var lineView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
         return view
@@ -147,7 +147,7 @@ class LoginScreen: UIView {
     
     @objc func tappedLoginButton(_ sender: UIButton) {
         self.delegate?.actionLoginButton()
-//        print(#function)
+        //        print(#function)
     }
     
     @objc func tappedRecoverPasswordButton(_ sender: UIButton) {
@@ -289,7 +289,4 @@ class LoginScreen: UIView {
             
         ])
     }
-    
-    
-    
 }
