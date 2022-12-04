@@ -28,7 +28,19 @@ class LoginVC: UIViewController {
         self.alert = Alert(controller: self)
         self.loginScreen?.loginTextField.text = "caio@hotmail.com"
         self.loginScreen?.passwordTextField.text = "1234caio"
+        self.configButtonEnable(false)
     }
+    
+    public func validaTextField() {
+        let email: String = self.loginScreen?.loginTextField.text ?? ""
+        let password: String = self.loginScreen?.passwordTextField.text ?? ""
+   
+           if !email.isEmpty && !password.isEmpty {
+               self.configButtonEnable(true)
+           }else{
+               self.configButtonEnable(false)
+           }
+       }
     
     private func configButtonEnable(_ enanle: Bool) {
         if enanle{
@@ -44,9 +56,9 @@ class LoginVC: UIViewController {
 extension LoginVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.isEqual(self.loginScreen?.loginTextField){
+        if textField.isEqual(self.loginScreen?.loginTextField) {
             self.loginScreen?.passwordTextField.becomeFirstResponder()
-        }else{
+        }else {
             self.loginScreen?.passwordTextField.resignFirstResponder()
         }
         return textField.resignFirstResponder()
@@ -57,32 +69,33 @@ extension LoginVC: UITextFieldDelegate {
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
             textField.layer.borderColor = UIColor.red.cgColor
+//            self.configButtonEnable(false)
         } else {
-            textField.layer.borderWidth = 0
-        }
-        
-        switch textField {
-        case self.loginScreen?.loginTextField:
-            
-            if (self.loginScreen?.loginTextField.text ?? "").isValid(validType: .email) {
-                self.loginScreen?.loginTextField.layer.borderWidth = 0
-            } else {
-                self.loginScreen?.loginTextField.layer.borderWidth = 1.5
-                self.loginScreen?.loginTextField.layer.borderColor = UIColor.red.cgColor
+            switch textField {
+            case self.loginScreen?.loginTextField:
+                
+                if (self.loginScreen?.loginTextField.text ?? "").isValid(validType: .email) {
+                    self.loginScreen?.loginTextField.layer.borderWidth = 0
+                } else {
+                    self.loginScreen?.loginTextField.layer.borderWidth = 1.5
+                    self.loginScreen?.loginTextField.layer.borderColor = UIColor.red.cgColor
+//                    self.configButtonEnable(false)
+                }
+                break
+            case self.loginScreen?.passwordTextField:
+                
+                if (self.loginScreen?.passwordTextField.text ?? "").isValid(validType: .password) {
+                    self.loginScreen?.passwordTextField.layer.borderWidth = 0
+                } else {
+                    self.loginScreen?.passwordTextField.layer.borderWidth = 1.5
+                    self.loginScreen?.passwordTextField.layer.borderColor = UIColor.red.cgColor
+//                    self.configButtonEnable(false)
+                }
+            default:
+                break
             }
-            break
-        case self.loginScreen?.passwordTextField:
-            
-            if (self.loginScreen?.passwordTextField.text ?? "").isValid(validType: .password) {
-                self.loginScreen?.passwordTextField.layer.borderWidth = 0
-            } else {
-                self.loginScreen?.passwordTextField.layer.borderWidth = 1.5
-                self.loginScreen?.passwordTextField.layer.borderColor = UIColor.red.cgColor
-            }
-        default:
-            break
         }
-        self.loginScreen?.validaTextField()
+        self.validaTextField()
     }
 }
 
@@ -91,10 +104,9 @@ extension LoginVC: LoginScreenProtocol {
         
         let vc: HomeVC = HomeVC()
         
-        guard let login = self.loginScreen else {return}
+        guard let login = self.loginScreen else { return }
         
         self.auth?.signIn(withEmail: login.getLogin(), password: login.getPassword(), completion: { user, error in
-            
             if error != nil {
                 self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
             }else{

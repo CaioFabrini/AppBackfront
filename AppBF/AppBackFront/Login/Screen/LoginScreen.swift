@@ -207,16 +207,16 @@ class LoginScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func validaTextField() {
-           let email: String = self.loginTextField.text ?? ""
-           let password: String = self.passwordTextField.text ?? ""
-   
-           if !email.isEmpty && !password.isEmpty {
-               self.configButtonEnable(true)
-           }else{
-               self.configButtonEnable(false)
-           }
-       }
+//    public func validaTextField() {
+//           let email: String = self.loginTextField.text ?? ""
+//           let password: String = self.passwordTextField.text ?? ""
+//   
+//           if !email.isEmpty && !password.isEmpty {
+//               self.configButtonEnable(true)
+//           }else{
+//               self.configButtonEnable(false)
+//           }
+//       }
    
     private func addElements() {
         addSubview(subImageView)
