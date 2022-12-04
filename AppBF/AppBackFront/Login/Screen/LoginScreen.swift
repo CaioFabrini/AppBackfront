@@ -140,8 +140,14 @@ class LoginScreen: UIView {
         return view
     }()
     
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.loginTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
+    }
+    
     @objc func tappedLoginButton(_ sender: UIButton) {
-        print(#function)
+        self.delegate?.actionLoginButton()
+//        print(#function)
     }
     
     @objc func tappedRecoverPasswordButton(_ sender: UIButton) {
@@ -173,6 +179,25 @@ class LoginScreen: UIView {
         label.text = LoginScreenString.signInMetamaskLabelTitle.rawValue
         return label
     }()
+    
+    private func configButtonEnable(_ enanle: Bool) {
+        if enanle{
+            self.loginButton.setTitleColor(.white, for: .normal)
+            self.loginButton.isEnabled = true
+        }else{
+            self.loginButton.setTitleColor(.lightGray, for: .normal)
+            self.loginButton.isEnabled = false
+        }
+    }
+    
+    public func getLogin() -> String {
+        return self.loginTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return self.passwordTextField.text ?? ""
+    }
+    
     
     
     override init(frame: CGRect) {

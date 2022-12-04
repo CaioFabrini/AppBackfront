@@ -14,6 +14,9 @@
 		343B9DA928D3A07E00956373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343B9DA728D3A07E00956373 /* LaunchScreen.storyboard */; };
 		343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9DB028D3A48A00956373 /* LoginScreen.swift */; };
 		3F18C1C6293BD4FA00047FF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F18C1C5293BD4FA00047FF1 /* GoogleService-Info.plist */; };
+		3F18C1C9293CD72B00047FF1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C1C8293CD72B00047FF1 /* Alert.swift */; };
+		3F18C1CC293CDBB300047FF1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C1CB293CDBB300047FF1 /* String.swift */; };
+		3F18C1CF293CE20C00047FF1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C1CE293CE20C00047FF1 /* HomeVC.swift */; };
 		BD25D88990F7828E54D824E8 /* Pods_AppBackFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		343B9DAA28D3A07E00956373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		343B9DB028D3A48A00956373 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		3F18C1C5293BD4FA00047FF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F18C1C8293CD72B00047FF1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		3F18C1CB293CDBB300047FF1 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		3F18C1CE293CE20C00047FF1 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		955D46207F36A7BF3BF11B9D /* Pods-AppBackFront.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.release.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.release.xcconfig"; sourceTree = "<group>"; };
 		D978E33D6189D8D932ED539F /* Pods-AppBackFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.debug.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +71,9 @@
 		343B9D9B28D3A07C00956373 /* AppBackFront */ = {
 			isa = PBXGroup;
 			children = (
+				3F18C1CD293CE1D500047FF1 /* Home */,
+				3F18C1CA293CDB8A00047FF1 /* Extension */,
+				3F18C1C7293CD70500047FF1 /* Alert */,
 				3F18C1C3293BD11F00047FF1 /* Login */,
 				343B9D9C28D3A07C00956373 /* AppDelegate.swift */,
 				343B9D9E28D3A07C00956373 /* SceneDelegate.swift */,
@@ -91,6 +100,30 @@
 				343B9DB028D3A48A00956373 /* LoginScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		3F18C1C7293CD70500047FF1 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				3F18C1C8293CD72B00047FF1 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		3F18C1CA293CDB8A00047FF1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3F18C1CB293CDBB300047FF1 /* String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3F18C1CD293CE1D500047FF1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3F18C1CE293CE20C00047FF1 /* HomeVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B2BF8648247392BAC385C1F4 /* Pods */ = {
@@ -225,9 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F18C1CC293CDBB300047FF1 /* String.swift in Sources */,
+				3F18C1CF293CE20C00047FF1 /* HomeVC.swift in Sources */,
 				343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */,
 				343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */,
 				343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */,
+				3F18C1C9293CD72B00047FF1 /* Alert.swift in Sources */,
 				343B9D9F28D3A07C00956373 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
