@@ -1,0 +1,111 @@
+//
+//  HomeScreen.swift
+//  AppBackFront
+//
+//  Created by Barbara Brigolin on 04/12/22.
+//
+
+import UIKit
+
+class HomeScreen: UIView {
+    
+    lazy var viewBackgraund: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .black       //UIColor(red: 25, green: 25, blue: 25, alpha: 1)
+        return view
+    }()
+    
+    lazy var logoImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "vector")
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+    
+    lazy var searchBar: UISearchBar = {
+        let search = UISearchBar()
+        search.translatesAutoresizingMaskIntoConstraints = false
+        search.clipsToBounds = true
+        search.layer.cornerRadius = 22
+        search.placeholder = "Pesquise por categorias, artistas..."
+//      Alterar cor de fundo e lupa
+        return search
+    }()
+    
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .green
+        collectionView.delaysContentTouches = false
+//        TO DO -> register da cell
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+        layout.scrollDirection = .horizontal
+        
+        collectionView.setCollectionViewLayout(layout, animated: false)
+        
+        return collectionView
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .yellow        //UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
+    //    TO DO -> register da cell
+        tableView.separatorStyle = .none
+        return tableView
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSuperView()
+        setupConstraints()
+    }
+    
+    private func addSuperView() {
+        self.addSubview(self.viewBackgraund)
+        self.viewBackgraund.addSubview(self.logoImageView)
+        self.viewBackgraund.addSubview(self.searchBar)
+        self.viewBackgraund.addSubview(self.collectionView)
+        self.addSubview(self.tableView)
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            
+            self.viewBackgraund.topAnchor.constraint(equalTo: self.topAnchor),
+            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 220),
+            
+            self.logoImageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 40),
+            self.logoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
+            self.logoImageView.heightAnchor.constraint(equalToConstant: 40),
+            self.logoImageView.widthAnchor.constraint(equalToConstant: 40),
+            
+            self.searchBar.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 15),
+            self.searchBar.leadingAnchor.constraint(equalTo: self.logoImageView.leadingAnchor),
+            self.searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -24),
+            self.searchBar.heightAnchor.constraint(equalToConstant: 46),
+            
+            self.collectionView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor, constant: 15),
+            self.collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.collectionView.bottomAnchor.constraint(equalTo: self.viewBackgraund.bottomAnchor),
+            
+            self.tableView.topAnchor.constraint(equalTo: self.viewBackgraund.bottomAnchor),
+            self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+        ])
+    }
+    
+}
