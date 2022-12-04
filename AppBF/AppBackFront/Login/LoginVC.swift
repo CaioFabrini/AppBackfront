@@ -16,8 +16,7 @@ class LoginVC: UIViewController {
     var auth: Auth?
     var alert: Alert?
     
-    
-    
+
     override func loadView() {
         loginScreen = LoginScreen()
         view = loginScreen
@@ -122,7 +121,6 @@ extension LoginVC: LoginScreenProtocol {
                 self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
             }else{
                 if user == nil{
-                    print("falha \(error?.localizedDescription ?? "")")
                     self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente mais tarde")
                 }else{
                     self.navigationController?.pushViewController(vc, animated: true)
