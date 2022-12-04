@@ -26,24 +26,19 @@ class LoginVC: UIViewController {
         self.loginScreen?.configTextFieldDelegate(delegate: self)
         self.auth = Auth.auth()
         self.alert = Alert(controller: self)
-        self.loginScreen?.loginTextField.text = "caio@hotmail.com"
-        self.loginScreen?.passwordTextField.text = "1234caio"
         self.configButtonEnable(false)
     }
     
     public func validaTextField() {
-        let email: String = self.loginScreen?.loginTextField.text ?? ""
-        let password: String = self.loginScreen?.passwordTextField.text ?? ""
-   
-           if !email.isEmpty && !password.isEmpty {
-               self.configButtonEnable(true)
-           }else{
-               self.configButtonEnable(false)
-           }
-       }
+        if (self.loginScreen?.passwordTextField.text ?? "").isValid(validType: .password) &&  (self.loginScreen?.loginTextField.text ?? "").isValid(validType: .email) {
+            configButtonEnable(true)
+        } else {
+            configButtonEnable(false)
+        }
+    }
     
     private func configButtonEnable(_ enanle: Bool) {
-        if enanle{
+        if enanle {
             self.loginScreen?.loginButton.setTitleColor(.white, for: .normal)
             self.loginScreen?.loginButton.isEnabled = true
         }else{
@@ -69,7 +64,7 @@ extension LoginVC: UITextFieldDelegate {
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
             textField.layer.borderColor = UIColor.red.cgColor
-//            self.configButtonEnable(false)
+
         } else {
             switch textField {
             case self.loginScreen?.loginTextField:
@@ -79,9 +74,7 @@ extension LoginVC: UITextFieldDelegate {
                 } else {
                     self.loginScreen?.loginTextField.layer.borderWidth = 1.5
                     self.loginScreen?.loginTextField.layer.borderColor = UIColor.red.cgColor
-//                    self.configButtonEnable(false)
                 }
-                break
             case self.loginScreen?.passwordTextField:
                 
                 if (self.loginScreen?.passwordTextField.text ?? "").isValid(validType: .password) {
@@ -89,7 +82,6 @@ extension LoginVC: UITextFieldDelegate {
                 } else {
                     self.loginScreen?.passwordTextField.layer.borderWidth = 1.5
                     self.loginScreen?.passwordTextField.layer.borderColor = UIColor.red.cgColor
-//                    self.configButtonEnable(false)
                 }
             default:
                 break
