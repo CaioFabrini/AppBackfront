@@ -13,8 +13,8 @@ enum LoginScreenString: String {
     case logoImage = "BFLogin"
     case labelLogin = "BF NFT"
     case labelDescription = "O marketplace de NFTs da Backfront Academy"
-    case loginTF = "Login"
-    case passwordTF = "Senha"
+    case emailTF = "Email:"
+    case passwordTF = "Senha:"
     case recoverPasswordTitle = "Recuperar Senha?"
     case subLoginImage = "gradient3"
     case loginButtonTitle = "Entrar"
@@ -68,14 +68,14 @@ class LoginScreen: UIView {
         return label
     }()
     
-    lazy var loginTextField: UITextField = {
+    lazy var emailTextField: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.autocorrectionType = .no
         tf.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1.0)
         tf.borderStyle = .roundedRect
         tf.keyboardType = .emailAddress
-        tf.attributedPlaceholder = NSAttributedString(string: LoginScreenString.loginTF.rawValue, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)])
+        tf.attributedPlaceholder = NSAttributedString(string: LoginScreenString.emailTF.rawValue, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.4)])
         tf.textColor = .white
         tf.clipsToBounds = true
         tf.layer.cornerRadius = 12
@@ -141,7 +141,7 @@ class LoginScreen: UIView {
     }()
     
     public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
-        self.loginTextField.delegate = delegate
+        self.emailTextField.delegate = delegate
         self.passwordTextField.delegate = delegate
     }
     
@@ -179,18 +179,8 @@ class LoginScreen: UIView {
         return label
     }()
     
-    private func configButtonEnable(_ enanle: Bool) {
-        if enanle{
-            self.loginButton.setTitleColor(.white, for: .normal)
-            self.loginButton.isEnabled = true
-        }else{
-            self.loginButton.setTitleColor(.lightGray, for: .normal)
-            self.loginButton.isEnabled = false
-        }
-    }
-    
     public func getLogin() -> String {
-        return self.loginTextField.text ?? ""
+        return self.emailTextField.text ?? ""
     }
     
     public func getPassword() -> String {
@@ -212,7 +202,7 @@ class LoginScreen: UIView {
         addSubview(logoAppImageView)
         addSubview(loginLabel)
         addSubview(descriptionLabel)
-        addSubview(loginTextField)
+        addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(recoverPasswordButton)
         addSubview(subLoginImageView)
@@ -242,23 +232,23 @@ class LoginScreen: UIView {
             descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             
-            loginTextField.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 32),
-            loginTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            loginTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            loginTextField.heightAnchor.constraint(equalToConstant: 39),
+            emailTextField.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 32),
+            emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            emailTextField.heightAnchor.constraint(equalToConstant: 39),
             
-            passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: 11),
-            passwordTextField.leadingAnchor.constraint(equalTo: loginTextField.leadingAnchor),
-            passwordTextField.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
-            passwordTextField.heightAnchor.constraint(equalTo: loginTextField.heightAnchor),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 11),
+            passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
             recoverPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 9),
-            recoverPasswordButton.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
+            recoverPasswordButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
             recoverPasswordButton.heightAnchor.constraint(equalToConstant: 16),
             
             subLoginImageView.topAnchor.constraint(equalTo: recoverPasswordButton.bottomAnchor, constant: 36),
-            subLoginImageView.leadingAnchor.constraint(equalTo: loginTextField.leadingAnchor),
-            subLoginImageView.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
+            subLoginImageView.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            subLoginImageView.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
             subLoginImageView.heightAnchor.constraint(equalToConstant: 43),
             
             loginButton.topAnchor.constraint(equalTo: subLoginImageView.topAnchor),

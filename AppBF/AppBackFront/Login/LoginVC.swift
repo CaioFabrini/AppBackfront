@@ -36,7 +36,7 @@ class LoginVC: UIViewController {
     }
     
     public func validaTextField() {
-        if (self.loginScreen?.passwordTextField.text ?? "").isValid(validType: .password) &&  (self.loginScreen?.loginTextField.text ?? "").isValid(validType: .email) {
+        if (self.loginScreen?.passwordTextField.text ?? "").isValid(validType: .password) &&  (self.loginScreen?.emailTextField.text ?? "").isValid(validType: .email) {
             configButtonEnable(true)
         } else {
             configButtonEnable(false)
@@ -57,7 +57,7 @@ class LoginVC: UIViewController {
 extension LoginVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.isEqual(self.loginScreen?.loginTextField) {
+        if textField.isEqual(self.loginScreen?.emailTextField) {
             self.loginScreen?.passwordTextField.becomeFirstResponder()
         }else {
             self.loginScreen?.passwordTextField.resignFirstResponder()
@@ -73,21 +73,21 @@ extension LoginVC: UITextFieldDelegate {
             
         } else {
             switch textField {
-            case self.loginScreen?.loginTextField:
+            case self.loginScreen?.emailTextField:
                 
-                if (self.loginScreen?.loginTextField.text ?? "").isValid(validType: .email) {
-                    self.loginScreen?.loginTextField.layer.borderWidth = 0
+                if (textField.text ?? "").isValid(validType: .email) {
+                    textField.layer.borderWidth = 0
                 } else {
-                    self.loginScreen?.loginTextField.layer.borderWidth = 1.5
-                    self.loginScreen?.loginTextField.layer.borderColor = UIColor.red.cgColor
+                    textField.layer.borderWidth = 1.5
+                    textField.layer.borderColor = UIColor.red.cgColor
                 }
             case self.loginScreen?.passwordTextField:
                 
-                if (self.loginScreen?.passwordTextField.text ?? "").isValid(validType: .password) {
-                    self.loginScreen?.passwordTextField.layer.borderWidth = 0
+                if (textField.text ?? "").isValid(validType: .password) {
+                    textField.layer.borderWidth = 0
                 } else {
-                    self.loginScreen?.passwordTextField.layer.borderWidth = 1.5
-                    self.loginScreen?.passwordTextField.layer.borderColor = UIColor.red.cgColor
+                    textField.layer.borderWidth = 1.5
+                    textField.layer.borderColor = UIColor.red.cgColor
                 }
             default:
                 break
@@ -100,8 +100,6 @@ extension LoginVC: UITextFieldDelegate {
 extension LoginVC: LoginScreenProtocol {
     func actionLoginButton() {
         
-        let vc: HomeVC = HomeVC()
-        
         guard let login = self.loginScreen else { return }
         
         self.auth?.signIn(withEmail: login.getLogin(), password: login.getPassword(), completion: { user, error in
@@ -111,7 +109,7 @@ extension LoginVC: LoginScreenProtocol {
                 if user == nil{
                     self.alert?.getAlert(title: AlertString.alert.rawValue, message: AlertString.userMassage.rawValue)
                 }else{
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    self.navigationController?.pushViewController(HomeVC(), animated: true)
                 }
             }
         })
