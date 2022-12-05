@@ -206,7 +206,7 @@ class LoginScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func addElements() {
         addSubview(subImageView)
         addSubview(logoAppImageView)

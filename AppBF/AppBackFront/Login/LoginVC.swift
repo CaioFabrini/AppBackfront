@@ -9,6 +9,12 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+enum AlertString: String {
+    case alert = "Atenção"
+    case errorMassage = "Dados incorretos, verifique seus dados"
+    case userMassage = "Tivemos um problema inesperado, tente novamente mais tarde"
+}
+
 class LoginVC: UIViewController {
     
     var loginScreen: LoginScreen?
@@ -64,7 +70,7 @@ extension LoginVC: UITextFieldDelegate {
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
             textField.layer.borderColor = UIColor.red.cgColor
-
+            
         } else {
             switch textField {
             case self.loginScreen?.loginTextField:
@@ -100,10 +106,10 @@ extension LoginVC: LoginScreenProtocol {
         
         self.auth?.signIn(withEmail: login.getLogin(), password: login.getPassword(), completion: { user, error in
             if error != nil {
-                self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
+                self.alert?.getAlert(title: AlertString.alert.rawValue , message: AlertString.errorMassage.rawValue)
             }else{
                 if user == nil{
-                    self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente mais tarde")
+                    self.alert?.getAlert(title: AlertString.alert.rawValue, message: AlertString.userMassage.rawValue)
                 }else{
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
