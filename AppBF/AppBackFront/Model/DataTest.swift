@@ -10,6 +10,6 @@ import UIKit
 
 
 struct NFTTest {
-    var imageNFT, imageUser: UIImage
+    var imageNFT, imageUser: String
     var nameUser, price, priceValue, ownedBy: String
 }

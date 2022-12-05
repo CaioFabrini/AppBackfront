@@ -23,7 +23,7 @@ class HomeTableViewCellScreen: UIView {
     lazy var viewBackgraund: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         view.clipsToBounds = true
         view.layer.cornerRadius = 18
         return view
@@ -33,9 +33,8 @@ class HomeTableViewCellScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "")
-        image.tintColor = .green
+        image.tintColor = .purple
         image.contentMode = .scaleAspectFit
-        image.backgroundColor = .red
         image.clipsToBounds = true
         image.layer.cornerRadius = 18
         return image
@@ -46,6 +45,7 @@ class HomeTableViewCellScreen: UIView {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "")
         image.tintColor = .green
+        image.backgroundColor = .purple
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -120,23 +120,23 @@ class HomeTableViewCellScreen: UIView {
             self.nftImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.nftImageView.heightAnchor.constraint(equalToConstant: 270),
             
-            self.userLabel.topAnchor.constraint(equalTo: self.nftImageView.bottomAnchor, constant: 10),
-            self.userLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            self.userLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
-            self.userLabel.heightAnchor.constraint(equalToConstant: 48),
-            self.userLabel.widthAnchor.constraint(equalToConstant: 48),
+            self.userImageView.topAnchor.constraint(equalTo: self.nftImageView.bottomAnchor, constant: 10),
+            self.userImageView.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 8),
+            self.userImageView.heightAnchor.constraint(equalToConstant: 48),
+            self.userImageView.widthAnchor.constraint(equalToConstant: 48),
             
             self.ownedByLabel.topAnchor.constraint(equalTo: self.nftImageView.bottomAnchor, constant: 20),
             self.ownedByLabel.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 8),
             
             self.userLabel.topAnchor.constraint(equalTo: self.ownedByLabel.bottomAnchor, constant: 5),
-            self.userLabel.leadingAnchor.constraint(equalTo: self.ownedByLabel.trailingAnchor),
+            self.userLabel.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 8),
+            self.userLabel.widthAnchor.constraint(equalToConstant: 90),
             
             self.priceLabel.topAnchor.constraint(equalTo: self.nftImageView.bottomAnchor, constant: 20),
-            self.priceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            self.priceLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -15),
             
-            self.priceValueLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 20),
-            self.priceValueLabel.trailingAnchor.constraint(equalTo: self.priceLabel.trailingAnchor),
+            self.priceValueLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 5),
+            self.priceValueLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -15),
             
             
         ])

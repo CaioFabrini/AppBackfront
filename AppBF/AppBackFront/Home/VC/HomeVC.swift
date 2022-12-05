@@ -13,7 +13,10 @@ class HomeVC: UIViewController {
     var homeScreen: HomeScreen?
     let viewModel: HomeViewModel = HomeViewModel()
     
-    var nftTest: [NFTTest] = []
+    var nftTest: [NFTTest] = [NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
+                              NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
+                              NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
+                              NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:")]
     
     override func loadView() {
         self.homeScreen = HomeScreen()
@@ -50,18 +53,18 @@ extension HomeVC: HomeViewModelDelegate {
 extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.viewModel.numberOfRowsInSection
+        self.nftTest.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell
-        cell?.setupHomeCell()
+        cell?.setupHomeCell(data: self.nftTest[indexPath.row])
         
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-        self.viewModel.heightForRowAt(indexPath: indexPath)
+        return 360
     }
     
 }
