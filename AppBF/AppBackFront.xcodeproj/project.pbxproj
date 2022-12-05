@@ -22,12 +22,11 @@
 		033F708C293D234700FAC046 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F708B293D234700FAC046 /* DataTest.swift */; };
 		033F708F293DEF0F00FAC046 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F708E293DEF0F00FAC046 /* HomeCollectionViewCell.swift */; };
 		033F7091293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7090293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift */; };
+		033F7097293E2CD700FAC046 /* Login in Resources */ = {isa = PBXBuildFile; fileRef = 033F7096293E2CD700FAC046 /* Login */; };
 		343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9C28D3A07C00956373 /* AppDelegate.swift */; };
 		343B9D9F28D3A07C00956373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9E28D3A07C00956373 /* SceneDelegate.swift */; };
-		343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9DA028D3A07C00956373 /* LoginVC.swift */; };
 		343B9DA628D3A07E00956373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343B9DA528D3A07E00956373 /* Assets.xcassets */; };
 		343B9DA928D3A07E00956373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343B9DA728D3A07E00956373 /* LaunchScreen.storyboard */; };
-		343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9DB028D3A48A00956373 /* LoginScreen.swift */; };
 		BD25D88990F7828E54D824E8 /* Pods_AppBackFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,15 +46,14 @@
 		033F708B293D234700FAC046 /* DataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
 		033F708E293DEF0F00FAC046 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		033F7090293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		033F7096293E2CD700FAC046 /* Login */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Login; sourceTree = "<group>"; };
 		196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBackFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9928D3A07C00956373 /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9C28D3A07C00956373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		343B9D9E28D3A07C00956373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		343B9DA028D3A07C00956373 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		343B9DA528D3A07E00956373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343B9DA828D3A07E00956373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		343B9DAA28D3A07E00956373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		343B9DB028D3A48A00956373 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		955D46207F36A7BF3BF11B9D /* Pods-AppBackFront.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.release.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.release.xcconfig"; sourceTree = "<group>"; };
 		D978E33D6189D8D932ED539F /* Pods-AppBackFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.debug.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -245,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				033F7076293BDD4D00FAC046 /* Service */,
+				033F7096293E2CD700FAC046 /* Login */,
 				033F7060293BD46600FAC046 /* TabBarController */,
 				033F7081293CED4700FAC046 /* CellsHome */,
 				033F7063293BD68F00FAC046 /* Home */,
@@ -254,8 +253,6 @@
 				033F707B293BE33100FAC046 /* Model */,
 				343B9D9C28D3A07C00956373 /* AppDelegate.swift */,
 				343B9D9E28D3A07C00956373 /* SceneDelegate.swift */,
-				343B9DB028D3A48A00956373 /* LoginScreen.swift */,
-				343B9DA028D3A07C00956373 /* LoginVC.swift */,
 				343B9DA528D3A07E00956373 /* Assets.xcassets */,
 				343B9DA728D3A07E00956373 /* LaunchScreen.storyboard */,
 				343B9DAA28D3A07E00956373 /* Info.plist */,
@@ -340,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033F7097293E2CD700FAC046 /* Login in Resources */,
 				343B9DA928D3A07E00956373 /* LaunchScreen.storyboard in Resources */,
 				343B9DA628D3A07E00956373 /* Assets.xcassets in Resources */,
 			);
@@ -395,10 +393,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				033F706E293BD81000FAC046 /* AddNewNFTVC.swift in Sources */,
-				343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */,
 				033F7080293CD74400FAC046 /* HomeScreen.swift in Sources */,
 				033F7091293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift in Sources */,
-				343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */,
 				033F7088293CEE5000FAC046 /* HomeTableViewCellScreen.swift in Sources */,
 				033F708F293DEF0F00FAC046 /* HomeCollectionViewCell.swift in Sources */,
 				033F7075293BDD2800FAC046 /* HomeViewModel.swift in Sources */,

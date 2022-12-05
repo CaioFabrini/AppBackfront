@@ -23,7 +23,7 @@ class HomeTableViewCellScreen: UIView {
     lazy var viewBackgraund: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green
+        view.backgroundColor = UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
         view.clipsToBounds = true
         view.layer.cornerRadius = 18
         return view
@@ -34,7 +34,7 @@ class HomeTableViewCellScreen: UIView {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "")
         image.tintColor = .purple
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleToFill
         image.clipsToBounds = true
         image.layer.cornerRadius = 18
         return image
@@ -46,6 +46,8 @@ class HomeTableViewCellScreen: UIView {
         image.image = UIImage(named: "")
         image.tintColor = .black
         image.backgroundColor = .white
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 24
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -54,7 +56,7 @@ class HomeTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(red: 69/255, green: 191/255, blue: 229/255, alpha: 1)
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.text = ""
         return label
     }()
@@ -72,7 +74,7 @@ class HomeTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(red: 69/255, green: 191/255, blue: 229/255, alpha: 1)
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.text = ""
         return label
     }()

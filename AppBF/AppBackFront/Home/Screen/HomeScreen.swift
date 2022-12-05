@@ -28,7 +28,7 @@ class HomeScreen: UIView {
         let search = UISearchBar()
         search.translatesAutoresizingMaskIntoConstraints = false
         search.clipsToBounds = true
-        search.layer.cornerRadius = 22
+        search.layer.cornerRadius = 20
         search.placeholder = "Pesquise por categorias, artistas..."
 //      Alterar cor de fundo e lupa
         return search
