@@ -38,13 +38,11 @@ class HomeScreen: UIView {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .green
+        collectionView.backgroundColor = .black
         collectionView.delaysContentTouches = false
-//        TO DO -> register da cell
-        
+        collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
-        
         collectionView.setCollectionViewLayout(layout, animated: false)
         
         return collectionView
@@ -78,7 +76,7 @@ class HomeScreen: UIView {
         self.tableView.dataSource = dataSource
     }
     
-    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+    public func configCollectionViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
         self.collectionView.delegate = delegate
         self.collectionView.dataSource = dataSource
     }

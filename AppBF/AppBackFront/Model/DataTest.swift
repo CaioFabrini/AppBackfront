@@ -13,3 +13,8 @@ struct NFTTest {
     var imageNFT, imageUser: String
     var nameUser, price, priceValue, ownedBy: String
 }
+
+struct FilterName {
+    var filter: String
+}
+

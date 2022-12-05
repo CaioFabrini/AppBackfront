@@ -44,8 +44,8 @@ class HomeTableViewCellScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "")
-        image.tintColor = .green
-        image.backgroundColor = .purple
+        image.tintColor = .black
+        image.backgroundColor = .white
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -137,7 +137,6 @@ class HomeTableViewCellScreen: UIView {
             
             self.priceValueLabel.topAnchor.constraint(equalTo: self.priceLabel.bottomAnchor, constant: 5),
             self.priceValueLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -15),
-            
             
         ])
     }

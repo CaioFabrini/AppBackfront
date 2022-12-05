@@ -18,6 +18,12 @@ class HomeVC: UIViewController {
                               NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
                               NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:")]
     
+    var filterTest: [FilterName] = [FilterName(filter: "Todos"),
+                                    FilterName(filter: "3D"),
+                                    FilterName(filter: "Ilustração"),
+                                    FilterName(filter: "Fotos"),
+                                    FilterName(filter: "GIFs")]
+    
     override func loadView() {
         self.homeScreen = HomeScreen()
         self.view = homeScreen
@@ -29,12 +35,12 @@ class HomeVC: UIViewController {
         self.viewModel.fetch()
         self.signatureDelegate()
         self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
+        self.homeScreen?.configCollectionViewProtocols(delegate: self, dataSource: self)
     }
     
     private func signatureDelegate() {
         viewModel.delegate(delegate: self)
     }
-
 }
 
 extension HomeVC: HomeViewModelDelegate {
@@ -65,6 +71,27 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return 360
+    }
+    
+}
+
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filterTest.count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: HomeCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell
+        cell?.setupCollectionCell(data: self.filterTest[indexPath.row])
+        
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 110, height: 60)
     }
     
 }

@@ -14,7 +14,6 @@ enum HomeTableViewCellString: String {
 class HomeTableViewCell: UITableViewCell {
     
     static let identifier: String = HomeTableViewCellString.identifier.rawValue
-//    var data: [NFTData] = []
     
     weak private var delegate: HomeTableViewCellScreenProtocol?
     
@@ -26,7 +25,7 @@ class HomeTableViewCell: UITableViewCell {
         let view = HomeTableViewCellScreen()
         view.delegate(delegate: self.delegate)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .yellow
+        view.backgroundColor = .blue
         return view
     }()
     
@@ -53,11 +52,7 @@ class HomeTableViewCell: UITableViewCell {
             self.screen.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
-    
-    
-    
-    
-//    criar setup da celula
+
     public func setupHomeCell(data: NFTTest) {
         self.screen.nftImageView.image = UIImage(systemName: data.imageNFT)
         self.screen.userImageView.image = UIImage(systemName: data.imageUser)
@@ -67,5 +62,4 @@ class HomeTableViewCell: UITableViewCell {
         self.screen.priceLabel.text = data.price
         
     }
-    
 }

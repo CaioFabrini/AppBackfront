@@ -20,6 +20,8 @@
 		033F7085293CEDEC00FAC046 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7084293CEDEC00FAC046 /* HomeTableViewCell.swift */; };
 		033F7088293CEE5000FAC046 /* HomeTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7087293CEE5000FAC046 /* HomeTableViewCellScreen.swift */; };
 		033F708C293D234700FAC046 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F708B293D234700FAC046 /* DataTest.swift */; };
+		033F708F293DEF0F00FAC046 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F708E293DEF0F00FAC046 /* HomeCollectionViewCell.swift */; };
+		033F7091293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7090293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift */; };
 		343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9C28D3A07C00956373 /* AppDelegate.swift */; };
 		343B9D9F28D3A07C00956373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9E28D3A07C00956373 /* SceneDelegate.swift */; };
 		343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9DA028D3A07C00956373 /* LoginVC.swift */; };
@@ -43,6 +45,8 @@
 		033F7084293CEDEC00FAC046 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		033F7087293CEE5000FAC046 /* HomeTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellScreen.swift; sourceTree = "<group>"; };
 		033F708B293D234700FAC046 /* DataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
+		033F708E293DEF0F00FAC046 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		033F7090293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBackFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9928D3A07C00956373 /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9C28D3A07C00956373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 		033F7083293CED9900FAC046 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				033F708D293DEEEB00FAC046 /* Screen */,
+				033F708E293DEF0F00FAC046 /* HomeCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -205,6 +211,14 @@
 			isa = PBXGroup;
 			children = (
 				033F7087293CEE5000FAC046 /* HomeTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		033F708D293DEEEB00FAC046 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				033F7090293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -383,8 +397,10 @@
 				033F706E293BD81000FAC046 /* AddNewNFTVC.swift in Sources */,
 				343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */,
 				033F7080293CD74400FAC046 /* HomeScreen.swift in Sources */,
+				033F7091293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift in Sources */,
 				343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */,
 				033F7088293CEE5000FAC046 /* HomeTableViewCellScreen.swift in Sources */,
+				033F708F293DEF0F00FAC046 /* HomeCollectionViewCell.swift in Sources */,
 				033F7075293BDD2800FAC046 /* HomeViewModel.swift in Sources */,
 				033F7072293BD86E00FAC046 /* ProfileVC.swift in Sources */,
 				033F7085293CEDEC00FAC046 /* HomeTableViewCell.swift in Sources */,
