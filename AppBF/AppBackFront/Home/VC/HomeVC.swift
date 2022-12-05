@@ -13,17 +13,7 @@ class HomeVC: UIViewController {
     var homeScreen: HomeScreen?
     let viewModel: HomeViewModel = HomeViewModel()
     
-    var nftTest: [NFTTest] = [NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
-                              NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
-                              NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
-                              NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:")]
-    
-    var filterTest: [FilterName] = [FilterName(filter: "Todos"),
-                                    FilterName(filter: "3D"),
-                                    FilterName(filter: "Ilustração"),
-                                    FilterName(filter: "Fotos"),
-                                    FilterName(filter: "GIFs")]
-    
+
     override func loadView() {
         self.homeScreen = HomeScreen()
         self.view = homeScreen
@@ -31,11 +21,10 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         self.viewModel.fetch()
         self.signatureDelegate()
-        self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
-        self.homeScreen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+//        self.homeScreen?.configCollectionViewProtocols(delegate: self, dataSource: self)
     }
     
     private func signatureDelegate() {
@@ -46,8 +35,10 @@ class HomeVC: UIViewController {
 extension HomeVC: HomeViewModelDelegate {
     
     func success() {
-        
-//        assinar protocolos da collection view
+        DispatchQueue.main.async {
+            self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
+            self.homeScreen?.tableView.reloadData()
+        }
     }
     
     func error(_message: String) {
@@ -59,13 +50,12 @@ extension HomeVC: HomeViewModelDelegate {
 extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.nftTest.count
+        viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell
-        cell?.setupHomeCell(data: self.nftTest[indexPath.row])
-        
+        cell?.setupHomeCell(data: viewModel.loadCurrentNFT(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     
@@ -74,24 +64,24 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     }
     
 }
-
-extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filterTest.count
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: HomeCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell
-        cell?.setupCollectionCell(data: self.filterTest[indexPath.row])
-        
-        return cell ?? UICollectionViewCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 110, height: 60)
-    }
-    
-}
+//
+//extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return filterTest.count
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell: HomeCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell
+//        cell?.setupCollectionCell(data: self.filterTest[indexPath.row])
+//
+//        return cell ?? UICollectionViewCell()
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        return CGSize(width: 110, height: 60)
+//    }
+//
+//}

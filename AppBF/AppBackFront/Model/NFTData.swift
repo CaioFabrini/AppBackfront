@@ -7,11 +7,11 @@ import Foundation
 
 // MARK: - NFTData
 struct NFTData: Codable {
-    var results: [Result]?
+    var results: [NFT]?
 }
 
-// MARK: - Result
-struct Result: Codable {
+// MARK: - NFT
+struct NFT: Codable {
     var tokenType: String?
     var contractAddress, id: String?
     var tokenName, tokenDescription: String?

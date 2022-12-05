@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 enum HomeTableViewCellString: String {
     case identifier = "HomeTableViewCell"
@@ -53,13 +54,13 @@ class HomeTableViewCell: UITableViewCell {
         ])
     }
 
-    public func setupHomeCell(data: NFTTest) {
-        self.screen.nftImageView.image = UIImage(systemName: data.imageNFT)
-        self.screen.userImageView.image = UIImage(systemName: data.imageUser)
-        self.screen.priceValueLabel.text = data.priceValue
-        self.screen.ownedByLabel.text = data.ownedBy
-        self.screen.userLabel.text = data.nameUser
-        self.screen.priceLabel.text = data.price
-        
+    public func setupHomeCell(data: NFT) {
+        guard let url = URL(string: data.cachedImages?.tiny100_100 ?? "") else {return}
+        self.screen.nftImageView.af.setImage(withURL: url)
+//        self.screen.userImageView.image = UIImage(systemName: data.imageUser)
+//        self.screen.priceValueLabel.text = data.priceValue
+//        self.screen.ownedByLabel.text = data.ownedBy
+//        self.screen.userLabel.text = data.nameUser
+//        self.screen.priceLabel.text = data.price
     }
 }
