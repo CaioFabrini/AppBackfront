@@ -23,7 +23,7 @@ class HomeTableViewCellScreen: UIView {
     lazy var viewBackgraund: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
+        view.backgroundColor = .green
         view.clipsToBounds = true
         view.layer.cornerRadius = 18
         return view

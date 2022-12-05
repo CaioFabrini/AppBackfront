@@ -12,7 +12,7 @@ class HomeScreen: UIView {
     lazy var viewBackgraund: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black       //UIColor(red: 25, green: 25, blue: 25, alpha: 1)
+        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         return view
     }()
     
@@ -38,7 +38,7 @@ class HomeScreen: UIView {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         collectionView.delaysContentTouches = false
         collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()

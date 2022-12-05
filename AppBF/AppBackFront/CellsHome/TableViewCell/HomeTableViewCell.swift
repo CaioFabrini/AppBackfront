@@ -25,7 +25,7 @@ class HomeTableViewCell: UITableViewCell {
         let view = HomeTableViewCellScreen()
         view.delegate(delegate: self.delegate)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .blue
+        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         return view
     }()
     
