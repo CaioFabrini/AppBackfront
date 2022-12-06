@@ -4,7 +4,7 @@
 //
 //  Created by Barbara Brigolin on 04/12/22.
 //
-
+import Foundation
 import UIKit
 import AlamofireImage
 
@@ -53,14 +53,27 @@ class HomeTableViewCell: UITableViewCell {
             self.screen.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
+    
+    var nameImage: [String] = ["user1", "user2", "user3", "user4", "user5", "user6", "user7", "user8", "user9", "user10"]
+    var nameUser: [String] = ["Seabu", "Syas", "Urwuo", "Zayn", "Tiaduleu", "Bamoe", "Caels", "Lyur", "Diaen", "Hayxu"]
+    var priceValue: [Int] = []
+
+    func randomPriceValue() {
+        for _ in 1...10{
+            let random = Int.random(in: 0...50)
+            priceValue.append(random)
+            
+        }
+    }
+
 
     public func setupHomeCell(data: NFT) {
-        guard let url = URL(string: data.cachedImages?.tiny100_100 ?? "") else {return}
+        guard let url = URL(string: data.cachedImages?.tiny100_100 ?? "") else { return }
         self.screen.nftImageView.af.setImage(withURL: url)
-        self.screen.userImageView.image = UIImage(systemName: "person.circle")
-        self.screen.priceValueLabel.text = "200"
+        self.screen.userImageView.image = UIImage(named:  nameImage.randomElement() ?? "")
+        self.screen.priceValueLabel.text = " \(priceValue.randomElement() ?? 0) ETH"
         self.screen.ownedByLabel.text = "Propriedade de:"
-        self.screen.userLabel.text = "Bárbara"
+        self.screen.userLabel.text = nameUser.randomElement() ?? ""
         self.screen.priceLabel.text = "Preço"
     }
 }
