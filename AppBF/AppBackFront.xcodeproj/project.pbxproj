@@ -29,12 +29,10 @@
 		343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9C28D3A07C00956373 /* AppDelegate.swift */; };
 		343B9D9F28D3A07C00956373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9E28D3A07C00956373 /* SceneDelegate.swift */; };
 		343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9DA028D3A07C00956373 /* LoginVC.swift */; };
-		343B9DA628D3A07E00956373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343B9DA528D3A07E00956373 /* Assets.xcassets */; };
 		343B9DA928D3A07E00956373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343B9DA728D3A07E00956373 /* LaunchScreen.storyboard */; };
 		343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9DB028D3A48A00956373 /* LoginScreen.swift */; };
 		3F18C1C6293BD4FA00047FF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F18C1C5293BD4FA00047FF1 /* GoogleService-Info.plist */; };
 		3F18C1C9293CD72B00047FF1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C1C8293CD72B00047FF1 /* Alert.swift */; };
-		3F18C1CC293CDBB300047FF1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C1CB293CDBB300047FF1 /* String.swift */; };
 		BD25D88990F7828E54D824E8 /* Pods_AppBackFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,13 +61,11 @@
 		343B9D9C28D3A07C00956373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		343B9D9E28D3A07C00956373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		343B9DA028D3A07C00956373 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		343B9DA528D3A07E00956373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343B9DA828D3A07E00956373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		343B9DAA28D3A07E00956373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		343B9DB028D3A48A00956373 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		3F18C1C5293BD4FA00047FF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F18C1C8293CD72B00047FF1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		3F18C1CB293CDBB300047FF1 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		955D46207F36A7BF3BF11B9D /* Pods-AppBackFront.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.release.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.release.xcconfig"; sourceTree = "<group>"; };
 		D978E33D6189D8D932ED539F /* Pods-AppBackFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.debug.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,13 +281,11 @@
 				033F712C294124C300FAC046 /* TabBarController */,
 				033F7137294124C400FAC046 /* Wallet */,
 				033F7122294124A900FAC046 /* AddNewNFT */,
-				3F18C1CA293CDB8A00047FF1 /* Extension */,
 				3F18C1C7293CD70500047FF1 /* Alert */,
 				3F18C1C3293BD11F00047FF1 /* Login */,
 				343B9D9C28D3A07C00956373 /* AppDelegate.swift */,
 				343B9D9E28D3A07C00956373 /* SceneDelegate.swift */,
 				033F713D294124C400FAC046 /* Assets.xcassets */,
-				343B9DA528D3A07E00956373 /* Assets.xcassets */,
 				343B9DA728D3A07E00956373 /* LaunchScreen.storyboard */,
 				343B9DAA28D3A07E00956373 /* Info.plist */,
 				3F18C1C5293BD4FA00047FF1 /* GoogleService-Info.plist */,
@@ -322,14 +316,6 @@
 				3F18C1C8293CD72B00047FF1 /* Alert.swift */,
 			);
 			path = Alert;
-			sourceTree = "<group>";
-		};
-		3F18C1CA293CDB8A00047FF1 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				3F18C1CB293CDBB300047FF1 /* String.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		B2BF8648247392BAC385C1F4 /* Pods */ = {
@@ -411,7 +397,6 @@
 			files = (
 				033F714B294124C400FAC046 /* homeData.json in Resources */,
 				343B9DA928D3A07E00956373 /* LaunchScreen.storyboard in Resources */,
-				343B9DA628D3A07E00956373 /* Assets.xcassets in Resources */,
 				3F18C1C6293BD4FA00047FF1 /* GoogleService-Info.plist in Resources */,
 				033F7156294124C400FAC046 /* Assets.xcassets in Resources */,
 			);
@@ -467,7 +452,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				033F7125294124A900FAC046 /* AddNewNFTVC.swift in Sources */,
-				3F18C1CC293CDBB300047FF1 /* String.swift in Sources */,
 				343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */,
 				033F7153294124C400FAC046 /* HomeTableViewCellScreen.swift in Sources */,
 				343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */,
