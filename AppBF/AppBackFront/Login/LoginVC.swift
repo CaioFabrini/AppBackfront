@@ -35,6 +35,10 @@ class LoginVC: UIViewController {
         self.configButtonEnable(false)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     public func validaTextField() {
         if (self.loginScreen?.passwordTextField.text ?? "").isValid(validType: .password) &&  (self.loginScreen?.emailTextField.text ?? "").isValid(validType: .email) {
             configButtonEnable(true)
