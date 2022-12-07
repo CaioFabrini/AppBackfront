@@ -8,6 +8,7 @@ target 'AppBackFront' do
   # Pods for AppBackFront
 
 pod 'Firebase'
+pod 'FirebaseAuth'
 pod 'Alamofire'
 pod 'AlamofireImage'
 
