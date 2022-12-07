@@ -76,6 +76,10 @@ class HomeScreen: UIView {
         self.tableView.dataSource = dataSource
     }
     
+    public func configSearchBarDelegate(delegate: UISearchBarDelegate) {
+        self.searchBar.delegate = delegate
+    }
+    
     public func configCollectionViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
         self.collectionView.delegate = delegate
         self.collectionView.dataSource = dataSource

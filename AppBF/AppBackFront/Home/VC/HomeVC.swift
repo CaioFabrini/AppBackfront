@@ -24,7 +24,7 @@ class HomeVC: UIViewController {
         view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         self.viewModel.fetch()
         self.signatureDelegate()
-//        self.homeScreen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+        self.homeScreen?.configSearchBarDelegate(delegate: self)
     }
     
     private func signatureDelegate() {
@@ -46,6 +46,16 @@ extension HomeVC: HomeViewModelDelegate {
     }
 }
 
+
+extension HomeVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     
