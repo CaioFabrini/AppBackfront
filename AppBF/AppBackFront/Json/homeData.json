@@ -1,0 +1,671 @@
+{
+    "logo_image": {
+        "image": "vector"
+    },
+    "filter_nft": [
+        {
+            "title": "Todos"
+        },
+        {
+            "title": "3D"
+        },
+        {
+            "title": "Ilustração"
+        },
+        {
+            "title": "Fotos"
+        },
+        {
+            "title": "GFIs"
+        }
+    ],
+    "nft_list": [
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/SzmW0K.nft1.png",
+            "user_name": "Mason Yates",
+            "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+            "nft_price": 1.4,
+            "nft_id": 2345,
+            "nft_name_image": "Cubo Mágico",
+            "nft_description": "Jogo tridimensional composto por faces de cores diferentes.",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+            ]
+        },
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/Sz6dj4.nft2.png",
+            "user_name": "Daisy Watkins",
+            "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+            "nft_price": 8.6,
+            "nft_id": 2679,
+            "nft_name_image": "Carnaval",
+            "nft_description": "O momento é agora, se jogue e curta a folia.",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+            ]
+        },
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/Sz6hym.nft3.png",
+            "user_name": "Kieran Simpson",
+            "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+            "nft_price": 1.5,
+            "nft_id": 2987,
+            "nft_name_image": "Halloween",
+            "nft_description": "Vista sua máscaras, corra para a sua em busca de doces ou travessuras",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+
+            ]
+        },
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/Sz6yaa.nft4.png",
+            "user_name": "Louis Douglas",
+            "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+            "nft_price": 4.8,
+            "nft_id": 2084,
+            "nft_name_image": "Liberte-se",
+            "nft_description": "Liberte-se para aquilo que realmente te faz feliz, se jogue e apreveite a vida!",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+
+            ]
+        },
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/Sz6ghK.nft5.png",
+            "user_name": "Mohammed Greenwood",
+            "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+            "nft_price": 5.6,
+            "nft_id": 2884,
+            "nft_name_image": "Vírus",
+            "nft_description": "Cuidado com o todo a sua volta, com aquilo que te contamina e danifica quem você é.",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+
+            ]
+        },
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/Sz6zwD.nft6.png",
+            "user_name": "Rhys Cunningham",
+            "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+            "nft_price": 9.3,
+            "nft_id": 2123,
+            "nft_name_image": "Vigilante",
+            "nft_description": "Atento à tudo que está ao seu redor, não deixa passar nenhum detalhe do que presencia.",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+
+            ]
+        },
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/Sz6Jiq.nft7.png",
+            "user_name": "Aaliyah Gardiner",
+            "user_image": "https://i.im.ge/2022/12/07/SzNkEx.user7.jpg",
+            "nft_price": 6.3,
+            "nft_id": 2098,
+            "nft_name_image": "Chupa-Cabra",
+            "nft_description": "Diz a lenda que o temido Chupa-Cabra devastava criações de fazendeiros em meados de 1990.",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+
+            ]
+        },
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/Sz64GP.nft8.png",
+            "user_name": "Demi Pickering",
+            "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+            "nft_price": 2.1,
+            "nft_id": 2567,
+            "nft_name_image": "Oasis-t3",
+            "nft_description": "Em meio a imensidão azul o Oasis-t3 reina com sua beleza.",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+
+            ]
+        },
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/SzNowW.nft9.png",
+            "user_name": "Poppy Stevens",
+            "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+            "nft_price": 1.9,
+            "nft_id": 2110,
+            "nft_name_image": "Solo",
+            "nft_description": "Por mais que sozinha, sua maravilha reina.",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+
+            ]
+        },
+        {
+            "owned_by": "Propriedade de:",
+            "price": "Preço",
+            "ntf_image": "https://i.im.ge/2022/12/07/SzNFcL.nft10.png",
+            "user_name": "Isabelle Bibi",
+            "user_image": " https://i.im.ge/2022/12/07/SzNvNy.user10.jpg",
+            "nft_price": 2.9,
+            "nft_id":2409,
+            "nft_name_image": "A Caveira",
+            "nft_description": "A Caveira simboliza mudança, transformação, renovação, início de um novo ciclo.",
+            "latest_deals": [
+                {
+                   "title_latest_deals": "Últimas Ofertas"
+                },
+                {
+                    "user_name": "Thomas D. Harrington",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
+                    "nft_price": 2.4,
+                    "last_access": "2h atrás"
+                },
+                {
+                    "user_name": "Clara G. Natal",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
+                    "nft_price": 0.8,
+                    "last_access": "5h atrás"
+                },
+                {
+                    "user_name": "Niamh Noble",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
+                    "nft_price": 3.9,
+                    "last_access": "2d atrás"
+                },
+                {
+                    "user_name": "Elliot Walters",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
+                    "nft_price": 7.1,
+                    "last_access": "1h atrás"
+                },
+                {
+                    "user_name": "Yasmin Patel",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
+                    "nft_price": 9.2,
+                    "last_access": "4d atrás"
+                },
+                {
+                    "user_name": "Joel Bradshaw",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
+                    "nft_price": 3.4,
+                    "last_access": "8h atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
+                    "nft_price": 2.2,
+                    "last_access": "1d atrás"
+                },
+                {
+                    "user_name": "Holly Bryan",
+                    "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
+                    "nft_price": 5.6,
+                    "last_access": "6h atrás"
+                }
+            ]
+        }
+    ]
+}

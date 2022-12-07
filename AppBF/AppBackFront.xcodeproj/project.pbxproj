@@ -23,6 +23,8 @@
 		033F708F293DEF0F00FAC046 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F708E293DEF0F00FAC046 /* HomeCollectionViewCell.swift */; };
 		033F7091293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7090293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift */; };
 		033F7097293E2CD700FAC046 /* Login in Resources */ = {isa = PBXBuildFile; fileRef = 033F7096293E2CD700FAC046 /* Login */; };
+		033F70CC2941037300FAC046 /* NFTHomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F70CB2941037300FAC046 /* NFTHomeData.swift */; };
+		033F70CF29410C6F00FAC046 /* homeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 033F70CE29410C6F00FAC046 /* homeData.json */; };
 		343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9C28D3A07C00956373 /* AppDelegate.swift */; };
 		343B9D9F28D3A07C00956373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9E28D3A07C00956373 /* SceneDelegate.swift */; };
 		343B9DA628D3A07E00956373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343B9DA528D3A07E00956373 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		033F708E293DEF0F00FAC046 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		033F7090293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		033F7096293E2CD700FAC046 /* Login */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Login; sourceTree = "<group>"; };
+		033F70CB2941037300FAC046 /* NFTHomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTHomeData.swift; sourceTree = "<group>"; };
+		033F70CE29410C6F00FAC046 /* homeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = homeData.json; sourceTree = "<group>"; };
 		196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBackFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9928D3A07C00956373 /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9C28D3A07C00956373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			children = (
 				033F708B293D234700FAC046 /* DataTest.swift */,
 				033F707C293BE34600FAC046 /* NFTData.swift */,
+				033F70CB2941037300FAC046 /* NFTHomeData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +226,14 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		033F70CD29410C5100FAC046 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				033F70CE29410C6F00FAC046 /* homeData.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		343B9D9028D3A07C00956373 = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +255,7 @@
 		343B9D9B28D3A07C00956373 /* AppBackFront */ = {
 			isa = PBXGroup;
 			children = (
+				033F70CD29410C5100FAC046 /* Json */,
 				033F7076293BDD4D00FAC046 /* Service */,
 				033F7096293E2CD700FAC046 /* Login */,
 				033F7060293BD46600FAC046 /* TabBarController */,
@@ -337,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033F70CF29410C6F00FAC046 /* homeData.json in Resources */,
 				033F7097293E2CD700FAC046 /* Login in Resources */,
 				343B9DA928D3A07E00956373 /* LaunchScreen.storyboard in Resources */,
 				343B9DA628D3A07E00956373 /* Assets.xcassets in Resources */,
@@ -397,6 +412,7 @@
 				033F7091293DEF2D00FAC046 /* HomeCollectionViewCellScreen.swift in Sources */,
 				033F7088293CEE5000FAC046 /* HomeTableViewCellScreen.swift in Sources */,
 				033F708F293DEF0F00FAC046 /* HomeCollectionViewCell.swift in Sources */,
+				033F70CC2941037300FAC046 /* NFTHomeData.swift in Sources */,
 				033F7075293BDD2800FAC046 /* HomeViewModel.swift in Sources */,
 				033F7072293BD86E00FAC046 /* ProfileVC.swift in Sources */,
 				033F7085293CEDEC00FAC046 /* HomeTableViewCell.swift in Sources */,

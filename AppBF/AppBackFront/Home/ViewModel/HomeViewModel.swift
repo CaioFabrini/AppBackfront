@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum TypeFetch {
+    case mock
+    case request
+}
+
 protocol HomeViewModelDelegate:AnyObject {
     func success()
     func error(_message: String)
@@ -15,7 +20,7 @@ protocol HomeViewModelDelegate:AnyObject {
 class HomeViewModel {
     
     private let service: HomeService = HomeService()
-    private var nftData: [NFT]?
+    private var nftData: [NFTHomeData]?
     
     private weak var delegate: HomeViewModelDelegate?
     
@@ -23,13 +28,25 @@ class HomeViewModel {
         self.delegate = delegate
     }
 
-    public func fetch() {
-        self.service.getHome { success, error in
-            if let success = success {
-                self.nftData = (success.results ?? []).filter({$0.cachedImages != nil})
-                self.delegate?.success()
-            } else {
-                self.delegate?.error(_message: error?.localizedDescription ?? "")
+    public func fetch(_ typeFetch: TypeFetch) {
+        switch typeFetch {
+        case.mock:
+            self.service.getHomefromJson { sucess, error in
+                if let sucess = sucess {
+//                    self.nftData = sucess
+                    self.delegate?.success()
+                }else {
+                    self.delegate?.error(_message: error?.localizedDescription ?? "")
+                }
+            }
+        case.request:
+            self.service.getHome { success, error in
+                if let success = success {
+//                    self.nftData = success
+                    self.delegate?.success()
+                }else {
+                    self.delegate?.error(_message: error?.localizedDescription ?? "")
+                }
             }
         }
     }
@@ -42,21 +59,20 @@ class HomeViewModel {
         return 360
     }
     
-//    
-//   var nftTest: [NFTTest] = [NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
-//                              NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
-//                              NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:"),
-//                              NFTTest(imageNFT: "person", imageUser: "person", nameUser: "Bárbara", price: "Preço", priceValue: "2000", ownedBy: "Possuído por:")]
-//    
-//    var filterTest: [FilterName] = [FilterName(filter: "Todos"),
-//                                    FilterName(filter: "3D"),
-//                                    FilterName(filter: "Ilustração"),
-//                                    FilterName(filter: "Fotos"),
-//                                    FilterName(filter: "GIFs")]
-    
-    func loadCurrentNFT(indexPath: IndexPath) -> NFT {
-        return nftData?[indexPath.row] ?? NFT()
+    func loadCurrentNFT(indexPath: IndexPath) -> NFTHomeData {
+        return nftData?[indexPath.row] ?? NFTHomeData()
     }
     
     
 }
+
+
+//
+//self.service.getHome { success, error in
+//    if let success = success {
+//                self.nftData = (success.results ?? []).filter({$0.cachedImages != nil})
+//        self.delegate?.success()
+//    } else {
+//        self.delegate?.error(_message: error?.localizedDescription ?? "")
+//    }
+//}
