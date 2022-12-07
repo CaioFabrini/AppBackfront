@@ -57,13 +57,14 @@ class HomeTableViewCell: UITableViewCell {
 
 
 
-    public func setupHomeCell(data: NFTHomeData) {
-//        guard let url = URL(string: data.cachedImages?.tiny100_100 ?? "") else { return }
-//        self.screen.nftImageView.af.setImage(withURL: url)
-//        self.screen.userImageView.image = UIImage(named:  nameImage.randomElement() ?? "")
-//        self.screen.priceValueLabel.text = " \( Double.random(in: 0...50)) ETH"
-//        self.screen.ownedByLabel.text = "Propriedade de:"
-//        self.screen.userLabel.text = nameUser.randomElement() ?? ""
-//        self.screen.priceLabel.text = "Preço"
+    public func setupHomeCell(data: NftList) {
+        guard let urlNFT = URL(string: data.ntfImage ?? "") else { return }
+        self.screen.nftImageView.af.setImage(withURL: urlNFT)
+        guard let urlUser = URL(string: data.userImage ?? "") else { return }
+        self.screen.nftImageView.af.setImage(withURL: urlUser)
+        self.screen.priceLabel.text = data.price
+        self.screen.priceValueLabel.text = String("\(data.nftPrice ?? 0.0) ETH")
+        self.screen.ownedByLabel.text = data.ownedBy
+        self.screen.userLabel.text = data.userName
     }
 }

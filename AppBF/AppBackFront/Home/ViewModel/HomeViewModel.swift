@@ -20,7 +20,7 @@ protocol HomeViewModelDelegate:AnyObject {
 class HomeViewModel {
     
     private let service: HomeService = HomeService()
-    private var nftData: [NFTHomeData]?
+    private var nftData: [NftList]?
     
     private weak var delegate: HomeViewModelDelegate?
     
@@ -59,8 +59,8 @@ class HomeViewModel {
         return 360
     }
     
-    func loadCurrentNFT(indexPath: IndexPath) -> NFTHomeData {
-        return nftData?[indexPath.row] ?? NFTHomeData()
+    func loadCurrentNFT(indexPath: IndexPath) -> NftList {
+        return nftData?[indexPath.row] ?? NftList()
     }
     
     
