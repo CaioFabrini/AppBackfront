@@ -35,13 +35,13 @@ struct NftList: Codable {
     var nftPrice: Double?
     var nftID: Int?
     var nftNameImage, nftDescription: String?
+    var titleLatestDeals: String?
     var latestDeals: [LatestDeal]?
 
 }
 
 // MARK: - LatestDeal
 struct LatestDeal: Codable {
-    var titleLatestDeals: String?
     var userName: String?
     var userImage: String?
     var nftPrice: Double?
