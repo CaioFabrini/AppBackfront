@@ -1,9 +1,3 @@
-//
-//  NFTHomeData.swift
-//  AppBackFront
-//
-//  Created by Barbara Brigolin on 07/12/22.
-//
 
 import Foundation
 
@@ -13,6 +7,11 @@ struct NFTHomeData: Codable {
     var filterNft: [FilterNft]?
     var nftList: [NftList]?
 
+    enum CodingKeys: String, CodingKey {
+        case logoImage = "logo_image"
+        case filterNft = "filter_nft"
+        case nftList = "nft_list"
+    }
 }
 
 // MARK: - FilterNft
@@ -29,7 +28,7 @@ struct LogoImage: Codable {
 struct NftList: Codable {
     var ownedBy: String?
     var price: String?
-    var ntfImage: String?
+    var nftImage: String?
     var userName: String?
     var userImage: String?
     var nftPrice: Double?
@@ -38,6 +37,19 @@ struct NftList: Codable {
     var titleLatestDeals: String?
     var latestDeals: [LatestDeal]?
 
+    enum CodingKeys: String, CodingKey {
+        case ownedBy = "owned_by"
+        case price
+        case nftImage = "nft_image"
+        case userName = "user_name"
+        case userImage = "user_image"
+        case nftPrice = "nft_price"
+        case nftID = "nft_id"
+        case nftNameImage = "nft_name_image"
+        case nftDescription = "nft_description"
+        case titleLatestDeals = "title_latest_deals"
+        case latestDeals = "latest_deals"
+    }
 }
 
 // MARK: - LatestDeal
@@ -47,6 +59,10 @@ struct LatestDeal: Codable {
     var nftPrice: Double?
     var lastAccess: String?
 
+    enum CodingKeys: String, CodingKey {
+        case userName = "user_name"
+        case userImage = "user_image"
+        case nftPrice = "nft_price"
+        case lastAccess = "last_access"
+    }
 }
-
-

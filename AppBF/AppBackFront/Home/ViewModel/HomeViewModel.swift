@@ -20,7 +20,7 @@ protocol HomeViewModelDelegate:AnyObject {
 class HomeViewModel {
     
     private let service: HomeService = HomeService()
-    private var nftData: [NftList]?
+    private var nftData: NFTHomeData?
     
     private weak var delegate: HomeViewModelDelegate?
     
@@ -33,7 +33,7 @@ class HomeViewModel {
         case.mock:
             self.service.getHomefromJson { sucess, error in
                 if let sucess = sucess {
-//                    self.nftData = sucess
+                    self.nftData = sucess
                     self.delegate?.success()
                 }else {
                     self.delegate?.error(_message: error?.localizedDescription ?? "")
@@ -42,7 +42,7 @@ class HomeViewModel {
         case.request:
             self.service.getHome { success, error in
                 if let success = success {
-//                    self.nftData = success
+                    self.nftData = success
                     self.delegate?.success()
                 }else {
                     self.delegate?.error(_message: error?.localizedDescription ?? "")
@@ -52,27 +52,17 @@ class HomeViewModel {
     }
     
     public var numberOfRowsInSection: Int {
-        return nftData?.count ?? 0
+        return nftData?.nftList?.count ?? 0
     }
+    
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat {
         return 360
     }
     
     func loadCurrentNFT(indexPath: IndexPath) -> NftList {
-        return nftData?[indexPath.row] ?? NftList()
+        return nftData?.nftList?[indexPath.row] ?? NftList()
     }
     
     
 }
-
-
-//
-//self.service.getHome { success, error in
-//    if let success = success {
-//                self.nftData = (success.results ?? []).filter({$0.cachedImages != nil})
-//        self.delegate?.success()
-//    } else {
-//        self.delegate?.error(_message: error?.localizedDescription ?? "")
-//    }
-//}

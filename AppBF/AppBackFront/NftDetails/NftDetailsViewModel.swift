@@ -20,7 +20,7 @@ class NftDetailsViewModel {
     }
     
     var getNFTImage: String {
-        return nft.ntfImage ?? ""
+        return nft.nftImage ?? ""
     }
     
     var idNFT: Int {

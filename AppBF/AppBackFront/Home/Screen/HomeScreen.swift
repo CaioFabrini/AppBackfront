@@ -63,6 +63,11 @@ class HomeScreen: UIView {
         setupConstraints()
     }
     
+    public func logoImage(data: NFTHomeData) {
+        guard let urlLogo = URL(string: data.logoImage?.image ?? "") else { return }
+        self.logoImageView.af.setImage(withURL: urlLogo)
+    }
+    
     private func addSuperView() {
         self.addSubview(self.viewBackgraund)
         self.viewBackgraund.addSubview(self.logoImageView)

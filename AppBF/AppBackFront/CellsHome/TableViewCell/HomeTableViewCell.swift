@@ -58,10 +58,15 @@ class HomeTableViewCell: UITableViewCell {
 
 
     public func setupHomeCell(data: NftList) {
-        guard let urlNFT = URL(string: data.ntfImage ?? "") else { return }
+        guard let urlNFT = URL(string: data.nftImage ?? "") else { return }
         self.screen.nftImageView.af.setImage(withURL: urlNFT)
+        
+        
+        
+        
+        
         guard let urlUser = URL(string: data.userImage ?? "") else { return }
-        self.screen.nftImageView.af.setImage(withURL: urlUser)
+        self.screen.userImageView.af.setImage(withURL: urlUser)
         self.screen.priceLabel.text = data.price
         self.screen.priceValueLabel.text = String("\(data.nftPrice ?? 0.0) ETH")
         self.screen.ownedByLabel.text = data.ownedBy
