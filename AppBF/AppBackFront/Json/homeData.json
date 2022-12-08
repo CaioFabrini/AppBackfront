@@ -30,10 +30,8 @@
             "nft_id": 2345,
             "nft_name_image": "Cubo Mágico",
             "nft_description": "Jogo tridimensional composto por faces de cores diferentes.",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -94,10 +92,8 @@
             "nft_id": 2679,
             "nft_name_image": "Carnaval",
             "nft_description": "O momento é agora, se jogue e curta a folia.",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -141,7 +137,7 @@
                     "last_access": "1d atrás"
                 },
                 {
-                    "user_name": "Holly Bryan",
+                    "user_name": "Taylor Bryan",
                     "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
                     "nft_price": 5.6,
                     "last_access": "6h atrás"
@@ -158,10 +154,8 @@
             "nft_id": 2987,
             "nft_name_image": "Halloween",
             "nft_description": "Vista sua máscaras, corra para a sua em busca de doces ou travessuras",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -223,10 +217,8 @@
             "nft_id": 2084,
             "nft_name_image": "Liberte-se",
             "nft_description": "Liberte-se para aquilo que realmente te faz feliz, se jogue e apreveite a vida!",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -288,10 +280,8 @@
             "nft_id": 2884,
             "nft_name_image": "Vírus",
             "nft_description": "Cuidado com o todo a sua volta, com aquilo que te contamina e danifica quem você é.",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -353,10 +343,8 @@
             "nft_id": 2123,
             "nft_name_image": "Vigilante",
             "nft_description": "Atento à tudo que está ao seu redor, não deixa passar nenhum detalhe do que presencia.",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -418,10 +406,8 @@
             "nft_id": 2098,
             "nft_name_image": "Chupa-Cabra",
             "nft_description": "Diz a lenda que o temido Chupa-Cabra devastava criações de fazendeiros em meados de 1990.",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -483,10 +469,8 @@
             "nft_id": 2567,
             "nft_name_image": "Oasis-t3",
             "nft_description": "Em meio a imensidão azul o Oasis-t3 reina com sua beleza.",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -548,10 +532,8 @@
             "nft_id": 2110,
             "nft_name_image": "Solo",
             "nft_description": "Por mais que sozinha, sua maravilha reina.",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -613,10 +595,8 @@
             "nft_id":2409,
             "nft_name_image": "A Caveira",
             "nft_description": "A Caveira simboliza mudança, transformação, renovação, início de um novo ciclo.",
+            "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
-                {
-                   "title_latest_deals": "Últimas Ofertas"
-                },
                 {
                     "user_name": "Thomas D. Harrington",
                     "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -669,3 +649,4 @@
         }
     ]
 }
+
