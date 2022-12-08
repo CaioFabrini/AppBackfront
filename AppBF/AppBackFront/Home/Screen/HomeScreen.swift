@@ -103,12 +103,12 @@ class HomeScreen: UIView {
             self.viewBackgraund.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
             self.viewBackgraund.heightAnchor.constraint(equalToConstant: 220),
             
-            self.logoImageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 40),
+            self.logoImageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 45),
             self.logoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
             self.logoImageView.heightAnchor.constraint(equalToConstant: 40),
             self.logoImageView.widthAnchor.constraint(equalToConstant: 40),
             
-            self.searchBar.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 15),
+            self.searchBar.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 10),
             self.searchBar.leadingAnchor.constraint(equalTo: self.logoImageView.leadingAnchor),
             self.searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -24),
             self.searchBar.heightAnchor.constraint(equalToConstant: 46),
@@ -124,5 +124,4 @@ class HomeScreen: UIView {
             self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         ])
     }
-    
 }

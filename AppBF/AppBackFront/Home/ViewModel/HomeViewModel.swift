@@ -20,7 +20,8 @@ protocol HomeViewModelDelegate:AnyObject {
 class HomeViewModel {
     
     private let service: HomeService = HomeService()
-    private var nftData: NFTHomeData?
+    private var getNftData: NFTHomeData?
+    private var searchNftData: NFTHomeData?
     
     private weak var delegate: HomeViewModelDelegate?
     
@@ -31,9 +32,10 @@ class HomeViewModel {
     public func fetch(_ typeFetch: TypeFetch) {
         switch typeFetch {
         case.mock:
-            self.service.getHomefromJson { sucess, error in
-                if let sucess = sucess {
-                    self.nftData = sucess
+            self.service.getHomefromJson { success, error in
+                if let success = success {
+                    self.getNftData = success
+                    self.searchNftData = success
                     self.delegate?.success()
                 }else {
                     self.delegate?.error(_message: error?.localizedDescription ?? "")
@@ -42,7 +44,8 @@ class HomeViewModel {
         case.request:
             self.service.getHome { success, error in
                 if let success = success {
-                    self.nftData = success
+                    self.getNftData = success
+                    self.searchNftData = success
                     self.delegate?.success()
                 }else {
                     self.delegate?.error(_message: error?.localizedDescription ?? "")
@@ -52,7 +55,7 @@ class HomeViewModel {
     }
     
     public var numberOfRowsInSection: Int {
-        return nftData?.nftList?.count ?? 0
+        return searchNftData?.nftList?.count ?? 0
     }
     
     
@@ -61,8 +64,16 @@ class HomeViewModel {
     }
     
     func loadCurrentNFT(indexPath: IndexPath) -> NftList {
-        return nftData?.nftList?[indexPath.row] ?? NftList()
+        return searchNftData?.nftList?[indexPath.row] ?? NftList()
     }
     
-    
+    public func filterContentForSearchText(_ searchText: String) {
+        if searchText == "" {
+            self.searchNftData?.nftList = getNftData?.nftList
+        } else {
+            self.searchNftData?.nftList = getNftData?.nftList?.filter({ (nft: NftList) -> Bool in
+                return nft.userName?.lowercased().contains(searchText.lowercased()) ?? false
+            })
+        }
+    }
 }
