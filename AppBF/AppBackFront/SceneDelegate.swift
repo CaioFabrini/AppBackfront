@@ -91,7 +91,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             LatestDeal(userName: "Taylor Bryan",userImage: "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",nftPrice: 5.6,lastAccess: "6h atrás"),
         ]
         
-        var nftList = NftList(ownedBy: "Propriedade de:", price: "Preço")
+        var nftList = NftList(ownedBy: "Propriedade de:", price: "Preço", ntfImage: "https://i.im.ge/2022/12/07/SzmW0K.nft1.png")
         
         let vc: NftDetailsVC = NftDetailsVC(nft: nftList)
         

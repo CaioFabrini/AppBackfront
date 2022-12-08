@@ -14,14 +14,14 @@ class NftDetailsScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        //        register
+        tableView.register(NftImageCell.self, forCellReuseIdentifier: NftImageCell.identifier)
         return tableView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(tableView)
-        self.setNeedsUpdateConstraints()
+        self.congigContrainsts()
     }
     
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){

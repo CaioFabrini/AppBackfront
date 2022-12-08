@@ -36,6 +36,8 @@
 		3F18C2282942210100047FF1 /* NftDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C2272942210100047FF1 /* NftDetailsVC.swift */; };
 		3F18C22B2942213200047FF1 /* NftDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C22A2942213200047FF1 /* NftDetailsViewModel.swift */; };
 		3F18C22E2942215000047FF1 /* NftDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C22D2942215000047FF1 /* NftDetailsScreen.swift */; };
+		3F18C23429423F1800047FF1 /* NftImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C23329423F1800047FF1 /* NftImageCell.swift */; };
+		3F18C23629423F5500047FF1 /* NftImageCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C23529423F5500047FF1 /* NftImageCellScreen.swift */; };
 		BD25D88990F7828E54D824E8 /* Pods_AppBackFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		3F18C2272942210100047FF1 /* NftDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailsVC.swift; sourceTree = "<group>"; };
 		3F18C22A2942213200047FF1 /* NftDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailsViewModel.swift; sourceTree = "<group>"; };
 		3F18C22D2942215000047FF1 /* NftDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailsScreen.swift; sourceTree = "<group>"; };
+		3F18C23329423F1800047FF1 /* NftImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftImageCell.swift; sourceTree = "<group>"; };
+		3F18C23529423F5500047FF1 /* NftImageCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftImageCellScreen.swift; sourceTree = "<group>"; };
 		955D46207F36A7BF3BF11B9D /* Pods-AppBackFront.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.release.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.release.xcconfig"; sourceTree = "<group>"; };
 		D978E33D6189D8D932ED539F /* Pods-AppBackFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.debug.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -328,8 +332,9 @@
 		3F18C226294220C500047FF1 /* NftDetails */ = {
 			isa = PBXGroup;
 			children = (
-				3F18C22F294226DA00047FF1 /* VC */,
+				3F18C23029423D4400047FF1 /* Cells */,
 				3F18C2292942211300047FF1 /* NftDetailsViewModel */,
+				3F18C22F294226DA00047FF1 /* VC */,
 				3F18C22C2942213E00047FF1 /* Screen */,
 			);
 			path = NftDetails;
@@ -357,6 +362,31 @@
 				3F18C2272942210100047FF1 /* NftDetailsVC.swift */,
 			);
 			name = VC;
+			sourceTree = "<group>";
+		};
+		3F18C23029423D4400047FF1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3F18C23129423D8600047FF1 /* NftImageCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		3F18C23129423D8600047FF1 /* NftImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				3F18C23329423F1800047FF1 /* NftImageCell.swift */,
+				3F18C23229423EDF00047FF1 /* Screen */,
+			);
+			name = NftImageCell;
+			sourceTree = "<group>";
+		};
+		3F18C23229423EDF00047FF1 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3F18C23529423F5500047FF1 /* NftImageCellScreen.swift */,
+			);
+			name = Screen;
 			sourceTree = "<group>";
 		};
 		B2BF8648247392BAC385C1F4 /* Pods */ = {
@@ -496,6 +526,7 @@
 				343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */,
 				033F7153294124C400FAC046 /* HomeTableViewCellScreen.swift in Sources */,
 				343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */,
+				3F18C23429423F1800047FF1 /* NftImageCell.swift in Sources */,
 				033F7154294124C400FAC046 /* WalletVC.swift in Sources */,
 				033F7150294124C400FAC046 /* HomeCollectionViewCell.swift in Sources */,
 				3F18C22E2942215000047FF1 /* NftDetailsScreen.swift in Sources */,
@@ -508,6 +539,7 @@
 				343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */,
 				033F7155294124C400FAC046 /* ProfileVC.swift in Sources */,
 				3F18C1C9293CD72B00047FF1 /* Alert.swift in Sources */,
+				3F18C23629423F5500047FF1 /* NftImageCellScreen.swift in Sources */,
 				033F7158294124C400FAC046 /* HomeService.swift in Sources */,
 				033F715D294124C400FAC046 /* String.swift in Sources */,
 				033F714C294124C400FAC046 /* DataTest.swift in Sources */,

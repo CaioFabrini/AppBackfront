@@ -29,11 +29,14 @@ class NftDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.screen?.configTableViewProtocols(delegate: self, dataSource: self)
-        view.backgroundColor = .red
     }
 
 }
-extension NftDetailsVC: UITableViewDelegate { }
+extension NftDetailsVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRowAt(indexPath: indexPath)
+    }
+}
 
 extension NftDetailsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,10 +44,11 @@ extension NftDetailsVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: NftImageCell.identifier, for: indexPath) as? NftImageCell
+        cell?.setupCell(data: viewModel.getNFTImage)
+        
+        return cell ?? UITableViewCell()
     }
     
-    
-    
-    
+ 
 }

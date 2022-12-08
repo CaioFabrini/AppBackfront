@@ -16,7 +16,7 @@ class NftDetailsViewModel {
     }
     
     var numberOfRowsInSection: Int {
-        return 2
+        return 1
     }
     
     var getNFTImage: String {
@@ -27,6 +27,12 @@ class NftDetailsViewModel {
         return nft.nftID ?? 0
     }
     
+   
     
+    public func heightForRowAt(indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
+
     
 }
