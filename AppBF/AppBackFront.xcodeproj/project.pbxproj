@@ -139,8 +139,8 @@
 		033F712F294124C400FAC046 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				033F7130294124C400FAC046 /* HomeCollectionViewCell.swift */,
 				033F7131294124C400FAC046 /* Screen */,
+				033F7130294124C400FAC046 /* HomeCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";

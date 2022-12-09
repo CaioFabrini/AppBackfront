@@ -47,7 +47,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         ])
     }
     
-    public func setupCollectionCell(data: FilterName) {
-        self.screen.filterLabel.text = data.filter
+    public func setupCollectionCell(data: FilterNft) {
+        self.screen.filterLabel.text = data.title
     }
 }

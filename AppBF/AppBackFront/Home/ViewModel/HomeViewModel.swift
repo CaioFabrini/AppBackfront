@@ -76,4 +76,17 @@ class HomeViewModel {
             })
         }
     }
+    
+    public var numberOfRowsInSectionCollection: Int {
+        return getNftData?.filterNft?.count ?? 0
+    }
+    
+    func loadFilter(indexPath: IndexPath) -> FilterNft {
+        return getNftData?.filterNft?[indexPath.row] ?? FilterNft()
+    }
+    
+    public func heightForRowAtCollection(indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 110, height: 60)
+    }
 }
+
