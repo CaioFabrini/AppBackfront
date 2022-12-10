@@ -15,6 +15,7 @@ class NftDetailsScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.register(NftImageCell.self, forCellReuseIdentifier: NftImageCell.identifier)
+        tableView.register(DescriptionTableViewCell.self, forCellReuseIdentifier: DescriptionTableViewCell.identifier)
         return tableView
     }()
     

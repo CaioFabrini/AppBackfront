@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum NameCell: Int {
+    case nftImage = 0
+    case descripition = 1
+}
+
 class NftDetailsVC: UIViewController {
     
     var viewModel: NftDetailsViewModel
@@ -44,11 +49,21 @@ extension NftDetailsVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NftImageCell.identifier, for: indexPath) as? NftImageCell
-        cell?.setupCell(data: viewModel.getNFTImage)
+        switch NameCell(rawValue: indexPath.row) {
+        case .nftImage:
+            let cell = tableView.dequeueReusableCell(withIdentifier: NftImageCell.identifier, for: indexPath) as? NftImageCell
+            cell?.setupCell(data: viewModel.getNFTImage)
+            
+            return cell ?? UITableViewCell()
+        case .descripition:
+            let cell = tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.identifier, for:  indexPath) as? DescriptionTableViewCell
+           
+            
+            return cell ?? UITableViewCell()
+        default:
+            return UITableViewCell()
         
-        return cell ?? UITableViewCell()
+        }
     }
-    
  
 }

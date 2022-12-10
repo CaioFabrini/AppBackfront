@@ -7,32 +7,40 @@
 
 import UIKit
 
+
+
 class NftDetailsViewModel {
     
-   private var nft: NftList
+    private var nft: NftList
     
     init(nft: NftList) {
         self.nft = nft
     }
     
-    var numberOfRowsInSection: Int {
-        return 1
+    public var numberOfRowsInSection: Int {
+        return 2
     }
     
-    var getNFTImage: String {
+    public var getNFTImage: String {
         return nft.ntfImage ?? ""
     }
     
-    var idNFT: Int {
+    public var idNFT: Int {
         return nft.nftID ?? 0
     }
     
-   
+    
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat {
-        return 150
+        switch NameCell(rawValue: indexPath.row){
+        case .nftImage:
+            return 170
+        case .descripition:
+            return 120
+        default:
+            return 0
+            
+        }
     }
-    
-
     
 }
