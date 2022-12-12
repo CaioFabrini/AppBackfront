@@ -57,7 +57,7 @@ extension NftDetailsVC: UITableViewDataSource {
             return cell ?? UITableViewCell()
         case .descripition:
             let cell = tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.identifier, for:  indexPath) as? DescriptionTableViewCell
-           
+            cell?.setupCell(id: viewModel.idNFT, title: viewModel.titleLabel, description: viewModel.descriptionLabel)
             
             return cell ?? UITableViewCell()
         default:

@@ -91,7 +91,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             LatestDeal(userName: "Taylor Bryan",userImage: "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",nftPrice: 5.6,lastAccess: "6h atrás"),
         ]
         
-        var nftList = NftList(ownedBy: "Propriedade de:", price: "Preço", ntfImage: "https://i.im.ge/2022/12/07/SzmW0K.nft1.png")
+//        public var idNFT: Int {
+//            return nft.nftID ?? 0
+//        }
+//
+//        public var titleLabel: String {
+//            return nft.titleLatestDeals ?? ""
+//        }
+//
+//        public var descriptionLabel: String{
+//            return nft.nftDescription ?? ""
+//        }
+//
+        var nftList = NftList(ownedBy: "Propriedade de:", price: "Preço", ntfImage: "https://i.im.ge/2022/12/07/SzmW0K.nft1.png", nftID: 2345, nftDescription:  "Jogo tridimensional composto por faces de cores diferentes.", titleLatestDeals: "Últimas Ofertas")
         
         let vc: NftDetailsVC = NftDetailsVC(nft: nftList)
         

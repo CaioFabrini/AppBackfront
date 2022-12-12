@@ -29,14 +29,20 @@ class NftDetailsViewModel {
         return nft.nftID ?? 0
     }
     
+    public var titleLabel: String {
+        return nft.titleLatestDeals ?? ""
+    }
     
+    public var descriptionLabel: String{
+        return nft.nftDescription ?? ""
+    }
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat {
         switch NameCell(rawValue: indexPath.row){
         case .nftImage:
             return 170
         case .descripition:
-            return 120
+            return 130
         default:
             return 0
             

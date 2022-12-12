@@ -13,7 +13,7 @@ class DescriptionCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .purple
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 24)
         label.text = ""
         return label
     }()
@@ -22,7 +22,7 @@ class DescriptionCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 25)
+        label.font = UIFont.boldSystemFont(ofSize: 30)
         label.text = ""
         return label
     }()
@@ -32,6 +32,7 @@ class DescriptionCellScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.text = ""
+        label.numberOfLines = 0
         return label
     }()
     
@@ -56,14 +57,14 @@ class DescriptionCellScreen: UIView {
             self.idLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.idLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             
-            self.titleLabel.topAnchor.constraint(equalTo: self.idLabel.topAnchor, constant: 20),
+            self.titleLabel.topAnchor.constraint(equalTo: self.idLabel.bottomAnchor, constant: 5),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.idLabel.leadingAnchor),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.idLabel.trailingAnchor),
-            
-            self.descriptionLabel.topAnchor.constraint(equalTo: self.titleLabel.topAnchor, constant: 20),
+//
+            self.descriptionLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 5),
             self.descriptionLabel.leadingAnchor.constraint(equalTo: self.idLabel.leadingAnchor),
             self.descriptionLabel.trailingAnchor.constraint(equalTo: self.idLabel.trailingAnchor)
-            
+//
         ])
     }
     

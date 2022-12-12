@@ -29,14 +29,12 @@ class DescriptionTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setupCell(data: String) {
-        
-       
-//        self.screen.idLabel.text = String("#\(data.nftID)")
-////        self.screen.titleLabel.text = data.titleLatestDeals
-////        self.screen.descriptionLabel.text = data.nftDescription
+    public func setupCell(id: Int, title: String, description: String) {
+        self.screen.idLabel.text = String ("#\(id)")
+        self.screen.titleLabel.text = title
+        self.screen.descriptionLabel.text = description
     }
-//
+
     private func configContrainsts(){
         NSLayoutConstraint.activate([
             
