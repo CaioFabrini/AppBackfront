@@ -23,6 +23,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "illustration",
             "nft_image": "https://i.im.ge/2022/12/07/SzmW0K.nft1.png",
             "user_name": "Mason Yates",
             "user_image": "https://i.im.ge/2022/12/07/SzNVML.user1.jpg",
@@ -85,6 +86,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "3D",
             "nft_image": "https://i.im.ge/2022/12/07/Sz6dj4.nft2.png",
             "user_name": "Daisy Watkins",
             "user_image": "https://i.im.ge/2022/12/07/SzNZgc.user2.jpg",
@@ -147,6 +149,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "illustration",
             "nft_image": "https://i.im.ge/2022/12/07/Sz6hym.nft3.png",
             "user_name": "Kieran Simpson",
             "user_image": "https://i.im.ge/2022/12/07/SzNRr0.user3.jpg",
@@ -210,6 +213,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "3D",
             "nft_image": "https://i.im.ge/2022/12/07/Sz6yaa.nft4.png",
             "user_name": "Louis Douglas",
             "user_image": "https://i.im.ge/2022/12/07/SzNW5T.user4.jpg",
@@ -273,6 +277,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "pictures",
             "nft_image": "https://i.im.ge/2022/12/07/Sz6ghK.nft5.png",
             "user_name": "Mohammed Greenwood",
             "user_image": "https://i.im.ge/2022/12/07/SzNgVW.user5.jpg",
@@ -336,6 +341,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "gfis",
             "nft_image": "https://i.im.ge/2022/12/07/Sz6zwD.nft6.png",
             "user_name": "Rhys Cunningham",
             "user_image": "https://i.im.ge/2022/12/07/SzNfDG.user6.jpg",
@@ -399,6 +405,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "pictures",
             "nft_image": "https://i.im.ge/2022/12/07/Sz6Jiq.nft7.png",
             "user_name": "Aaliyah Gardiner",
             "user_image": "https://i.im.ge/2022/12/07/SzNkEx.user7.jpg",
@@ -462,6 +469,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "gfis",
             "nft_image": "https://i.im.ge/2022/12/07/Sz64GP.nft8.png",
             "user_name": "Demi Pickering",
             "user_image": "https://i.im.ge/2022/12/07/SzNzJa.user8.jpg",
@@ -525,6 +533,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "3D",
             "nft_image": "https://i.im.ge/2022/12/07/SzNowW.nft9.png",
             "user_name": "Poppy Stevens",
             "user_image": "https://i.im.ge/2022/12/07/SzNpSJ.user9.jpg",
@@ -588,6 +597,7 @@
         {
             "owned_by": "Propriedade de:",
             "price": "Preço",
+            "type": "illustration",
             "nft_image": "https://i.im.ge/2022/12/07/SzNFcL.nft10.png",
             "user_name": "Isabelle Bibi",
             "user_image": " https://i.im.ge/2022/12/07/SzNvNy.user10.jpg",
@@ -649,4 +659,5 @@
         }
     ]
 }
+
 

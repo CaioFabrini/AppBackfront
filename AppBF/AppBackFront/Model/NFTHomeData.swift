@@ -28,6 +28,7 @@ struct LogoImage: Codable {
 struct NftList: Codable {
     var ownedBy: String?
     var price: String?
+    var type: String?
     var nftImage: String?
     var userName: String?
     var userImage: String?
@@ -39,7 +40,7 @@ struct NftList: Codable {
 
     enum CodingKeys: String, CodingKey {
         case ownedBy = "owned_by"
-        case price
+        case price, type
         case nftImage = "nft_image"
         case userName = "user_name"
         case userImage = "user_image"
@@ -66,3 +67,5 @@ struct LatestDeal: Codable {
         case lastAccess = "last_access"
     }
 }
+
+
