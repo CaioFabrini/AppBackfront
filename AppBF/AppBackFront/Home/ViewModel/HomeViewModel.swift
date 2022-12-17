@@ -73,23 +73,6 @@ class HomeViewModel {
         return searchNftData?.nftList?[indexPath.row] ?? NftList()
     }
     
-    public func filterContentForSearchText(_ searchText: String) {
-        if searchText == "" {
-            self.searchNftData?.nftList = getNftData?.nftList
-        } else {
-            self.searchNftData?.nftList = getNftData?.nftList?.filter({ (nft: NftList) -> Bool in
-                if let typeFilter = typeFilter {
-                    if typeFilter == "Todos" {
-                        return nft.userName?.lowercased().contains(searchText.lowercased()) ?? false
-                    } else {
-                        return (nft.userName?.lowercased().contains(searchText.lowercased()) ?? false) && (nft.type == typeFilter)
-                    }
-                }
-                return nft.userName?.lowercased().contains(searchText.lowercased()) ?? false
-            })
-        }
-    }
-    
     public var numberOfRowsInSectionCollection: Int {
         return searchNftData?.filterNft?.count ?? 0
     }
@@ -102,7 +85,7 @@ class HomeViewModel {
         return CGSize(width: 110, height: 60)
     }
     
-    public func setFilter(indexPath: IndexPath) {
+    public func setFilter(indexPath: IndexPath, searchText: String) {
         var filterNFT: [FilterNft] = []
         for (indices,value) in (searchNftData?.filterNft ?? []).enumerated() {
             var type = value
@@ -114,6 +97,27 @@ class HomeViewModel {
             filterNFT.append(type)
         }
         searchNftData?.filterNft = filterNFT
+        filterContentForSearchText(searchText)
+    }
+    
+    public func filterContentForSearchText(_ searchText: String) {
+        
+        guard let typeFilter else { return }
+        var nftList: [NftList] = []
+        
+        if typeFilter == "Todos" {
+            nftList = getNftData?.nftList ?? []
+        } else {
+            nftList = getNftData?.nftList?.filter({$0.type == typeFilter}) ?? []
+        }
+        
+        if searchText == "" {
+            self.searchNftData?.nftList = nftList
+        } else {
+            self.searchNftData?.nftList = nftList.filter({ (nft: NftList) -> Bool in
+                return nft.userName?.lowercased().contains(searchText.lowercased()) ?? false
+            })
+        }
     }
     
     
