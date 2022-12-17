@@ -17,6 +17,8 @@ struct NFTHomeData: Codable {
 // MARK: - FilterNft
 struct FilterNft: Codable {
     var title: String?
+    var isSelected: Bool?
+    var id: Int?
 }
 
 // MARK: - LogoImage

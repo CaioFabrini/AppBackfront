@@ -24,6 +24,7 @@ class HomeViewModel {
     private var searchNftData: NFTHomeData?
     
     private weak var delegate: HomeViewModelDelegate?
+//    private var typeFilter: String?
     
     public func delegate(delegate: HomeViewModelDelegate?) {
         self.delegate = delegate
@@ -54,6 +55,11 @@ class HomeViewModel {
         }
     }
     
+    var typeFilter: String? {
+        // TO DO: SUBSTITUIR POR ID
+        return searchNftData?.filterNft?.first(where: {$0.isSelected == true})?.title
+    }
+    
     public var numberOfRowsInSection: Int {
         return searchNftData?.nftList?.count ?? 0
     }
@@ -72,21 +78,40 @@ class HomeViewModel {
             self.searchNftData?.nftList = getNftData?.nftList
         } else {
             self.searchNftData?.nftList = getNftData?.nftList?.filter({ (nft: NftList) -> Bool in
+                if let typeFilter = typeFilter {
+                    if typeFilter == "Todos" {
+                        return nft.userName?.lowercased().contains(searchText.lowercased()) ?? false
+                    } else {
+                        return (nft.userName?.lowercased().contains(searchText.lowercased()) ?? false) && (nft.type == typeFilter)
+                    }
+                }
                 return nft.userName?.lowercased().contains(searchText.lowercased()) ?? false
             })
         }
     }
     
     public var numberOfRowsInSectionCollection: Int {
-        return getNftData?.filterNft?.count ?? 0
+        return searchNftData?.filterNft?.count ?? 0
     }
     
     func loadFilter(indexPath: IndexPath) -> FilterNft {
-        return getNftData?.filterNft?[indexPath.row] ?? FilterNft()
+        return searchNftData?.filterNft?[indexPath.row] ?? FilterNft()
     }
     
     public func heightForRowAtCollection(indexPath: IndexPath) -> CGSize {
         return CGSize(width: 110, height: 60)
+    }
+    
+    public func setFilter(indexPath: IndexPath) {
+        for indices in (getNftData?.filterNft ?? []).indices {
+            if indices == indexPath.row {
+                getNftData?.filterNft?[indexPath.row].isSelected = true
+                searchNftData?.filterNft?[indexPath.row].isSelected = true
+            } else {
+                getNftData?.filterNft?[indexPath.row].isSelected = false
+                searchNftData?.filterNft?[indexPath.row].isSelected = false
+            }
+        }
     }
 }
 

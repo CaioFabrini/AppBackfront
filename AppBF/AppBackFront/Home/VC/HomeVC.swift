@@ -9,11 +9,9 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    
     var homeScreen: HomeScreen?
     let viewModel: HomeViewModel = HomeViewModel()
     
-
     override func loadView() {
         self.homeScreen = HomeScreen()
         self.view = homeScreen
@@ -22,8 +20,8 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
-        self.viewModel.fetch(.request)
         self.signatureDelegate()
+        self.viewModel.fetch(.mock)
         self.homeScreen?.configSearchBarDelegate(delegate: self)
     }
     
@@ -83,7 +81,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSectionCollection
-
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -94,7 +91,12 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return viewModel.heightForRowAtCollection(indexPath: indexPath)
-
+   }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.setFilter(indexPath: indexPath)
+        homeScreen?.searchBar.text = ""
+        homeScreen?.tableView.reloadData()
     }
 
 }

@@ -49,5 +49,10 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     public func setupCollectionCell(data: FilterNft) {
         self.screen.filterLabel.text = data.title
+        if data.isSelected ?? false {
+            screen.filterLabel.backgroundColor = .purple
+        } else {
+            screen.filterLabel.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
+        }
     }
 }

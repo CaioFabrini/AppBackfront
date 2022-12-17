@@ -4,19 +4,29 @@
     },
     "filter_nft": [
         {
-            "title": "Todos"
+            "title": "Todos",
+            "id": 0,
+            "isSelected": true
         },
         {
-            "title": "3D"
+            "title": "3D",
+            "id": 1,
+            "isSelected": false
         },
         {
-            "title": "Ilustração"
+            "title": "Ilustração",
+            "id": 2,
+            "isSelected": false
         },
         {
-            "title": "Fotos"
+            "title": "Fotos",
+            "id": 3,
+            "isSelected": false
         },
         {
-            "title": "GFIs"
+            "title": "GFIs",
+            "id": 4,
+            "isSelected": false
         }
     ],
     "nft_list": [
