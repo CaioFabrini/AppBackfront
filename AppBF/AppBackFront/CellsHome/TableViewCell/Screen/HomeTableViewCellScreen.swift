@@ -48,7 +48,7 @@ class HomeTableViewCellScreen: UIView {
         image.backgroundColor = .white
         image.clipsToBounds = true
         image.layer.cornerRadius = 24
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         return image
     }()
     

@@ -7,17 +7,12 @@
 
 import UIKit
 
-enum HomeCollectionViewCellString: String {
-    case identifier = "HomeCollectionViewCell"
-}
-
 class HomeCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = HomeCollectionViewCellString.identifier.rawValue
+    static let identifier = String(describing: HomeCollectionViewCell.self)
     
     lazy var screen: HomeCollectionViewCellScreen = {
         let view = HomeCollectionViewCellScreen()
-//        view.delegate(delegate: self.delegate)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .none
         return view
@@ -39,7 +34,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     private func setUpConstraintsScreenCell() {
         NSLayoutConstraint.activate([
-            
             self.screen.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.screen.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
             self.screen.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),

@@ -21,7 +21,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         self.signatureDelegate()
-        self.viewModel.fetch(.mock)
+        self.viewModel.fetch(.request)
         self.homeScreen?.configSearchBarDelegate(delegate: self)
     }
     
@@ -95,9 +95,9 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.setFilter(indexPath: indexPath, searchText: homeScreen?.searchBar.text ?? "")
-//        homeScreen?.searchBar.text = ""
         homeScreen?.tableView.reloadData()
         homeScreen?.collectionView.reloadData()
+        homeScreen?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         homeScreen?.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 

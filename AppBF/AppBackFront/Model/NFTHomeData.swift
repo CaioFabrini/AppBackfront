@@ -30,7 +30,7 @@ struct LogoImage: Codable {
 struct NftList: Codable {
     var ownedBy: String?
     var price: String?
-    var type: String?
+    var type: Int?
     var nftImage: String?
     var userName: String?
     var userImage: String?

@@ -24,7 +24,6 @@ class HomeViewModel {
     private var searchNftData: NFTHomeData?
     
     private weak var delegate: HomeViewModelDelegate?
-//    private var typeFilter: String?
     
     public func delegate(delegate: HomeViewModelDelegate?) {
         self.delegate = delegate
@@ -32,7 +31,7 @@ class HomeViewModel {
 
     public func fetch(_ typeFetch: TypeFetch) {
         switch typeFetch {
-        case.mock:
+        case .mock:
             self.service.getHomefromJson { success, error in
                 if let success = success {
                     self.getNftData = success
@@ -42,7 +41,7 @@ class HomeViewModel {
                     self.delegate?.error(_message: error?.localizedDescription ?? "")
                 }
             }
-        case.request:
+        case .request:
             self.service.getHome { success, error in
                 if let success = success {
                     self.getNftData = success
@@ -55,9 +54,8 @@ class HomeViewModel {
         }
     }
     
-    var typeFilter: String? {
-        // TO DO: SUBSTITUIR POR ID
-        return searchNftData?.filterNft?.first(where: {$0.isSelected == true})?.title
+    var typeFilter: Int? {
+        return searchNftData?.filterNft?.first(where: {$0.isSelected == true})?.id
     }
     
     public var numberOfRowsInSection: Int {
@@ -102,13 +100,12 @@ class HomeViewModel {
     
     public func filterContentForSearchText(_ searchText: String) {
         
-        guard let typeFilter else { return }
         var nftList: [NftList] = []
         
-        if typeFilter == "Todos" {
+        if self.typeFilter == 0  /* o zero significa todos */ {
             nftList = getNftData?.nftList ?? []
         } else {
-            nftList = getNftData?.nftList?.filter({$0.type == typeFilter}) ?? []
+            nftList = getNftData?.nftList?.filter({$0.type == typeFilter ?? 0}) ?? []
         }
         
         if searchText == "" {

@@ -8,13 +8,9 @@ import Foundation
 import UIKit
 import AlamofireImage
 
-enum HomeTableViewCellString: String {
-    case identifier = "HomeTableViewCell"
-}
-
 class HomeTableViewCell: UITableViewCell {
     
-    static let identifier: String = HomeTableViewCellString.identifier.rawValue
+    static let identifier: String = String(describing: HomeTableViewCell.self)
     
     weak private var delegate: HomeTableViewCellScreenProtocol?
     
@@ -32,7 +28,6 @@ class HomeTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         addSubView()
         setUpConstraintsScreenCell()
     }
@@ -54,14 +49,13 @@ class HomeTableViewCell: UITableViewCell {
         ])
     }
     
-
-
-
     public func setupHomeCell(data: NftList) {
         guard let urlNFT = URL(string: data.nftImage ?? "") else { return }
-        self.screen.nftImageView.af.setImage(withURL: urlNFT)
+        self.screen.nftImageView.af.setImage(withURL: urlNFT, placeholderImage: UIImage(named: "threeButtons"))
+        self.screen.nftImageView.backgroundColor = .white
         guard let urlUser = URL(string: data.userImage ?? "") else { return }
-        self.screen.userImageView.af.setImage(withURL: urlUser)
+        self.screen.userImageView.af.setImage(withURL: urlUser, placeholderImage: UIImage(systemName: "person.circle.fill")?.withTintColor(.black))
+        self.screen.userImageView.backgroundColor = .white
         self.screen.priceLabel.text = data.price
         self.screen.priceValueLabel.text = String("\(data.nftPrice ?? 0.0) ETH")
         self.screen.ownedByLabel.text = data.ownedBy
