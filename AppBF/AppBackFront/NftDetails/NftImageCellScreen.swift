@@ -7,8 +7,38 @@
 
 import UIKit
 
+protocol ButtonsScreenProtocol: AnyObject {
+    func actionXButton()
+    func actionLupaButton()
+}
+
 class NftImageCellScreen: UIView {
     
+    private weak var delegate: ButtonsScreenProtocol?
+    
+    func delegate(delegate: ButtonsScreenProtocol){
+        self.delegate = delegate
+    }
+    
+    lazy var xButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(self.tappedXButton), for: .touchUpInside)
+        button.setImage(UIImage(named: "fechar"), for: .normal)
+        return button
+    }()
+    
+    lazy var lupaButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(self.actionLupaButton), for: .touchUpInside)
+        button.setImage(UIImage(named: "lupa"), for: .normal)
+
+        return button
+    }()
+
     lazy var nftImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -17,26 +47,21 @@ class NftImageCellScreen: UIView {
         return image
     }()
     
-    lazy var lupaImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "fechar")
-        return image
-    }()
-    
-    lazy var fecharImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "lupa")
-        return image
-    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(nftImageView)
-        self.nftImageView.addSubview(fecharImageView)
-        self.nftImageView.addSubview(lupaImageView)
+        addSubview(xButton)
+        addSubview(lupaButton)
         self.configContrainsts()
+    }
+    
+    @objc private func tappedXButton() {
+        self.delegate?.actionXButton()
+    }
+    
+    @objc private func actionLupaButton() {
+        self.delegate?.actionLupaButton()
     }
     
     required init?(coder: NSCoder) {
@@ -51,19 +76,15 @@ class NftImageCellScreen: UIView {
             nftImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             nftImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            
-            lupaImageView.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 30),
-            lupaImageView.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            lupaImageView.heightAnchor.constraint(equalToConstant: 20),
-            lupaImageView.widthAnchor.constraint(equalToConstant: 20),
-
-            
-            
-            fecharImageView.bottomAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: -30),
-            fecharImageView.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            fecharImageView.heightAnchor.constraint(equalToConstant: 20),
-            fecharImageView.widthAnchor.constraint(equalToConstant: 20)
-            
+            xButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 30),
+            xButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
+            xButton.heightAnchor.constraint(equalToConstant: 20),
+            xButton.widthAnchor.constraint(equalToConstant: 20),
+                        
+            lupaButton.bottomAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: -30),
+            lupaButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
+            lupaButton.heightAnchor.constraint(equalToConstant: 20),
+            lupaButton.widthAnchor.constraint(equalToConstant: 20)
         ])
     }
     

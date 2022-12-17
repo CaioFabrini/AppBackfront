@@ -12,7 +12,7 @@ class DescriptionCellScreen: UIView {
     lazy var idLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .purple
+        label.textColor = UIColor(red: 240/255, green: 156/255, blue: 248/255, alpha: 1)
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.text = ""
         return label

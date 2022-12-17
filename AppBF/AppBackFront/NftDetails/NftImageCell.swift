@@ -22,7 +22,8 @@ class NftImageCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
-        self.addSubview(screen)
+        self.screen.delegate(delegate: self)
+        self.contentView.addSubview(screen)
         self.configContrainsts()
     }
     
@@ -46,4 +47,13 @@ class NftImageCell: UITableViewCell {
         ])
     }
     
+}
+extension NftImageCell: ButtonsScreenProtocol {
+    func actionXButton() {
+        print("Apertei encerrar")
+    }
+    
+    func actionLupaButton() {
+        print("Apertei a lupa")
+    }
 }
