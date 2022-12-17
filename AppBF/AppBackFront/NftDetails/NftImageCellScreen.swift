@@ -75,7 +75,7 @@ class NftImageCellScreen: UIView {
             nftImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             nftImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             nftImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
+
             xButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 30),
             xButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
             xButton.heightAnchor.constraint(equalToConstant: 20),

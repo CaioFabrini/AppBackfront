@@ -16,6 +16,7 @@ class NftDetailsScreen: UIView {
         tableView.separatorStyle = .none
         tableView.register(NftImageCell.self, forCellReuseIdentifier: NftImageCell.identifier)
         tableView.register(DescriptionTableViewCell.self, forCellReuseIdentifier: DescriptionTableViewCell.identifier)
+//        tableView.backgroundColor = .purple
         return tableView
     }()
     
@@ -23,6 +24,7 @@ class NftDetailsScreen: UIView {
         super.init(frame: frame)
         addSubview(tableView)
         self.congigContrainsts()
+        
     }
     
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){

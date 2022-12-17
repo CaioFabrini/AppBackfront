@@ -383,8 +383,8 @@
 		3F18C23129423D8600047FF1 /* NftImageCell */ = {
 			isa = PBXGroup;
 			children = (
-				3F18C23329423F1800047FF1 /* NftImageCell.swift */,
 				3F18C23229423EDF00047FF1 /* Screen */,
+				3F18C23329423F1800047FF1 /* NftImageCell.swift */,
 			);
 			name = NftImageCell;
 			sourceTree = "<group>";
@@ -400,8 +400,8 @@
 		3F18C23729437B7A00047FF1 /* DescriptionTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				3F18C23B2944497B00047FF1 /* DescriptionTableViewCell.swift */,
 				3F18C23829437BCD00047FF1 /* Screen */,
+				3F18C23B2944497B00047FF1 /* DescriptionTableViewCell.swift */,
 			);
 			name = DescriptionTableViewCell;
 			sourceTree = "<group>";

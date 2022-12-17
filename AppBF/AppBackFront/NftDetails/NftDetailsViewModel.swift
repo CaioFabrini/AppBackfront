@@ -38,9 +38,10 @@ class NftDetailsViewModel {
     }
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat {
+        
         switch NameCell(rawValue: indexPath.row){
         case .nftImage:
-            return 170
+            return 400
         case .descripition:
             return 130
         default:

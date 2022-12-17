@@ -38,9 +38,11 @@ class NftDetailsVC: UIViewController {
 
 }
 extension NftDetailsVC: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRowAt(indexPath: indexPath)
     }
+
 }
 
 extension NftDetailsVC: UITableViewDataSource {
@@ -65,5 +67,8 @@ extension NftDetailsVC: UITableViewDataSource {
         
         }
     }
+    
+
+
  
 }
