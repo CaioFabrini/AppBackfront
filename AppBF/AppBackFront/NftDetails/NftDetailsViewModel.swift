@@ -18,7 +18,7 @@ class NftDetailsViewModel {
     }
     
     public var numberOfRowsInSection: Int {
-        return 2
+        return 3
     }
     
     public var getNFTImage: String {
@@ -44,6 +44,8 @@ class NftDetailsViewModel {
             return 400
         case .descripition:
             return 130
+        case .latestDeals:
+            return 500
         default:
             return 0
             

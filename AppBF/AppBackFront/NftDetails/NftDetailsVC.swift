@@ -10,6 +10,7 @@ import UIKit
 enum NameCell: Int {
     case nftImage = 0
     case descripition = 1
+    case latestDeals = 2
 }
 
 class NftDetailsVC: UIViewController {
@@ -61,6 +62,10 @@ extension NftDetailsVC: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.identifier, for:  indexPath) as? DescriptionTableViewCell
             cell?.setupCell(id: viewModel.idNFT, title: viewModel.titleLabel, description: viewModel.descriptionLabel)
             
+            return cell ?? UITableViewCell()
+            
+        case .latestDeals:
+            let cell = tableView.dequeueReusableCell(withIdentifier: LatestDealTableViewCell.identifier, for: indexPath) as? LatestDealTableViewCell
             return cell ?? UITableViewCell()
         default:
             return UITableViewCell()

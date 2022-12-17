@@ -16,7 +16,7 @@ class NftDetailsScreen: UIView {
         tableView.separatorStyle = .none
         tableView.register(NftImageCell.self, forCellReuseIdentifier: NftImageCell.identifier)
         tableView.register(DescriptionTableViewCell.self, forCellReuseIdentifier: DescriptionTableViewCell.identifier)
-//        tableView.backgroundColor = .purple
+        tableView.register(LatestDealTableViewCell.self, forCellReuseIdentifier: LatestDealTableViewCell.identifier)
         return tableView
     }()
     
