@@ -103,15 +103,19 @@ class HomeViewModel {
     }
     
     public func setFilter(indexPath: IndexPath) {
-        for indices in (getNftData?.filterNft ?? []).indices {
+        var filterNFT: [FilterNft] = []
+        for (indices,value) in (searchNftData?.filterNft ?? []).enumerated() {
+            var type = value
             if indices == indexPath.row {
-                getNftData?.filterNft?[indexPath.row].isSelected = true
-                searchNftData?.filterNft?[indexPath.row].isSelected = true
+                type.isSelected = true
             } else {
-                getNftData?.filterNft?[indexPath.row].isSelected = false
-                searchNftData?.filterNft?[indexPath.row].isSelected = false
+                type.isSelected = false
             }
+            filterNFT.append(type)
         }
+        searchNftData?.filterNft = filterNFT
     }
+    
+    
 }
 

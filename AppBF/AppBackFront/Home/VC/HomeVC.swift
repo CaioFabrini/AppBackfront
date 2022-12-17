@@ -97,6 +97,8 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         viewModel.setFilter(indexPath: indexPath)
         homeScreen?.searchBar.text = ""
         homeScreen?.tableView.reloadData()
+        homeScreen?.collectionView.reloadData()
+        homeScreen?.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 
 }
