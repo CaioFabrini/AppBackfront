@@ -7,16 +7,16 @@
 
 import UIKit
 
-protocol ButtonsScreenProtocol: AnyObject {
-    func actionXButton()
-    func actionLupaButton()
+protocol NftImageCellScreenProtocol: AnyObject {
+    func tappedClosed()
+    func actionMagnifyingGlassButton()
 }
 
 class NftImageCellScreen: UIView {
     
-    private weak var delegate: ButtonsScreenProtocol?
+    private weak var delegate: NftImageCellScreenProtocol?
     
-    func delegate(delegate: ButtonsScreenProtocol){
+    func delegate(delegate: NftImageCellScreenProtocol){
         self.delegate = delegate
     }
     
@@ -57,11 +57,11 @@ class NftImageCellScreen: UIView {
     }
     
     @objc private func tappedXButton() {
-        self.delegate?.actionXButton()
+        self.delegate?.tappedClosed()
     }
     
     @objc private func actionLupaButton() {
-        self.delegate?.actionLupaButton()
+        self.delegate?.actionMagnifyingGlassButton()
     }
     
     required init?(coder: NSCoder) {

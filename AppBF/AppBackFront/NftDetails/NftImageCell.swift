@@ -8,10 +8,20 @@
 import UIKit
 import AlamofireImage
 
+protocol NftImageCellProtocol: AnyObject {
+    func actionClosedButton()
+    func actionMagnifyingGlassButton()
+}
+
 class NftImageCell: UITableViewCell {
     
     static let identifier: String = "NftImageCell"
     
+    private weak var delegate: NftImageCellProtocol?
+    
+    func delegate(delegate: NftImageCellProtocol){
+        self.delegate = delegate
+    }
     
     lazy var screen: NftImageCellScreen = {
         let view = NftImageCellScreen()
@@ -48,12 +58,12 @@ class NftImageCell: UITableViewCell {
     }
     
 }
-extension NftImageCell: ButtonsScreenProtocol {
-    func actionXButton() {
-        print("Apertei encerrar")
+extension NftImageCell: NftImageCellScreenProtocol {
+    func tappedClosed() {
+        delegate?.actionClosedButton()
     }
     
-    func actionLupaButton() {
-        print("Apertei a lupa")
+    func actionMagnifyingGlassButton() {
+        delegate?.actionMagnifyingGlassButton()
     }
 }

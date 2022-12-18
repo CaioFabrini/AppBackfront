@@ -107,7 +107,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let vc: NftDetailsVC = NftDetailsVC(nft: nftList)
         
-        //        let nav = UINavigationController(rootViewController: vc)
+                let nav = UINavigationController(rootViewController: vc)
         window.rootViewController = vc
         window.makeKeyAndVisible()
         self.window = window

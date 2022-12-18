@@ -55,7 +55,7 @@ extension NftDetailsVC: UITableViewDataSource {
         case .nftImage:
             let cell = tableView.dequeueReusableCell(withIdentifier: NftImageCell.identifier, for: indexPath) as? NftImageCell
             cell?.setupCell(data: viewModel.getNFTImage)
-            
+            cell?.delegate(delegate: self)
             return cell ?? UITableViewCell()
         case .descripition:
             let cell = tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.identifier, for:  indexPath) as? DescriptionTableViewCell
@@ -67,8 +67,17 @@ extension NftDetailsVC: UITableViewDataSource {
         
         }
     }
+}
+
+extension NftDetailsVC: NftImageCellProtocol {
+    func actionClosedButton() {
+        print(#function)
+        dismiss(animated: true)
+    }
     
-
-
- 
+    func actionMagnifyingGlassButton() {
+        print(#function)
+        let vc = MagnifyingGlassVC()
+        self.present(vc, animated: true)
+    }
 }

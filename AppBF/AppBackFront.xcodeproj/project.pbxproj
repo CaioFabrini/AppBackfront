@@ -41,6 +41,8 @@
 		3F18C23A29437C2D00047FF1 /* DescriptionCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C23929437C2D00047FF1 /* DescriptionCellScreen.swift */; };
 		3F18C23C2944497B00047FF1 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C23B2944497B00047FF1 /* DescriptionTableViewCell.swift */; };
 		3F18C2402945084500047FF1 /* LatestDealsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F18C23F2945084500047FF1 /* LatestDealsScreen.swift */; };
+		3F3ACD0B294E5A4D00DDE405 /* MagnifyingGlassScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ACD0A294E5A4D00DDE405 /* MagnifyingGlassScreen.swift */; };
+		3F3ACD0E294E5CAA00DDE405 /* MagnifyingGlassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ACD0D294E5CAA00DDE405 /* MagnifyingGlassVC.swift */; };
 		BD25D88990F7828E54D824E8 /* Pods_AppBackFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		3F18C23929437C2D00047FF1 /* DescriptionCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCellScreen.swift; sourceTree = "<group>"; };
 		3F18C23B2944497B00047FF1 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		3F18C23F2945084500047FF1 /* LatestDealsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestDealsScreen.swift; sourceTree = "<group>"; };
+		3F3ACD0A294E5A4D00DDE405 /* MagnifyingGlassScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifyingGlassScreen.swift; sourceTree = "<group>"; };
+		3F3ACD0D294E5CAA00DDE405 /* MagnifyingGlassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifyingGlassVC.swift; sourceTree = "<group>"; };
 		955D46207F36A7BF3BF11B9D /* Pods-AppBackFront.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.release.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.release.xcconfig"; sourceTree = "<group>"; };
 		D978E33D6189D8D932ED539F /* Pods-AppBackFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.debug.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,6 +291,7 @@
 		343B9D9B28D3A07C00956373 /* AppBackFront */ = {
 			isa = PBXGroup;
 			children = (
+				3F3ACD08294E599100DDE405 /* MagnifyingGlassVC */,
 				3F18C226294220C500047FF1 /* NftDetails */,
 				033F712E294124C400FAC046 /* CellsHome */,
 				033F7149294124C400FAC046 /* Extension */,
@@ -430,6 +435,24 @@
 			name = Screen;
 			sourceTree = "<group>";
 		};
+		3F3ACD08294E599100DDE405 /* MagnifyingGlassVC */ = {
+			isa = PBXGroup;
+			children = (
+				3F3ACD09294E5A2400DDE405 /* Screen */,
+				3F3ACD0D294E5CAA00DDE405 /* MagnifyingGlassVC.swift */,
+			);
+			name = MagnifyingGlassVC;
+			path = NftDetails;
+			sourceTree = "<group>";
+		};
+		3F3ACD09294E5A2400DDE405 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3F3ACD0A294E5A4D00DDE405 /* MagnifyingGlassScreen.swift */,
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
 		B2BF8648247392BAC385C1F4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,6 +589,7 @@
 				033F7125294124A900FAC046 /* AddNewNFTVC.swift in Sources */,
 				343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */,
 				033F7153294124C400FAC046 /* HomeTableViewCellScreen.swift in Sources */,
+				3F3ACD0B294E5A4D00DDE405 /* MagnifyingGlassScreen.swift in Sources */,
 				343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */,
 				3F18C23429423F1800047FF1 /* NftImageCell.swift in Sources */,
 				033F7154294124C400FAC046 /* WalletVC.swift in Sources */,
@@ -576,6 +600,7 @@
 				033F7152294124C400FAC046 /* HomeTableViewCell.swift in Sources */,
 				033F715A294124C400FAC046 /* HomeVC.swift in Sources */,
 				033F714E294124C400FAC046 /* NFTData.swift in Sources */,
+				3F3ACD0E294E5CAA00DDE405 /* MagnifyingGlassVC.swift in Sources */,
 				033F7151294124C400FAC046 /* HomeCollectionViewCellScreen.swift in Sources */,
 				343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */,
 				033F7155294124C400FAC046 /* ProfileVC.swift in Sources */,
