@@ -29,7 +29,6 @@ class TabBarVC: UITabBarController {
         let addNewNFTVC = UINavigationController(rootViewController: AddNewNFTVC())
         let profileVC = UINavigationController(rootViewController: ProfileVC())
         self.setViewControllers([homeVC, walletVC, addNewNFTVC, profileVC], animated: true)
-        self.tabBar.backgroundColor = .white
         self.tabBar.isTranslucent = false
         self.tabBar.tintColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
         self.tabBar.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
