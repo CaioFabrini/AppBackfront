@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum NameCell: Int {
+    case nftImage = 0
+    case descripition = 1
+}
+
 class NftDetailsVC: UIViewController {
     
     var viewModel: NftDetailsViewModel
@@ -29,11 +34,16 @@ class NftDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.screen?.configTableViewProtocols(delegate: self, dataSource: self)
-        view.backgroundColor = .red
     }
 
 }
-extension NftDetailsVC: UITableViewDelegate { }
+extension NftDetailsVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRowAt(indexPath: indexPath)
+    }
+
+}
 
 extension NftDetailsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,10 +51,33 @@ extension NftDetailsVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        switch NameCell(rawValue: indexPath.row) {
+        case .nftImage:
+            let cell = tableView.dequeueReusableCell(withIdentifier: NftImageCell.identifier, for: indexPath) as? NftImageCell
+            cell?.setupCell(data: viewModel.getNFTImage)
+            cell?.delegate(delegate: self)
+            return cell ?? UITableViewCell()
+        case .descripition:
+            let cell = tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.identifier, for:  indexPath) as? DescriptionTableViewCell
+            cell?.setupCell(id: viewModel.idNFT, title: viewModel.titleLabel, description: viewModel.descriptionLabel)
+            
+            return cell ?? UITableViewCell()
+        default:
+            return UITableViewCell()
+        
+        }
+    }
+}
+
+extension NftDetailsVC: NftImageCellProtocol {
+    func actionClosedButton() {
+        print(#function)
+        dismiss(animated: true)
     }
     
-    
-    
-    
+    func actionMagnifyingGlassButton() {
+        print(#function)
+        let vc = MagnifyingGlassVC()
+        self.present(vc, animated: true)
+    }
 }
