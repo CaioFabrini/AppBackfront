@@ -41,7 +41,8 @@ class HomeScreen: UIView {
         collectionView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         collectionView.delaysContentTouches = false
         collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         layout.scrollDirection = .horizontal
         collectionView.setCollectionViewLayout(layout, animated: false)
         
@@ -61,6 +62,11 @@ class HomeScreen: UIView {
         super.init(frame: frame)
         addSuperView()
         setupConstraints()
+    }
+    
+    public func logoImage(data: NFTHomeData) {
+        guard let urlLogo = URL(string: data.logoImage?.image ?? "") else { return }
+        self.logoImageView.af.setImage(withURL: urlLogo)
     }
     
     private func addSuperView() {
@@ -98,12 +104,12 @@ class HomeScreen: UIView {
             self.viewBackgraund.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
             self.viewBackgraund.heightAnchor.constraint(equalToConstant: 220),
             
-            self.logoImageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 40),
+            self.logoImageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 45),
             self.logoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
             self.logoImageView.heightAnchor.constraint(equalToConstant: 40),
             self.logoImageView.widthAnchor.constraint(equalToConstant: 40),
             
-            self.searchBar.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 15),
+            self.searchBar.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 10),
             self.searchBar.leadingAnchor.constraint(equalTo: self.logoImageView.leadingAnchor),
             self.searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -24),
             self.searchBar.heightAnchor.constraint(equalToConstant: 46),
@@ -119,5 +125,4 @@ class HomeScreen: UIView {
             self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         ])
     }
-    
 }

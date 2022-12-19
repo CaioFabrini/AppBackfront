@@ -8,13 +8,9 @@ import Foundation
 import UIKit
 import AlamofireImage
 
-enum HomeTableViewCellString: String {
-    case identifier = "HomeTableViewCell"
-}
-
 class HomeTableViewCell: UITableViewCell {
     
-    static let identifier: String = HomeTableViewCellString.identifier.rawValue
+    static let identifier: String = String(describing: HomeTableViewCell.self)
     
     weak private var delegate: HomeTableViewCellScreenProtocol?
     
@@ -32,7 +28,6 @@ class HomeTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         addSubView()
         setUpConstraintsScreenCell()
     }
@@ -54,16 +49,16 @@ class HomeTableViewCell: UITableViewCell {
         ])
     }
     
-
-
-
-    public func setupHomeCell(data: NFTHomeData) {
-//        guard let url = URL(string: data.cachedImages?.tiny100_100 ?? "") else { return }
-//        self.screen.nftImageView.af.setImage(withURL: url)
-//        self.screen.userImageView.image = UIImage(named:  nameImage.randomElement() ?? "")
-//        self.screen.priceValueLabel.text = " \( Double.random(in: 0...50)) ETH"
-//        self.screen.ownedByLabel.text = "Propriedade de:"
-//        self.screen.userLabel.text = nameUser.randomElement() ?? ""
-//        self.screen.priceLabel.text = "Preço"
+    public func setupHomeCell(data: Nft) {
+        guard let urlNFT = URL(string: data.nftImage ?? "") else { return }
+        self.screen.nftImageView.af.setImage(withURL: urlNFT, placeholderImage: UIImage(named: "threeButtons"))
+        self.screen.nftImageView.backgroundColor = .white
+        guard let urlUser = URL(string: data.userImage ?? "") else { return }
+        self.screen.userImageView.af.setImage(withURL: urlUser, placeholderImage: UIImage(systemName: "person.circle.fill")?.withTintColor(.black))
+        self.screen.userImageView.backgroundColor = .white
+        self.screen.priceLabel.text = data.price
+        self.screen.priceValueLabel.text = String("\(data.nftPrice ?? 0.0) ETH")
+        self.screen.ownedByLabel.text = data.ownedBy
+        self.screen.userLabel.text = data.userName
     }
 }

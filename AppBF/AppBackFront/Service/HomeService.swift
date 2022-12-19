@@ -17,7 +17,7 @@ class HomeService: HomeServiceDelegate {
     
     func getHome(completion: @escaping completion<NFTHomeData?>) {
         
-        let url: String = "https://run.mocky.io/v3/bbbfd6f1-65c0-4b7f-8bd7-f4500a7cc6e7"
+        let url: String = "https://run.mocky.io/v3/ab2c8044-21c3-4205-9202-ad1be226e415"
         
         AF.request( url, method: .get).validate().responseDecodable(of: NFTHomeData.self) { response in
             print(#function)

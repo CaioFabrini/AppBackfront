@@ -9,11 +9,9 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    
     var homeScreen: HomeScreen?
     let viewModel: HomeViewModel = HomeViewModel()
     
-
     override func loadView() {
         self.homeScreen = HomeScreen()
         self.view = homeScreen
@@ -22,8 +20,8 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
-        self.viewModel.fetch(.request)
         self.signatureDelegate()
+        self.viewModel.fetch(.request)
         self.homeScreen?.configSearchBarDelegate(delegate: self)
     }
     
@@ -38,6 +36,8 @@ extension HomeVC: HomeViewModelDelegate {
         DispatchQueue.main.async {
             self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
             self.homeScreen?.tableView.reloadData()
+            self.homeScreen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+            self.homeScreen?.collectionView.reloadData()
         }
     }
     
@@ -49,7 +49,9 @@ extension HomeVC: HomeViewModelDelegate {
 
 extension HomeVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        self.viewModel.filterContentForSearchText(searchBar.text ?? "")
+        self.homeScreen?.tableView.reloadData()
+        print(searchBar)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -70,28 +72,38 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-        return 360
+        return viewModel.heightForRowAt(indexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc: NftDetailsVC = NftDetailsVC(nft: viewModel.loadCurrentNFT(indexPath: indexPath))
+        present(vc, animated: true)
     }
     
 }
-//
-//extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return filterTest.count
-//
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell: HomeCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell
-//        cell?.setupCollectionCell(data: self.filterTest[indexPath.row])
-//
-//        return cell ?? UICollectionViewCell()
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        return CGSize(width: 110, height: 60)
-//    }
-//
-//}
+
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSectionCollection
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: HomeCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell
+        cell?.setupCollectionCell(data: viewModel.loadFilter(indexPath: indexPath))
+        return cell ?? UICollectionViewCell()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return viewModel.heightForRowAtCollection(indexPath: indexPath)
+   }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.setFilter(indexPath: indexPath, searchText: homeScreen?.searchBar.text ?? "")
+        homeScreen?.tableView.reloadData()
+        homeScreen?.collectionView.reloadData()
+        homeScreen?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        homeScreen?.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+
+}

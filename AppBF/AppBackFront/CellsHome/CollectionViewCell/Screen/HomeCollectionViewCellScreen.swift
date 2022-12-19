@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class HomeCollectionViewCellScreen: UIView {
     
     lazy var filterLabel: UILabel = {

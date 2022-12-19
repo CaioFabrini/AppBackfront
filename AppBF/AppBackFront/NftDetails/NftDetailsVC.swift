@@ -22,7 +22,7 @@ class NftDetailsVC: UIViewController {
         self.view = screen
     }
 
-    required init(nft: NftList) {
+    required init(nft: Nft) {
         viewModel = NftDetailsViewModel(nft: nft)
         super.init(nibName: nil, bundle: nil)
     }
