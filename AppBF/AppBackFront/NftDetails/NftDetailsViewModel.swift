@@ -21,9 +21,9 @@ class NftDetailsViewModel {
         return 2
     }
     
-    public var getNFTImage: String {
-        return nft.ntfImage ?? ""
-    }
+//    public var getNFTImage: String {
+//        return nft.ntfImage ?? ""
+//    }
     
     public var idNFT: Int {
         return nft.nftID ?? 0
