@@ -11,6 +11,7 @@ class LatestDealTableViewCell: UITableViewCell {
     
     static let identifier: String = "LatestDealTableViewCell"
     var latestDealsScreen: LatestDealsScreen = LatestDealsScreen()
+    var dataLatestDeal: [LatestDeal] = []
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -50,9 +51,13 @@ extension LatestDealTableViewCell: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: ListOfOffersTableViewCell? = tableView.dequeueReusableCell(withIdentifier: ListOfOffersTableViewCell.identifier, for: indexPath) as? ListOfOffersTableViewCell
-        
+        cell?.setupCell()
         return cell ?? UITableViewCell()
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
 }

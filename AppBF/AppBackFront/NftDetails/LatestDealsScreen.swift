@@ -25,6 +25,7 @@ class LatestDealsScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
+        // desabilitar scroll
         tableView.register(ListOfOffersTableViewCell.self, forCellReuseIdentifier: ListOfOffersTableViewCell.identifier)
         return tableView
     }()

@@ -37,6 +37,8 @@ class NftDetailsViewModel {
         return nft.nftDescription ?? ""
     }
     
+//    latestDeals -> criar var depois
+    
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat {
         
         switch NameCell(rawValue: indexPath.row){
@@ -45,11 +47,11 @@ class NftDetailsViewModel {
         case .descripition:
             return 130
         case .latestDeals:
+            //    valor da altura da celula vezes latestDeals.count
             return 500
         default:
             return 0
             
         }
     }
-    
 }

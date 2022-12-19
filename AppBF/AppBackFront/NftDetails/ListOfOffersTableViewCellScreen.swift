@@ -13,7 +13,7 @@ class ListOfOffersTableViewCellScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "")
-        image.tintColor = .green
+        image.tintColor = .lightGray
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -47,6 +47,7 @@ class ListOfOffersTableViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .black
         addSbView()
         setupConstraints()
     }
@@ -72,13 +73,13 @@ class ListOfOffersTableViewCellScreen: UIView {
             self.userImageView.widthAnchor.constraint(equalToConstant: 40),
             
             self.nameUserLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            self.userImageView.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 12),
+            self.nameUserLabel.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 12),
             
             self.nftPriceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.nftPriceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
             self.lastVizualizationLabel.topAnchor.constraint(equalTo: self.nftPriceLabel.bottomAnchor, constant: 5),
-            self.nftPriceLabel.trailingAnchor.constraint(equalTo: self.nftPriceLabel.trailingAnchor),
+            self.lastVizualizationLabel.trailingAnchor.constraint(equalTo: self.nftPriceLabel.trailingAnchor),
             
             
         ])
