@@ -77,7 +77,7 @@ extension NftDetailsVC: NftImageCellProtocol {
     
     func actionMagnifyingGlassButton() {
         print(#function)
-        let vc = MagnifyingGlassVC()
+        let vc = MagnifyingGlassVC(url: viewModel.getNFTImage)
         self.present(vc, animated: true)
     }
 }

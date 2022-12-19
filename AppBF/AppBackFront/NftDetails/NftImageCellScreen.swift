@@ -24,6 +24,7 @@ class NftImageCellScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .gray
         button.addTarget(self, action: #selector(self.tappedXButton), for: .touchUpInside)
         button.setImage(UIImage(named: "fechar"), for: .normal)
         return button
@@ -33,6 +34,7 @@ class NftImageCellScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .gray
         button.addTarget(self, action: #selector(self.actionLupaButton), for: .touchUpInside)
         button.setImage(UIImage(named: "lupa"), for: .normal)
 
@@ -78,13 +80,13 @@ class NftImageCellScreen: UIView {
 
             xButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 30),
             xButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            xButton.heightAnchor.constraint(equalToConstant: 20),
-            xButton.widthAnchor.constraint(equalToConstant: 20),
+            xButton.heightAnchor.constraint(equalToConstant: 25),
+            xButton.widthAnchor.constraint(equalToConstant: 25),
                         
             lupaButton.bottomAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: -30),
             lupaButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            lupaButton.heightAnchor.constraint(equalToConstant: 20),
-            lupaButton.widthAnchor.constraint(equalToConstant: 20)
+            lupaButton.heightAnchor.constraint(equalToConstant: 25),
+            lupaButton.widthAnchor.constraint(equalToConstant: 25)
         ])
     }
     
