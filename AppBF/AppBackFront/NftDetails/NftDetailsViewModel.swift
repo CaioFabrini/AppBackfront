@@ -11,9 +11,9 @@ import UIKit
 
 class NftDetailsViewModel {
     
-    private var nft: NftList
+    private var nft: Nft
     
-    init(nft: NftList) {
+    init(nft: Nft) {
         self.nft = nft
     }
     
@@ -22,7 +22,7 @@ class NftDetailsViewModel {
     }
     
     public var getNFTImage: String {
-        return nft.ntfImage ?? ""
+        return nft.nftImage ?? ""
     }
     
     public var idNFT: Int {

@@ -67,8 +67,8 @@ class HomeViewModel {
         return 360
     }
     
-    func loadCurrentNFT(indexPath: IndexPath) -> NftList {
-        return searchNftData?.nftList?[indexPath.row] ?? NftList()
+    func loadCurrentNFT(indexPath: IndexPath) -> Nft {
+        return searchNftData?.nftList?[indexPath.row] ?? Nft()
     }
     
     public var numberOfRowsInSectionCollection: Int {
@@ -100,7 +100,7 @@ class HomeViewModel {
     
     public func filterContentForSearchText(_ searchText: String) {
         
-        var nftList: [NftList] = []
+        var nftList: [Nft] = []
         
         if self.typeFilter == 0  /* o zero significa todos */ {
             nftList = getNftData?.nftList ?? []
@@ -111,7 +111,7 @@ class HomeViewModel {
         if searchText == "" {
             self.searchNftData?.nftList = nftList
         } else {
-            self.searchNftData?.nftList = nftList.filter({ (nft: NftList) -> Bool in
+            self.searchNftData?.nftList = nftList.filter({ (nft: Nft) -> Bool in
                 return nft.userName?.lowercased().contains(searchText.lowercased()) ?? false
             })
         }

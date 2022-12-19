@@ -49,7 +49,7 @@ class HomeTableViewCell: UITableViewCell {
         ])
     }
     
-    public func setupHomeCell(data: NftList) {
+    public func setupHomeCell(data: Nft) {
         guard let urlNFT = URL(string: data.nftImage ?? "") else { return }
         self.screen.nftImageView.af.setImage(withURL: urlNFT, placeholderImage: UIImage(named: "threeButtons"))
         self.screen.nftImageView.backgroundColor = .white

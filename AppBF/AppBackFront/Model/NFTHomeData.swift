@@ -5,7 +5,7 @@ import Foundation
 struct NFTHomeData: Codable {
     var logoImage: LogoImage?
     var filterNft: [FilterNft]?
-    var nftList: [NftList]?
+    var nftList: [Nft]?
 
     enum CodingKeys: String, CodingKey {
         case logoImage = "logo_image"
@@ -26,8 +26,8 @@ struct LogoImage: Codable {
     var image: String?
 }
 
-// MARK: - NftList
-struct NftList: Codable {
+// MARK: - Nft
+struct Nft: Codable {
     var ownedBy: String?
     var price: String?
     var type: Int?

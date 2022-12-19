@@ -75,6 +75,11 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
         return viewModel.heightForRowAt(indexPath: indexPath)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc: NftDetailsVC = NftDetailsVC(nft: viewModel.loadCurrentNFT(indexPath: indexPath))
+        present(vc, animated: true)
+    }
+    
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
