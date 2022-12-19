@@ -201,8 +201,8 @@
 		033F7133294124C400FAC046 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				033F7134294124C400FAC046 /* HomeTableViewCell.swift */,
 				033F7135294124C400FAC046 /* Screen */,
+				033F7134294124C400FAC046 /* HomeTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
