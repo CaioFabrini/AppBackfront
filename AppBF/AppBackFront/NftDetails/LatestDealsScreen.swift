@@ -36,8 +36,8 @@ class LatestDealsScreen: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame )
-        configSubView()
-        configConstraints()
+        self.configSubView()
+        self.configConstraints()
     }
     
     func configSubView() {

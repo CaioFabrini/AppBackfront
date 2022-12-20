@@ -22,7 +22,6 @@ class DescriptionTableViewCell: UITableViewCell {
         return view
     }()
     
-   
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(screen)
@@ -38,15 +37,14 @@ class DescriptionTableViewCell: UITableViewCell {
         self.screen.titleLabel.text = title
         self.screen.descriptionLabel.text = description
     }
-
+    
     private func configContrainsts(){
         NSLayoutConstraint.activate([
             
-            screen.topAnchor.constraint(equalTo: self.topAnchor),
-            screen.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            screen.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            screen.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-            
+            self.screen.topAnchor.constraint(equalTo: self.topAnchor),
+            self.screen.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.screen.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.screen.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
 }

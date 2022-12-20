@@ -8,8 +8,8 @@
 import UIKit
 
 enum ButtonString: String {
-    case closedButton = "fechar"
-    case magnifyingGlass = "lupa"
+    case closedButton = "xmark"
+    case magnifyingGlass = "magnifyingglass"
 }
 
 protocol NftImageCellScreenProtocol: AnyObject {
@@ -25,31 +25,33 @@ class NftImageCellScreen: UIView {
         self.delegate = delegate
     }
     
-    lazy var xButton: UIButton = {
+    lazy var closedButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = UIColor (red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
-        button.addTarget(self, action: #selector(self.tappedXButton), for: .touchUpInside)
-        button.setImage(UIImage(named: ButtonString.closedButton.rawValue), for: .normal)
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(self.tappedClosedButton), for: .touchUpInside)
+        button.setImage(UIImage(systemName: ButtonString.closedButton.rawValue), for: .normal)
         return button
     }()
     
-    lazy var lupaButton: UIButton = {
+    lazy var magnifyingGlassButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = UIColor (red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
-        button.addTarget(self, action: #selector(self.actionLupaButton), for: .touchUpInside)
-        button.setImage(UIImage(named: ButtonString.magnifyingGlass.rawValue), for: .normal)
-
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(self.actionMagnifyingGlassButton), for: .touchUpInside)
+        button.setImage(UIImage(systemName: ButtonString.magnifyingGlass.rawValue), for: .normal)
+        
         return button
     }()
-
+    
     lazy var nftImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -62,17 +64,17 @@ class NftImageCellScreen: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(nftImageView)
-        addSubview(xButton)
-        addSubview(lupaButton)
+        addSubview(closedButton)
+        addSubview(magnifyingGlassButton)
         self.configContrainsts()
-
+        
     }
     
-    @objc private func tappedXButton() {
+    @objc private func tappedClosedButton() {
         self.delegate?.tappedClosed()
     }
     
-    @objc private func actionLupaButton() {
+    @objc private func actionMagnifyingGlassButton() {
         self.delegate?.actionMagnifyingGlassButton()
     }
     
@@ -87,16 +89,16 @@ class NftImageCellScreen: UIView {
             nftImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             nftImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             nftImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-
-            xButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 30),
-            xButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            xButton.heightAnchor.constraint(equalToConstant: 38),
-            xButton.widthAnchor.constraint(equalToConstant: 38),
-                        
-            lupaButton.bottomAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: -30),
-            lupaButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            lupaButton.heightAnchor.constraint(equalToConstant: 38),
-            lupaButton.widthAnchor.constraint(equalToConstant: 38)
+            
+            closedButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 30),
+            closedButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
+            closedButton.heightAnchor.constraint(equalToConstant: 35),
+            closedButton.widthAnchor.constraint(equalToConstant: 35),
+            
+            magnifyingGlassButton.bottomAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: -30),
+            magnifyingGlassButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
+            magnifyingGlassButton.heightAnchor.constraint(equalToConstant: 35),
+            magnifyingGlassButton.widthAnchor.constraint(equalToConstant: 35)
         ])
     }
     

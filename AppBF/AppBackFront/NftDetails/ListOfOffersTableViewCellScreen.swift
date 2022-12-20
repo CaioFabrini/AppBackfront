@@ -52,11 +52,11 @@ class ListOfOffersTableViewCellScreen: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
-        addSbView()
-        setupConstraints()
+        self.addSubView()
+        self.setupConstraints()
     }
     
-    private func addSbView() {
+    private func addSubView() {
         self.addSubview(self.userImageView)
         self.addSubview(self.nameUserLabel)
         self.addSubview(self.nftPriceLabel)

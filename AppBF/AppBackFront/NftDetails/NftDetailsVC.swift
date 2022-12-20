@@ -22,7 +22,7 @@ class NftDetailsVC: UIViewController {
         self.screen = NftDetailsScreen()
         self.view = screen
     }
-
+    
     required init(nft: Nft) {
         viewModel = NftDetailsViewModel(nft: nft)
         super.init(nibName: nil, bundle: nil)
@@ -36,14 +36,14 @@ class NftDetailsVC: UIViewController {
         super.viewDidLoad()
         self.screen?.configTableViewProtocols(delegate: self, dataSource: self)
     }
-
+    
 }
 extension NftDetailsVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRowAt(indexPath: indexPath, widht: view.frame.width)
     }
-
+    
 }
 
 extension NftDetailsVC: UITableViewDataSource {
@@ -69,7 +69,7 @@ extension NftDetailsVC: UITableViewDataSource {
             return cell ?? UITableViewCell()
         default:
             return UITableViewCell()
-        
+            
         }
     }
 }

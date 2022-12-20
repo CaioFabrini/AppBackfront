@@ -8,7 +8,7 @@
 import UIKit
 
 enum stringMagic: String {
-    case closed = "imagemVoltar"
+    case closed = "arrowshape.turn.up.backward.fill"
 }
 
 protocol MagnifyingGlassScreenProtocol: AnyObject {
@@ -38,8 +38,9 @@ class MagnifyingGlassScreen: UIView {
         button.backgroundColor = UIColor (red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
+        button.tintColor = .white
         button.addTarget(self, action: #selector(self.actionReturn), for: .touchUpInside)
-        button.setImage(UIImage(named: stringMagic.closed.rawValue), for: .normal)
+        button.setImage(UIImage(systemName: stringMagic.closed.rawValue ), for: .normal)
         return button
     }()
     
@@ -61,15 +62,15 @@ class MagnifyingGlassScreen: UIView {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-            self.nftImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            self.nftImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.nftImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.nftImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            nftImageView.topAnchor.constraint(equalTo: self.topAnchor),
+            nftImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            nftImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            nftImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             returnButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 20),
             returnButton.leadingAnchor.constraint(equalTo: self.nftImageView.leadingAnchor, constant: 20),
-            returnButton.heightAnchor.constraint(equalToConstant: 38),
-            returnButton.widthAnchor.constraint(equalToConstant: 38),
+            returnButton.heightAnchor.constraint(equalToConstant: 35),
+            returnButton.widthAnchor.constraint(equalToConstant: 35),
             
         ])
     }
