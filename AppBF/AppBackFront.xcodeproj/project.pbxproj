@@ -141,6 +141,7 @@
 		033F712E294124C400FAC046 /* CellsHome */ = {
 			isa = PBXGroup;
 			children = (
+				033F7131294124C400FAC046 /* Screen */,
 				033F712F294124C400FAC046 /* CollectionViewCell */,
 				033F7133294124C400FAC046 /* TableViewCell */,
 			);
@@ -151,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				033F7130294124C400FAC046 /* HomeCollectionViewCell.swift */,
-				033F7131294124C400FAC046 /* Screen */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";

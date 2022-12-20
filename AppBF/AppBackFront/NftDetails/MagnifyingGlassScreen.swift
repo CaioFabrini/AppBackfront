@@ -7,8 +7,18 @@
 
 import UIKit
 
-class MagnifyingGlassScreen: UIView {
+protocol MagnifyingGlassScreenProtocol: AnyObject {
+    func tappedReturn()
+}
 
+class MagnifyingGlassScreen: UIView {
+    
+    private weak var delegate: MagnifyingGlassScreenProtocol?
+    
+    func delegate(delegate: MagnifyingGlassScreenProtocol){
+        self.delegate = delegate
+    }
+    
     lazy var nftImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -16,10 +26,28 @@ class MagnifyingGlassScreen: UIView {
         image.tintColor = .white
         return image
     }()
-   
+    
+    lazy var returnButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor (red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(self.actionReturn), for: .touchUpInside)
+        button.setImage(UIImage(named: "voltar"), for: .normal)
+        return button
+    }()
+    
+    @objc private func actionReturn(){
+        self.delegate?.tappedReturn()
+        print(#function)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(nftImageView)
+        self.addSubview(returnButton)
         self.configConstraints()
     }
     
@@ -33,9 +61,12 @@ class MagnifyingGlassScreen: UIView {
             self.nftImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.nftImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.nftImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-  
+            
+            returnButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 20),
+            returnButton.leadingAnchor.constraint(equalTo: self.nftImageView.leadingAnchor, constant: 20),
+            returnButton.heightAnchor.constraint(equalToConstant: 38),
+            returnButton.widthAnchor.constraint(equalToConstant: 38),
+            
         ])
     }
-    
-    
 }

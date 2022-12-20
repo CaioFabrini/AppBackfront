@@ -21,7 +21,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         self.signatureDelegate()
-        self.viewModel.fetch(.request)
+        self.viewModel.fetch(.mock)
         self.homeScreen?.configSearchBarDelegate(delegate: self)
     }
     
