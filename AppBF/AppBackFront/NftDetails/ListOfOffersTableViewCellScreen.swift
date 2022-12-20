@@ -51,7 +51,7 @@ class ListOfOffersTableViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
+        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
         addSbView()
         setupConstraints()
     }

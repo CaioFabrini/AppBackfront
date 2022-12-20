@@ -170,7 +170,6 @@
 		033F712E294124C400FAC046 /* CellsHome */ = {
 			isa = PBXGroup;
 			children = (
-				033F7131294124C400FAC046 /* Screen */,
 				033F712F294124C400FAC046 /* CollectionViewCell */,
 				033F7133294124C400FAC046 /* TableViewCell */,
 			);
@@ -180,6 +179,7 @@
 		033F712F294124C400FAC046 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				033F7131294124C400FAC046 /* Screen */,
 				033F7130294124C400FAC046 /* HomeCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
@@ -296,6 +296,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		038FA6EA29522D510027FF34 /* LatestDealCell */ = {
+			isa = PBXGroup;
+			children = (
+				0311F9522951F0F5000A30C5 /* ListOfOffersTableViewCell */,
+				3F18C23D2945073100047FF1 /* LatestDealsTableViewCel */,
+			);
+			name = LatestDealCell;
+			sourceTree = "<group>";
+		};
 		343B9D9028D3A07C00956373 = {
 			isa = PBXGroup;
 			children = (
@@ -404,8 +413,7 @@
 		3F18C23029423D4400047FF1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0311F9522951F0F5000A30C5 /* ListOfOffersTableViewCell */,
-				3F18C23D2945073100047FF1 /* LatestDealsTableViewCel */,
+				038FA6EA29522D510027FF34 /* LatestDealCell */,
 				3F18C23729437B7A00047FF1 /* DescriptionTableViewCell */,
 				3F18C23129423D8600047FF1 /* NftImageCell */,
 			);

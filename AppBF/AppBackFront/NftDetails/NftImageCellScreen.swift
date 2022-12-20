@@ -24,24 +24,24 @@ class NftImageCellScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor (red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
+        button.backgroundColor = UIColor(red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
+        button.setImage(UIImage(systemName: "xmark.app"), for: .normal)
+        button.tintColor = .white
         button.addTarget(self, action: #selector(self.tappedXButton), for: .touchUpInside)
-        button.setImage(UIImage(named: "fechar"), for: .normal)
         return button
     }()
     
     lazy var lupaButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor (red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
+        button.backgroundColor = UIColor(red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
+        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        button.tintColor = .white
         button.addTarget(self, action: #selector(self.actionLupaButton), for: .touchUpInside)
-        button.setImage(UIImage(named: "lupa"), for: .normal)
-
         return button
     }()
 
@@ -85,13 +85,13 @@ class NftImageCellScreen: UIView {
 
             xButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 30),
             xButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            xButton.heightAnchor.constraint(equalToConstant: 38),
-            xButton.widthAnchor.constraint(equalToConstant: 38),
+            xButton.heightAnchor.constraint(equalToConstant: 35),
+            xButton.widthAnchor.constraint(equalToConstant: 35),
                         
             lupaButton.bottomAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: -30),
             lupaButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            lupaButton.heightAnchor.constraint(equalToConstant: 38),
-            lupaButton.widthAnchor.constraint(equalToConstant: 38)
+            lupaButton.heightAnchor.constraint(equalToConstant: 35),
+            lupaButton.widthAnchor.constraint(equalToConstant: 35)
         ])
     }
     
