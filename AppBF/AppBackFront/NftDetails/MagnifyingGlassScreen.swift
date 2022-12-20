@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum stringMagic: String {
+    case closed = "imagemVoltar"
+}
+
 protocol MagnifyingGlassScreenProtocol: AnyObject {
     func tappedReturn()
 }
@@ -35,7 +39,7 @@ class MagnifyingGlassScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(self.actionReturn), for: .touchUpInside)
-        button.setImage(UIImage(named: "voltar"), for: .normal)
+        button.setImage(UIImage(named: stringMagic.closed.rawValue), for: .normal)
         return button
     }()
     

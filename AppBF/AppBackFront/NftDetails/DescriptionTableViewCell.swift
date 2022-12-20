@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum IdentifierString: String {
+    case identifier = "DescriptionTableViewCell"
+}
+
 class DescriptionTableViewCell: UITableViewCell {
     
-    static let identifier: String = "DescriptionTableViewCell"
+    static let identifier: String = IdentifierString.identifier.rawValue
     
     lazy var screen: DescriptionCellScreen = {
         let view = DescriptionCellScreen()

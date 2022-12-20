@@ -28,7 +28,7 @@ class HomeViewModel {
     public func delegate(delegate: HomeViewModelDelegate?) {
         self.delegate = delegate
     }
-
+    
     public func fetch(_ typeFetch: TypeFetch) {
         switch typeFetch {
         case .mock:
@@ -116,7 +116,5 @@ class HomeViewModel {
             })
         }
     }
-    
-    
 }
 

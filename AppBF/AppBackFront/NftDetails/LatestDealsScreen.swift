@@ -7,8 +7,11 @@
 
 import UIKit
 
+enum Text:String {
+    case title = "teste"
+}
+
 class LatestDealsScreen: UIView {
-    
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -17,7 +20,7 @@ class LatestDealsScreen: UIView {
         label.textAlignment = .left
         label.textColor = .white
         label.numberOfLines = 0
-        label.text = "teste"
+        label.text = Text.title.rawValue
         return label
     }()
     

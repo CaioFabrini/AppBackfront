@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum ButtonString: String {
+    case closedButton = "fechar"
+    case magnifyingGlass = "lupa"
+}
+
 protocol NftImageCellScreenProtocol: AnyObject {
     func tappedClosed()
     func actionMagnifyingGlassButton()
@@ -28,7 +33,7 @@ class NftImageCellScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(self.tappedXButton), for: .touchUpInside)
-        button.setImage(UIImage(named: "fechar"), for: .normal)
+        button.setImage(UIImage(named: ButtonString.closedButton.rawValue), for: .normal)
         return button
     }()
     
@@ -40,7 +45,7 @@ class NftImageCellScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(self.actionLupaButton), for: .touchUpInside)
-        button.setImage(UIImage(named: "lupa"), for: .normal)
+        button.setImage(UIImage(named: ButtonString.magnifyingGlass.rawValue), for: .normal)
 
         return button
     }()
