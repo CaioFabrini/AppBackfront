@@ -47,10 +47,28 @@ class LatestDealTableViewCell: UITableViewCell {
         ])
     }
     
+    func validateIncial(indexPath: IndexPath) -> Bool {
+        if indexPath.row == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func validateFinal(indexPath: IndexPath) -> Bool {
+        if indexPath.row == dataLatestDeal.count - 1 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }
+
 extension LatestDealTableViewCell: UITableViewDelegate {
     
 }
+
 extension LatestDealTableViewCell: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,16 +78,7 @@ extension LatestDealTableViewCell: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: ListOfOffersTableViewCell? = tableView.dequeueReusableCell(withIdentifier: ListOfOffersTableViewCell.identifier, for: indexPath) as? ListOfOffersTableViewCell
-        
-        // isInicial é uma PROPRIEDADE deste modo deve informar um booleano (true/false)
-        // deste modo, deve criar uma logica para validar se a POSIÇÃO (INDEXPATH) é a INICIAL
-        // caso for retorne true, caso contrario returne false
-        
-        // isFinal é uma PROPRIEDADE deste modo deve informar um booleano (true/false)
-        // deste modo, deve criar uma logica para validar se a POSIÇÃO (INDEXPATH) é a FINAL
-        // caso for retorne true, caso contrario returne false
-        
-        cell?.setupCell(data: dataLatestDeal[indexPath.row], isInicial: true, isFinal: false)
+        cell?.setupCell(data: dataLatestDeal[indexPath.row], isInicial: validateIncial(indexPath: indexPath), isFinal: validateFinal(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     

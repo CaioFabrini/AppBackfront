@@ -33,7 +33,14 @@ class ListOfOffersTableViewCell: UITableViewCell {
         self.listOfOffersTableViewCell.nameUserLabel.text = data.userName
         self.listOfOffersTableViewCell.nftPriceLabel.text = String(data.nftPrice ?? 0.0)
         self.listOfOffersTableViewCell.lastVizualizationLabel.text = data.lastAccess
-
+        
+        if isInicial {
+            // arredondar bordas superiores
+        }
+        
+        if isFinal {
+            // arredondar bordas inferiores
+        }
     }
     
     private func addSubView() {
