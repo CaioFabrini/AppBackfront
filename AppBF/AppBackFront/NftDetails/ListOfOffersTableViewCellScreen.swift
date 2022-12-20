@@ -14,15 +14,19 @@ class ListOfOffersTableViewCellScreen: UIView {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "")
         image.tintColor = .lightGray
-        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 20
+        image.layer.borderColor = UIColor.white.cgColor
+        image.layer.borderWidth = 1
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
     lazy var nameUserLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .purple
-        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         label.text = ""
         return label
     }()
@@ -30,7 +34,7 @@ class ListOfOffersTableViewCellScreen: UIView {
     lazy var nftPriceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .purple
+        label.textColor = UIColor(red: 255/255, green: 152/255, blue: 255/255, alpha: 1)
         label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         label.text = ""
         return label
@@ -39,7 +43,7 @@ class ListOfOffersTableViewCellScreen: UIView {
     lazy var lastVizualizationLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .purple
+        label.textColor = UIColor(red: 255/255, green: 152/255, blue: 255/255, alpha: 1)
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.text = ""
         return label
@@ -47,7 +51,7 @@ class ListOfOffersTableViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .black
+        self.backgroundColor = UIColor(red: 0.2, green: 0.2, blue:0.2, alpha: 1)
         addSbView()
         setupConstraints()
     }
@@ -75,7 +79,7 @@ class ListOfOffersTableViewCellScreen: UIView {
             self.nameUserLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             self.nameUserLabel.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 12),
             
-            self.nftPriceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            self.nftPriceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 25),
             self.nftPriceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
             self.lastVizualizationLabel.topAnchor.constraint(equalTo: self.nftPriceLabel.bottomAnchor, constant: 5),

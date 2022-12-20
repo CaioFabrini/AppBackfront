@@ -11,9 +11,13 @@ enum HeightLatestDealNft: CGFloat {
     case height = 90
 }
 
+enum LatestDealTableViewCellString: String {
+    case identifier = "LatestDealTableViewCell"
+}
+
 class LatestDealTableViewCell: UITableViewCell {
     
-    static let identifier: String = "LatestDealTableViewCell"
+    static let identifier: String = LatestDealTableViewCellString.identifier.rawValue
     var latestDealsScreen: LatestDealsScreen = LatestDealsScreen()
     var dataLatestDeal: [LatestDeal] = []
     
@@ -62,7 +66,6 @@ class LatestDealTableViewCell: UITableViewCell {
             return false
         }
     }
-    
 }
 
 extension LatestDealTableViewCell: UITableViewDelegate {

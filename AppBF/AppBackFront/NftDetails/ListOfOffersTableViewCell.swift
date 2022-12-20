@@ -20,6 +20,7 @@ class ListOfOffersTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = UIColor(red: 0.2, green: 0.2, blue:0.2, alpha: 1)
         addSubView()
         configConstraints()
     }
@@ -31,15 +32,15 @@ class ListOfOffersTableViewCell: UITableViewCell {
         
         self.listOfOffersTableViewCell.userImageView.af.setImage(withURL: urlUser, placeholderImage: UIImage(systemName: "person.circle.fill")?.withTintColor(.black))
         self.listOfOffersTableViewCell.nameUserLabel.text = data.userName
-        self.listOfOffersTableViewCell.nftPriceLabel.text = String(data.nftPrice ?? 0.0)
+        self.listOfOffersTableViewCell.nftPriceLabel.text = "\(data.nftPrice ?? 0.0) ETH"
         self.listOfOffersTableViewCell.lastVizualizationLabel.text = data.lastAccess
         
         if isInicial {
-            // arredondar bordas superiores
+            self.listOfOffersTableViewCell.roundCorners(cornerRadiuns: 20.0, typeCorners: [.topRight, .topLeft])
         }
         
         if isFinal {
-            // arredondar bordas inferiores
+            self.listOfOffersTableViewCell.roundCorners(cornerRadiuns: 20.0, typeCorners: [.bottomRight, .bottomLeft])
         }
     }
     

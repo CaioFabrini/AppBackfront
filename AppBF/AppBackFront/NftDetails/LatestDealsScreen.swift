@@ -13,7 +13,7 @@ class LatestDealsScreen: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 24, weight: .black)
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         label.textAlignment = .left
         label.textColor = .white
         label.numberOfLines = 0
