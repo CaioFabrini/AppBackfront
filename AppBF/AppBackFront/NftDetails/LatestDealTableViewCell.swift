@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum HeightLatestDealNft: CGFloat {
+    case height = 90
+}
+
 class LatestDealTableViewCell: UITableViewCell {
     
     static let identifier: String = "LatestDealTableViewCell"
@@ -23,7 +27,11 @@ class LatestDealTableViewCell: UITableViewCell {
     private func addSubView() {
         self.latestDealsScreen.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.latestDealsScreen)
-        
+    }
+    
+    public func setupCell(data: Nft) {
+        self.latestDealsScreen.titleLabel.text = data.titleLatestDeals ?? ""
+        self.dataLatestDeal = data.latestDeals ?? []
     }
     
     required init?(coder: NSCoder) {
@@ -41,23 +49,32 @@ class LatestDealTableViewCell: UITableViewCell {
     
 }
 extension LatestDealTableViewCell: UITableViewDelegate {
+    
 }
 extension LatestDealTableViewCell: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return dataLatestDeal.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: ListOfOffersTableViewCell? = tableView.dequeueReusableCell(withIdentifier: ListOfOffersTableViewCell.identifier, for: indexPath) as? ListOfOffersTableViewCell
-        cell?.setupCell()
-        return cell ?? UITableViewCell()
         
+        // isInicial é uma PROPRIEDADE deste modo deve informar um booleano (true/false)
+        // deste modo, deve criar uma logica para validar se a POSIÇÃO (INDEXPATH) é a INICIAL
+        // caso for retorne true, caso contrario returne false
+        
+        // isFinal é uma PROPRIEDADE deste modo deve informar um booleano (true/false)
+        // deste modo, deve criar uma logica para validar se a POSIÇÃO (INDEXPATH) é a FINAL
+        // caso for retorne true, caso contrario returne false
+        
+        cell?.setupCell(data: dataLatestDeal[indexPath.row], isInicial: true, isFinal: false)
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return HeightLatestDealNft.height.rawValue
     }
     
 }

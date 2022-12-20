@@ -25,7 +25,7 @@ class LatestDealsScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        // desabilitar scroll
+        tableView.isScrollEnabled = false
         tableView.register(ListOfOffersTableViewCell.self, forCellReuseIdentifier: ListOfOffersTableViewCell.identifier)
         return tableView
     }()
@@ -55,7 +55,7 @@ class LatestDealsScreen: UIView {
     private func configConstraints() {
         NSLayoutConstraint.activate([
             
-            self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
+            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -24),
             self.titleLabel.heightAnchor.constraint(equalToConstant: 30),
@@ -64,7 +64,7 @@ class LatestDealsScreen: UIView {
             self.tableView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 15),
             self.tableView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
             self.tableView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
-            self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50)
+            self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
         
         ])
     }

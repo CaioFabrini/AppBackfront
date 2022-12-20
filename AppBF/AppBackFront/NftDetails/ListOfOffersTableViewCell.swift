@@ -24,20 +24,16 @@ class ListOfOffersTableViewCell: UITableViewCell {
         configConstraints()
     }
     
-    public func setupCell() {
-//        guard let urlUser = URL(string: data.userImage ?? "") else { return }
-//        self.listOfOffersTableViewCell.userImageView.af.setImage(withURL: urlUser, placeholderImage: UIImage(systemName: "person.circle.fill")?.withTintColor(.black))
-//        self.listOfOffersTableViewCell.nameUserLabel.text = data.userName
-//        self.listOfOffersTableViewCell.nftPriceLabel.text = String(data.nftPrice ?? 0.0)
-//        self.listOfOffersTableViewCell.lastVizualizationLabel.text = data.lastAccess
-                
-        self.listOfOffersTableViewCell.userImageView.image = UIImage(systemName: "person.circle.fill")
-                self.listOfOffersTableViewCell.nameUserLabel.text = "Barbara"
-                self.listOfOffersTableViewCell.nftPriceLabel.text = "1.2 HT"
-                self.listOfOffersTableViewCell.lastVizualizationLabel.text = "2h atras"
+    public func setupCell(data: LatestDeal, isInicial: Bool, isFinal: Bool) {
+        guard let urlUser = URL(string: data.userImage ?? "") else { return }
+        listOfOffersTableViewCell.layer.borderColor = UIColor.white.cgColor
+        listOfOffersTableViewCell.layer.borderWidth = 0.5
         
-   
-        
+        self.listOfOffersTableViewCell.userImageView.af.setImage(withURL: urlUser, placeholderImage: UIImage(systemName: "person.circle.fill")?.withTintColor(.black))
+        self.listOfOffersTableViewCell.nameUserLabel.text = data.userName
+        self.listOfOffersTableViewCell.nftPriceLabel.text = String(data.nftPrice ?? 0.0)
+        self.listOfOffersTableViewCell.lastVizualizationLabel.text = data.lastAccess
+
     }
     
     private func addSubView() {
@@ -50,7 +46,6 @@ class ListOfOffersTableViewCell: UITableViewCell {
     }
     
     private func configConstraints() {
-        
         NSLayoutConstraint.activate([
             self.listOfOffersTableViewCell.topAnchor.constraint(equalTo: self.topAnchor),
             self.listOfOffersTableViewCell.leftAnchor.constraint(equalTo: self.leftAnchor),
