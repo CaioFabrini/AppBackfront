@@ -17,11 +17,13 @@ class NftDetailsScreen: UIView {
         tableView.register(NftImageCell.self, forCellReuseIdentifier: NftImageCell.identifier)
         tableView.register(DescriptionTableViewCell.self, forCellReuseIdentifier: DescriptionTableViewCell.identifier)
         tableView.register(LatestDealTableViewCell.self, forCellReuseIdentifier: LatestDealTableViewCell.identifier)
+        tableView.backgroundColor = UIColor(red: 0.2, green: 0.2, blue:0.2, alpha: 1)
         return tableView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = UIColor(red: 0.2, green: 0.2, blue:0.2, alpha: 1)
         addSubview(tableView)
         self.congigContrainsts()
         

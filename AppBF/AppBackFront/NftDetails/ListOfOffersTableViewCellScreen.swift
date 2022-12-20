@@ -79,7 +79,7 @@ class ListOfOffersTableViewCellScreen: UIView {
             self.nameUserLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             self.nameUserLabel.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 12),
             
-            self.nftPriceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 25),
+            self.nftPriceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 18),
             self.nftPriceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
             self.lastVizualizationLabel.topAnchor.constraint(equalTo: self.nftPriceLabel.bottomAnchor, constant: 5),

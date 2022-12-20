@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 class NftDetailsViewModel {
     
     private var nft: Nft

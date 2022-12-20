@@ -8,7 +8,7 @@
 import UIKit
 
 enum HeightLatestDealNft: CGFloat {
-    case height = 90
+    case height = 70
 }
 
 enum LatestDealTableViewCellString: String {
@@ -26,6 +26,7 @@ class LatestDealTableViewCell: UITableViewCell {
         addSubView()
         configConstraints()
         latestDealsScreen.configProtocolsTableView(delegate: self, dataSource: self)
+        selectionStyle = .none
     }
     
     private func addSubView() {
