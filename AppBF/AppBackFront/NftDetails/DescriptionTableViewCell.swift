@@ -14,7 +14,7 @@ class DescriptionTableViewCell: UITableViewCell {
     lazy var screen: DescriptionCellScreen = {
         let view = DescriptionCellScreen()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
         return view
     }()
     
