@@ -48,7 +48,7 @@ class HomeTableViewCellScreen: UIView {
         image.backgroundColor = .white
         image.clipsToBounds = true
         image.layer.cornerRadius = 24
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
@@ -132,7 +132,6 @@ class HomeTableViewCellScreen: UIView {
             
             self.userLabel.topAnchor.constraint(equalTo: self.ownedByLabel.bottomAnchor, constant: 5),
             self.userLabel.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 8),
-            self.userLabel.widthAnchor.constraint(equalToConstant: 90),
             
             self.priceLabel.topAnchor.constraint(equalTo: self.nftImageView.bottomAnchor, constant: 20),
             self.priceLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -15),
