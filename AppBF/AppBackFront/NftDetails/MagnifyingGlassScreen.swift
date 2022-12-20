@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum stringMagic: String {
+    case closed = "arrowshape.turn.up.backward.fill"
+}
+
 protocol MagnifyingGlassScreenProtocol: AnyObject {
     func tappedReturn()
 }
@@ -30,12 +34,13 @@ class MagnifyingGlassScreen: UIView {
     lazy var returnButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor(red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor (red: 187/255, green: 187/255, blue: 187/255, alpha: 1)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
-        button.setImage(UIImage(systemName: "arrow.uturn.backward"), for: .normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(self.actionReturn), for: .touchUpInside)
+        button.setImage(UIImage(systemName: stringMagic.closed.rawValue ), for: .normal)
         return button
     }()
     
@@ -64,8 +69,8 @@ class MagnifyingGlassScreen: UIView {
             
             returnButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 20),
             returnButton.leadingAnchor.constraint(equalTo: self.nftImageView.leadingAnchor, constant: 20),
-            returnButton.heightAnchor.constraint(equalToConstant: 30),
-            returnButton.widthAnchor.constraint(equalToConstant: 30),
+            returnButton.heightAnchor.constraint(equalToConstant: 35),
+            returnButton.widthAnchor.constraint(equalToConstant: 35),
             
         ])
     }

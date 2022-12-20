@@ -23,9 +23,9 @@ class LatestDealTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubView()
-        configConstraints()
-        latestDealsScreen.configProtocolsTableView(delegate: self, dataSource: self)
+        self.addSubView()
+        self.configConstraints()
+        self.latestDealsScreen.configProtocolsTableView(delegate: self, dataSource: self)
         selectionStyle = .none
     }
     
@@ -53,6 +53,7 @@ class LatestDealTableViewCell: UITableViewCell {
     }
     
     func validateIncial(indexPath: IndexPath) -> Bool {
+        
         if indexPath.row == 0 {
             return true
         } else {
@@ -61,6 +62,7 @@ class LatestDealTableViewCell: UITableViewCell {
     }
     
     func validateFinal(indexPath: IndexPath) -> Bool {
+        
         if indexPath.row == dataLatestDeal.count - 1 {
             return true
         } else {

@@ -16,7 +16,7 @@ class HomeVC: UIViewController {
         self.homeScreen = HomeScreen()
         self.view = homeScreen
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
@@ -83,20 +83,20 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSectionCollection
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: HomeCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell
         cell?.setupCollectionCell(data: viewModel.loadFilter(indexPath: indexPath))
         return cell ?? UICollectionViewCell()
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return viewModel.heightForRowAtCollection(indexPath: indexPath)
-   }
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.setFilter(indexPath: indexPath, searchText: homeScreen?.searchBar.text ?? "")
@@ -105,5 +105,5 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         homeScreen?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         homeScreen?.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
-
+    
 }

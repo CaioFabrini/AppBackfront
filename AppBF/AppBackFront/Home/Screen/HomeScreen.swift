@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum ElementsString: String {
+    case logoImage = "vector"
+    case search = "Pesquise por categorias, artistas..."
+}
+
 class HomeScreen: UIView {
     
     lazy var viewBackgraund: UIView = {
@@ -19,7 +24,7 @@ class HomeScreen: UIView {
     lazy var logoImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "vector")
+        image.image = UIImage(named: ElementsString.logoImage.rawValue)
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -29,8 +34,7 @@ class HomeScreen: UIView {
         search.translatesAutoresizingMaskIntoConstraints = false
         search.clipsToBounds = true
         search.layer.cornerRadius = 20
-        search.placeholder = "Pesquise por categorias, artistas..."
-//      Alterar cor de fundo e lupa
+        search.placeholder = ElementsString.search.rawValue
         return search
     }()
     
