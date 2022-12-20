@@ -85,13 +85,13 @@ class NftImageCellScreen: UIView {
 
             xButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 30),
             xButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            xButton.heightAnchor.constraint(equalToConstant: 35),
-            xButton.widthAnchor.constraint(equalToConstant: 35),
+            xButton.heightAnchor.constraint(equalToConstant: 30),
+            xButton.widthAnchor.constraint(equalToConstant: 30),
                         
             lupaButton.bottomAnchor.constraint(equalTo: nftImageView.bottomAnchor, constant: -30),
             lupaButton.trailingAnchor.constraint(equalTo: self.nftImageView.trailingAnchor, constant: -20),
-            lupaButton.heightAnchor.constraint(equalToConstant: 35),
-            lupaButton.widthAnchor.constraint(equalToConstant: 35)
+            lupaButton.heightAnchor.constraint(equalToConstant: 30),
+            lupaButton.widthAnchor.constraint(equalToConstant: 30)
         ])
     }
     

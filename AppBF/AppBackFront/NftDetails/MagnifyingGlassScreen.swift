@@ -64,8 +64,8 @@ class MagnifyingGlassScreen: UIView {
             
             returnButton.topAnchor.constraint(equalTo: nftImageView.topAnchor, constant: 20),
             returnButton.leadingAnchor.constraint(equalTo: self.nftImageView.leadingAnchor, constant: 20),
-            returnButton.heightAnchor.constraint(equalToConstant: 35),
-            returnButton.widthAnchor.constraint(equalToConstant: 35),
+            returnButton.heightAnchor.constraint(equalToConstant: 30),
+            returnButton.widthAnchor.constraint(equalToConstant: 30),
             
         ])
     }
