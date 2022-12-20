@@ -60,6 +60,7 @@ class NftImageCellScreen: UIView {
         addSubview(xButton)
         addSubview(lupaButton)
         self.configContrainsts()
+
     }
     
     @objc private func tappedXButton() {

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0311F94B2951D83D000A30C5 /* ListOfOffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311F94A2951D83D000A30C5 /* ListOfOffersTableViewCell.swift */; };
+		0311F94D2951D848000A30C5 /* LatestDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311F94C2951D848000A30C5 /* LatestDealTableViewCell.swift */; };
+		0311F94F2951D862000A30C5 /* ListOfOffersTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311F94E2951D862000A30C5 /* ListOfOffersTableViewCellScreen.swift */; };
+		0311F9512951E4A9000A30C5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311F9502951E4A9000A30C5 /* UIViewController+Extension.swift */; };
+		0311F9552951F838000A30C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311F9542951F838000A30C5 /* UIView+Extension.swift */; };
+		0311F9572951F87D000A30C5 /* CACornerMask+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311F9562951F87D000A30C5 /* CACornerMask+Extension.swift */; };
 		033F7125294124A900FAC046 /* AddNewNFTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7124294124A900FAC046 /* AddNewNFTVC.swift */; };
 		033F714B294124C400FAC046 /* homeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 033F7127294124C300FAC046 /* homeData.json */; };
 		033F714D294124C400FAC046 /* NFTHomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F712A294124C300FAC046 /* NFTHomeData.swift */; };
@@ -23,7 +29,7 @@
 		033F7159294124C400FAC046 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7143294124C400FAC046 /* HomeViewModel.swift */; };
 		033F715A294124C400FAC046 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7145294124C400FAC046 /* HomeVC.swift */; };
 		033F715B294124C400FAC046 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F7147294124C400FAC046 /* HomeScreen.swift */; };
-		033F715D294124C400FAC046 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F714A294124C400FAC046 /* String.swift */; };
+		033F715D294124C400FAC046 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F714A294124C400FAC046 /* String+Extension.swift */; };
 		343B9D9D28D3A07C00956373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9C28D3A07C00956373 /* AppDelegate.swift */; };
 		343B9D9F28D3A07C00956373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9D9E28D3A07C00956373 /* SceneDelegate.swift */; };
 		343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B9DA028D3A07C00956373 /* LoginVC.swift */; };
@@ -45,6 +51,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0311F94A2951D83D000A30C5 /* ListOfOffersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOffersTableViewCell.swift; sourceTree = "<group>"; };
+		0311F94C2951D848000A30C5 /* LatestDealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestDealTableViewCell.swift; sourceTree = "<group>"; };
+		0311F94E2951D862000A30C5 /* ListOfOffersTableViewCellScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfOffersTableViewCellScreen.swift; sourceTree = "<group>"; };
+		0311F9502951E4A9000A30C5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		0311F9542951F838000A30C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		0311F9562951F87D000A30C5 /* CACornerMask+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CACornerMask+Extension.swift"; sourceTree = "<group>"; };
 		033F7124294124A900FAC046 /* AddNewNFTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewNFTVC.swift; sourceTree = "<group>"; };
 		033F7127294124C300FAC046 /* homeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homeData.json; sourceTree = "<group>"; };
 		033F712A294124C300FAC046 /* NFTHomeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFTHomeData.swift; sourceTree = "<group>"; };
@@ -61,7 +73,7 @@
 		033F7143294124C400FAC046 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		033F7145294124C400FAC046 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		033F7147294124C400FAC046 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		033F714A294124C400FAC046 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		033F714A294124C400FAC046 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		196F39053075F899B44F93C6 /* Pods_AppBackFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBackFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9928D3A07C00956373 /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343B9D9C28D3A07C00956373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0311F9522951F0F5000A30C5 /* ListOfOffersTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0311F9532951F100000A30C5 /* Screen */,
+				0311F94A2951D83D000A30C5 /* ListOfOffersTableViewCell.swift */,
+			);
+			name = ListOfOffersTableViewCell;
+			sourceTree = "<group>";
+		};
+		0311F9532951F100000A30C5 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0311F94E2951D862000A30C5 /* ListOfOffersTableViewCellScreen.swift */,
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
 		033F7122294124A900FAC046 /* AddNewNFT */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,8 +196,8 @@
 		033F7133294124C400FAC046 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				033F7134294124C400FAC046 /* HomeTableViewCell.swift */,
 				033F7135294124C400FAC046 /* Screen */,
+				033F7134294124C400FAC046 /* HomeTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -259,7 +288,10 @@
 		033F7149294124C400FAC046 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				033F714A294124C400FAC046 /* String.swift */,
+				033F714A294124C400FAC046 /* String+Extension.swift */,
+				0311F9502951E4A9000A30C5 /* UIViewController+Extension.swift */,
+				0311F9542951F838000A30C5 /* UIView+Extension.swift */,
+				0311F9562951F87D000A30C5 /* CACornerMask+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -372,6 +404,7 @@
 		3F18C23029423D4400047FF1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0311F9522951F0F5000A30C5 /* ListOfOffersTableViewCell */,
 				3F18C23D2945073100047FF1 /* LatestDealsTableViewCel */,
 				3F18C23729437B7A00047FF1 /* DescriptionTableViewCell */,
 				3F18C23129423D8600047FF1 /* NftImageCell */,
@@ -417,6 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				3F18C23E294507F700047FF1 /* Screen */,
+				0311F94C2951D848000A30C5 /* LatestDealTableViewCell.swift */,
 			);
 			name = LatestDealsTableViewCel;
 			sourceTree = "<group>";
@@ -584,12 +618,15 @@
 				343B9DA128D3A07C00956373 /* LoginVC.swift in Sources */,
 				033F7153294124C400FAC046 /* HomeTableViewCellScreen.swift in Sources */,
 				3F3ACD0B294E5A4D00DDE405 /* MagnifyingGlassScreen.swift in Sources */,
+				0311F9512951E4A9000A30C5 /* UIViewController+Extension.swift in Sources */,
 				343B9DB128D3A48A00956373 /* LoginScreen.swift in Sources */,
 				3F18C23429423F1800047FF1 /* NftImageCell.swift in Sources */,
 				033F7154294124C400FAC046 /* WalletVC.swift in Sources */,
+				0311F9552951F838000A30C5 /* UIView+Extension.swift in Sources */,
 				033F7150294124C400FAC046 /* HomeCollectionViewCell.swift in Sources */,
 				3F18C22E2942215000047FF1 /* NftDetailsScreen.swift in Sources */,
 				3F18C22B2942213200047FF1 /* NftDetailsViewModel.swift in Sources */,
+				0311F9572951F87D000A30C5 /* CACornerMask+Extension.swift in Sources */,
 				3F18C2282942210100047FF1 /* NftDetailsVC.swift in Sources */,
 				033F7152294124C400FAC046 /* HomeTableViewCell.swift in Sources */,
 				033F715A294124C400FAC046 /* HomeVC.swift in Sources */,
@@ -599,8 +636,10 @@
 				033F7155294124C400FAC046 /* ProfileVC.swift in Sources */,
 				3F18C1C9293CD72B00047FF1 /* Alert.swift in Sources */,
 				3F18C23629423F5500047FF1 /* NftImageCellScreen.swift in Sources */,
+				0311F94F2951D862000A30C5 /* ListOfOffersTableViewCellScreen.swift in Sources */,
 				033F7158294124C400FAC046 /* HomeService.swift in Sources */,
-				033F715D294124C400FAC046 /* String.swift in Sources */,
+				0311F94B2951D83D000A30C5 /* ListOfOffersTableViewCell.swift in Sources */,
+				033F715D294124C400FAC046 /* String+Extension.swift in Sources */,
 				033F7159294124C400FAC046 /* HomeViewModel.swift in Sources */,
 				3F18C23C2944497B00047FF1 /* DescriptionTableViewCell.swift in Sources */,
 				3F18C23A29437C2D00047FF1 /* DescriptionCellScreen.swift in Sources */,
@@ -609,6 +648,7 @@
 				3F18C2402945084500047FF1 /* LatestDealsScreen.swift in Sources */,
 				033F715B294124C400FAC046 /* HomeScreen.swift in Sources */,
 				033F7157294124C400FAC046 /* GenericService.swift in Sources */,
+				0311F94D2951D848000A30C5 /* LatestDealTableViewCell.swift in Sources */,
 				033F714D294124C400FAC046 /* NFTHomeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
