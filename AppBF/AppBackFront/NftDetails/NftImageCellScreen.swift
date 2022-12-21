@@ -21,7 +21,7 @@ class NftImageCellScreen: UIView {
     
     private weak var delegate: NftImageCellScreenProtocol?
     
-    func delegate(delegate: NftImageCellScreenProtocol){
+    func delegate(delegate: NftImageCellScreenProtocol) {
         self.delegate = delegate
     }
     

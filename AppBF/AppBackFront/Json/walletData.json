@@ -19,7 +19,7 @@
             {
                 "type": "exit",
                 "id_transaction" : "dnmalfclf1012dfbgf123",
-                "image" : "iimage.exit",
+                "image" : "image.exit",
                 "price_eth" : 0.85,
                 "value_dollar" : 987.05,
                 "date_and_hour": "16-07-2022 10:10"

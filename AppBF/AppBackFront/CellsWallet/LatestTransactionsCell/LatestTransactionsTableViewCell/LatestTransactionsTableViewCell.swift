@@ -6,6 +6,9 @@
 //
 
 import UIKit
+enum HeightLLatestTransactions: CGFloat {
+    case height = 70
+}
 
 enum LatestTransactionsTableViewCellString: String {
     case identifier = "LatestTransactionsTableViewCell"
@@ -14,8 +17,14 @@ enum LatestTransactionsTableViewCellString: String {
 class LatestTransactionsTableViewCell: UITableViewCell {
     
     static let identifier: String = LatestTransactionsTableViewCellString.identifier.rawValue
-    var screen: LatestTransactionsTableViewCellScreen = LatestTransactionsTableViewCellScreen()
     var latestTransactions: [ListOfTransaction] = []
+    
+    lazy var screen: LatestTransactionsTableViewCellScreen = {
+        let view = LatestTransactionsTableViewCellScreen()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        return view
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -47,6 +56,24 @@ class LatestTransactionsTableViewCell: UITableViewCell {
             self.screen.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
+    
+    func validateIncial(indexPath: IndexPath) -> Bool {
+        
+        if indexPath.row == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func validateFinal(indexPath: IndexPath) -> Bool {
+        
+        if indexPath.row == latestTransactions.count - 1 {
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
 extension LatestTransactionsTableViewCell: UITableViewDelegate {
@@ -58,10 +85,14 @@ extension LatestTransactionsTableViewCell: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListOfTransactionsTableViewCell.identifier, for: indexPath) as? ListOfTransactionsTableViewCell
+        cell?.setupCell(data: latestTransactions[indexPath.row], isInicial: validateIncial(indexPath: indexPath), isFinal: validateFinal(indexPath: indexPath))
+        return cell ?? UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return HeightLLatestTransactions.height.rawValue
+    }
     
 }
 

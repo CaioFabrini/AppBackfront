@@ -15,7 +15,7 @@ class LatestTransactionsTableViewCellScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 24, weight: .bold)
         label.textAlignment = .left
-        label.textColor = .black
+        label.textColor = .white
         label.numberOfLines = 0
         label.text = ""
         return label
@@ -26,7 +26,8 @@ class LatestTransactionsTableViewCellScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.isScrollEnabled = false
-//        tableView.register(   .self, forCellReuseIdentifier: .identifier)
+        tableView.register(ListOfTransactionsTableViewCell.self, forCellReuseIdentifier: ListOfTransactionsTableViewCell.identifier)
+        tableView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         return tableView
     }()
     
