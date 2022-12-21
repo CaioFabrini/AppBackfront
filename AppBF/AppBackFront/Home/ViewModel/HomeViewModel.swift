@@ -12,7 +12,7 @@ enum TypeFetch {
     case request
 }
 
-protocol HomeViewModelDelegate:AnyObject {
+protocol HomeViewModelDelegate: AnyObject {
     func success()
     func error(_message: String)
 }
