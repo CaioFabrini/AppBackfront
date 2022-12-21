@@ -49,10 +49,10 @@ class NftImageCell: UITableViewCell {
     private func configContrainsts(){
         NSLayoutConstraint.activate([
             
-            screen.topAnchor.constraint(equalTo: self.topAnchor),
-            screen.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            screen.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            screen.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            self.screen.topAnchor.constraint(equalTo: self.topAnchor),
+            self.screen.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.screen.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.screen.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             
         ])
     }

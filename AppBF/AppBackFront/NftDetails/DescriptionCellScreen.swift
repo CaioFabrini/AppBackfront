@@ -31,6 +31,7 @@ class DescriptionCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 18)
         label.text = ""
         label.numberOfLines = 0
         return label
@@ -56,15 +57,17 @@ class DescriptionCellScreen: UIView {
             self.idLabel.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
             self.idLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.idLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.idLabel.heightAnchor.constraint(equalToConstant: 24),
             
             self.titleLabel.topAnchor.constraint(equalTo: self.idLabel.bottomAnchor, constant: 5),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.idLabel.leadingAnchor),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.idLabel.trailingAnchor),
+            self.titleLabel.heightAnchor.constraint(equalToConstant: 30),
 //
             self.descriptionLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 5),
             self.descriptionLabel.leadingAnchor.constraint(equalTo: self.idLabel.leadingAnchor),
-            self.descriptionLabel.trailingAnchor.constraint(equalTo: self.idLabel.trailingAnchor)
-//
+            self.descriptionLabel.trailingAnchor.constraint(equalTo: self.idLabel.trailingAnchor),
+            self.descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
         ])
     }
     

@@ -7,8 +7,11 @@
 
 import UIKit
 
+enum Text:String {
+    case title = "teste"
+}
+
 class LatestDealsScreen: UIView {
-    
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -17,7 +20,7 @@ class LatestDealsScreen: UIView {
         label.textAlignment = .left
         label.textColor = .white
         label.numberOfLines = 0
-        label.text = "teste"
+        label.text = Text.title.rawValue
         return label
     }()
     
@@ -33,12 +36,12 @@ class LatestDealsScreen: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame )
-        backgroundColor = UIColor(red: 0.2, green: 0.2, blue:0.2, alpha: 1)
-        configSubView()
-        configConstraints()
+        self.configSubView()
+        self.configConstraints()
     }
     
     func configSubView() {
+        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
         self.addSubview(self.titleLabel)
         self.addSubview(self.tableView)
     }

@@ -13,7 +13,6 @@ protocol HomeTableViewCellScreenProtocol: AnyObject {
 
 class HomeTableViewCellScreen: UIView {
     
-    
     weak private var delegate: HomeTableViewCellScreenProtocol?
     
     func delegate(delegate: HomeTableViewCellScreenProtocol?) {
@@ -46,6 +45,8 @@ class HomeTableViewCellScreen: UIView {
         image.backgroundColor = .white
         image.clipsToBounds = true
         image.layer.cornerRadius = 24
+        image.layer.borderColor = UIColor.white.cgColor
+        image.layer.borderWidth = 1
         image.contentMode = .scaleAspectFill
         return image
     }()

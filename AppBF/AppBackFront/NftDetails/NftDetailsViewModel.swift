@@ -28,7 +28,7 @@ class NftDetailsViewModel {
     }
     
     public var titleLabel: String {
-        return nft.titleLatestDeals ?? ""
+        return nft.nftNameImage ?? ""
     }
     
     public var descriptionLabel: String{
@@ -39,13 +39,14 @@ class NftDetailsViewModel {
         return nft
     }
     
-    public func heightForRowAt(indexPath: IndexPath) -> CGFloat {
+    public func heightForRowAt(indexPath: IndexPath, widht: CGFloat) -> CGFloat {
         
-        switch NameCell(rawValue: indexPath.row){
+        switch NameCell(rawValue: indexPath.row) {
         case .nftImage:
             return 400
         case .descripition:
-            return 130
+            let heightLabel = descriptionLabel.height(withConstrainedWidth: widht - 40, font: UIFont.systemFont(ofSize: 18))
+            return 5 + heightLabel + 5 + 30 + 5 + 24 + 10 + 10
         case .latestDeals:
             return HeightLatestDealNft.height.rawValue * CGFloat(nft.latestDeals?.count ?? 0) + 75
         default:

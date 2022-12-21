@@ -40,7 +40,7 @@
             "nft_price": 1.4,
             "nft_id": 2345,
             "nft_name_image": "Cubo Mágico",
-            "nft_description": "Jogo tridimensional composto por faces de cores diferentes.",
+            "nft_description": "Jogo tridimensional composto por faces de cores diferentes",
             "title_latest_deals": "Últimas Ofertas",
             "latest_deals": [
                 {
