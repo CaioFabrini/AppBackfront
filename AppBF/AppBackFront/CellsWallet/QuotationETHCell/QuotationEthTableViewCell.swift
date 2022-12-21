@@ -18,7 +18,7 @@ class QuotationEthTableViewCell: UITableViewCell {
     lazy var screen: QuotationEthTableViewCellScreen = {
         let view = QuotationEthTableViewCellScreen()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .yellow         /*UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)*/
+        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         return view
     }()
     
@@ -35,6 +35,13 @@ class QuotationEthTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func setupCell(data: QuotationEthereum) {
+        screen.logoBFImageView.image = UIImage(named: "vector")
+        screen.ethValueLabel.text = "\(data.ethValue ?? 0.0) ETH"
+        screen.ethValueInDollarsLabel.text = "$ \(data.valueInDollars ?? 0.0 )"
+        screen.coinEthImageView.image = UIImage(named: data.coinEthImage ?? "" )
     }
     
     private func setupConstraints() {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Text:String {
+enum Text: String {
     case title = "teste"
 }
 
@@ -36,11 +36,11 @@ class LatestDealsScreen: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame )
-        self.configSubView()
+        self.addSubView()
         self.configConstraints()
     }
     
-    func configSubView() {
+    private func addSubView() {
         backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
         self.addSubview(self.titleLabel)
         self.addSubview(self.tableView)
@@ -58,16 +58,15 @@ class LatestDealsScreen: UIView {
     private func configConstraints() {
         NSLayoutConstraint.activate([
             
-            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
-            self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -24),
-            self.titleLabel.heightAnchor.constraint(equalToConstant: 30),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -24),
+            titleLabel.heightAnchor.constraint(equalToConstant: 30),
         
-            
-            self.tableView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 15),
-            self.tableView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
-            self.tableView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
-            self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
+            tableView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 15),
+            tableView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            tableView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
+            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
         
         ])
     }

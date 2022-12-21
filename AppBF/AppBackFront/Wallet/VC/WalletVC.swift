@@ -65,6 +65,11 @@ extension WalletVC: UITableViewDataSource {
         switch WalletNameCell(rawValue: indexPath.row) {
         case .quotationEth:
             let cell = tableView.dequeueReusableCell(withIdentifier: QuotationEthTableViewCell.identifier, for: indexPath) as? QuotationEthTableViewCell
+            cell?.setupCell(data: viewModel.quotationEthCell)
+            return cell ?? UITableViewCell()
+        case .transactionList:
+            let cell = tableView.dequeueReusableCell(withIdentifier: LatestTransactionsTableViewCell.identifier, for: indexPath) as? LatestTransactionsTableViewCell
+            cell?.setupCell(data: viewModel.transactionList)
             return cell ?? UITableViewCell()
         default:
             return UITableViewCell()
