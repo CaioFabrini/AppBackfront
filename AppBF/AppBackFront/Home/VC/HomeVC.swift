@@ -16,6 +16,10 @@ class HomeVC: UIViewController {
         self.homeScreen = HomeScreen()
         self.view = homeScreen
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

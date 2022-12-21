@@ -35,8 +35,6 @@ class HomeTableViewCellScreen: UIView {
         image.image = UIImage(named: "")
         image.tintColor = .purple
         image.contentMode = .scaleToFill
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 18
         return image
     }()
     
@@ -118,8 +116,8 @@ class HomeTableViewCellScreen: UIView {
             self.viewBackgraund.heightAnchor.constraint(equalToConstant: 340),
             
             self.nftImageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor),
-            self.nftImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.nftImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.nftImageView.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor),
+            self.nftImageView.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor),
             self.nftImageView.heightAnchor.constraint(equalToConstant: 270),
             
             self.userImageView.topAnchor.constraint(equalTo: self.nftImageView.bottomAnchor, constant: 10),

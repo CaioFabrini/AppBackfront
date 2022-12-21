@@ -29,7 +29,7 @@ class HomeScreen: UIView {
         search.translatesAutoresizingMaskIntoConstraints = false
         search.clipsToBounds = true
         search.layer.cornerRadius = 20
-        search.placeholder = "Pesquise por categorias, artistas..."
+        search.placeholder = "Pesquise pelo nome:"
 //      Alterar cor de fundo e lupa
         return search
     }()
@@ -100,8 +100,8 @@ class HomeScreen: UIView {
         NSLayoutConstraint.activate([
             
             self.viewBackgraund.topAnchor.constraint(equalTo: self.topAnchor),
-            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
-            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.viewBackgraund.heightAnchor.constraint(equalToConstant: 220),
             
             self.logoImageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 45),
