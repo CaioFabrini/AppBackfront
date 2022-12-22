@@ -21,7 +21,7 @@ class WalletScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemPink //UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         addSubView()
         setupConstraints()
     }

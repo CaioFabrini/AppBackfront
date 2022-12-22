@@ -20,7 +20,7 @@ class QuotationEthTableViewCellScreen: UIView {
     lazy var viewBackgraund: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 70/255, green: 50/255, blue: 50/255, alpha: 1)
+        view.backgroundColor = UIColor(red: 58/255, green: 52/255, blue: 57/255, alpha: 1)
         view.clipsToBounds = true
         view.layer.cornerRadius = 18
         view.layer.borderWidth = 1.5
@@ -50,10 +50,17 @@ class QuotationEthTableViewCellScreen: UIView {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "")
         image.contentMode = .scaleAspectFill
-//        image.backgroundColor = .white
+//        image.backgroundColor = .green
         return image
     }()
-
+    
+    lazy var shadowImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "shadow")
+        image.contentMode = .scaleAspectFill
+        return image
+    }()
 
     
     override init(frame: CGRect) {
@@ -67,7 +74,8 @@ class QuotationEthTableViewCellScreen: UIView {
         self.addSubview(self.viewBackgraund)
         self.viewBackgraund.addSubview(self.ethValueLabel)
         self.viewBackgraund.addSubview(self.ethValueInDollarsLabel)
-        self.viewBackgraund.addSubview(self.coinEthImageView)
+        self.addSubview(self.coinEthImageView)
+        self.addSubview(self.shadowImageView)
 
     }
     
@@ -87,16 +95,19 @@ class QuotationEthTableViewCellScreen: UIView {
             self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.viewBackgraund.heightAnchor.constraint(equalToConstant: 150),
             
-            self.ethValueLabel.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 40),
+            self.ethValueLabel.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 50),
             self.ethValueLabel.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 15),
             
             self.ethValueInDollarsLabel.topAnchor.constraint(equalTo: self.ethValueLabel.bottomAnchor, constant: 10),
             self.ethValueInDollarsLabel.leadingAnchor.constraint(equalTo: self.ethValueLabel.leadingAnchor),
             
-            self.coinEthImageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 5),
-            self.coinEthImageView.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -10),
-            self.coinEthImageView.bottomAnchor.constraint(equalTo: self.viewBackgraund.bottomAnchor, constant: -5),
-            self.coinEthImageView.widthAnchor.constraint(equalToConstant: 150),
+            self.coinEthImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 36),
+            self.coinEthImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -4),
+            self.coinEthImageView.widthAnchor.constraint(equalToConstant: 240),
+            
+            self.shadowImageView.topAnchor.constraint(equalTo: self.topAnchor),
+            self.shadowImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.shadowImageView.widthAnchor.constraint(equalToConstant: 450),
     
         ])
     }
