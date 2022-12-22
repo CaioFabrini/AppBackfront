@@ -21,7 +21,7 @@ class WalletScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .purple //UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        backgroundColor = .systemPink //UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         addSubView()
         setupConstraints()
     }
@@ -43,7 +43,7 @@ class WalletScreen: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            tableView.topAnchor.constraint(equalTo: self.topAnchor),
+            tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)

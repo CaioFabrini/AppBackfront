@@ -51,7 +51,7 @@ class LoginVC: UIViewController {
         if enanle {
             self.loginScreen?.loginButton.setTitleColor(.white, for: .normal)
             self.loginScreen?.loginButton.isEnabled = true
-        }else{
+        } else {
             self.loginScreen?.loginButton.setTitleColor(.lightGray, for: .normal)
             self.loginScreen?.loginButton.isEnabled = false
         }

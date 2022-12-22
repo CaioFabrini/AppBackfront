@@ -14,7 +14,7 @@
                 "image" : "symbol.eth",
                 "price_eth" : 1.2,
                 "value_dollar" : 1393.49,
-                "date_and_hour": "10-07-2022 16:50"
+                "date_and_hour": "10/07/2022 16:50"
             },
             {
                 "type": "exit",
@@ -22,7 +22,7 @@
                 "image" : "image.exit",
                 "price_eth" : 0.85,
                 "value_dollar" : 987.05,
-                "date_and_hour": "16-07-2022 10:10"
+                "date_and_hour": "16/07/2022 10:10"
             },
             {
                 "type": "entry",
@@ -30,7 +30,7 @@
                 "image" : "symbol.eth",
                 "price_eth" : 1.2,
                 "value_dollar" : 1393.49,
-                "date_and_hour": "19-07-2022 08:20"
+                "date_and_hour": "19/07/2022 08:20"
             },
             {
                 "type": "exit",
@@ -38,7 +38,7 @@
                 "image" : "image.exit",
                 "price_eth" : 1.2,
                 "value_dollar" :  1393.49,
-                "date_and_hour": "21-07-2022 18:14"
+                "date_and_hour": "21/07/2022 18:14"
             },
             {
                 "type": "entry",
@@ -46,7 +46,7 @@
                 "image" : "symbol.eth",
                 "price_eth" : 1.5,
                 "value_dollar" : 1710.86,
-                "date_and_hour": "25-07-2022 07:15"
+                "date_and_hour": "25/07/2022 07:15"
             },
             {
                 "type": "exit",
@@ -54,7 +54,7 @@
                 "image" : "image.exit",
                 "price_eth" : 1.8,
                 "value_dollar" :  2090.23,
-                "date_and_hour": "26-07-2022 12:44"
+                "date_and_hour": "26/07/2022 12:44"
             },
             {
                 "type": "entry",
@@ -62,7 +62,7 @@
                 "image" : "symbol.eth",
                 "price_eth" : 1.7,
                 "value_dollar" : 1989.23,
-                "date_and_hour": "30-07-2022 14:23"
+                "date_and_hour": "30/07/2022 14:23"
             },
             {
                 "type": "exit",
@@ -70,7 +70,7 @@
                 "image" : "image.exit",
                 "price_eth" : 1.5,
                 "value_dollar" :  1710.86,
-                "date_and_hour": "02-08-2022 10:04"
+                "date_and_hour": "02/08/2022 10:04"
             },
             {
                 "type": "entry",
@@ -78,7 +78,7 @@
                 "image" : "symbol.eth",
                 "price_eth" : 1.2,
                 "value_dollar" : 1393.49,
-                "date_and_hour": "03-08-2022 16:05"
+                "date_and_hour": "03/08/2022 16:05"
                 
             }
         ]

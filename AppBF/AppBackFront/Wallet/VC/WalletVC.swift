@@ -27,11 +27,15 @@ class WalletVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signatureDelegate()
-        self.viewModel.fetch(.mock)
+        self.viewModel.fetch(.request)
     }
     
     private func signatureDelegate() {
         viewModel.delegate(delegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
 }

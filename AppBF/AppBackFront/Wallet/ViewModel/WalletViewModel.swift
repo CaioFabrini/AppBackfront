@@ -57,7 +57,7 @@ class WalletViewModel {
         case .quotationEth:
             return 250
         case .transactionList:
-            return HeightLLatestTransactions.height.rawValue * CGFloat(getWalletData?.latestTransactionsCell?.listOfTransactions?.count ?? 0) + 75
+            return HeightLatestTransactions.height.rawValue * CGFloat(getWalletData?.latestTransactionsCell?.listOfTransactions?.count ?? 0) + 75
         default:
             return 0
         }

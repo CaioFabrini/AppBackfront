@@ -18,7 +18,7 @@ class WalletService: WalletServiceDelegate {
     
     func getHome(completion: @escaping completion<WalletData?>) {
         
-        let url: String = "https://run.mocky.io/v3/1f96fa14-5404-4ea5-9281-8c2d163eaa07"
+        let url: String = "https://run.mocky.io/v3/d1823d68-3355-4d53-8800-2a847b0af2e1"
         
         AF.request( url, method: .get).validate(statusCode: 200...299).responseDecodable(of: WalletData.self) { response in
             print(#function)

@@ -6,7 +6,8 @@
 //
 
 import UIKit
-enum HeightLLatestTransactions: CGFloat {
+
+enum HeightLatestTransactions: CGFloat {
     case height = 70
 }
 
@@ -91,7 +92,7 @@ extension LatestTransactionsTableViewCell: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return HeightLLatestTransactions.height.rawValue
+        return HeightLatestTransactions.height.rawValue
     }
     
 }

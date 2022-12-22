@@ -37,7 +37,7 @@ class ListOfTransactionsTableViewCell: UITableViewCell {
     public func setupCell(data: ListOfTransaction, isInicial: Bool, isFinal: Bool) {
         self.screen.idTransactionLabel.text = data.idTransaction
         self.screen.transactionImageView.image = UIImage(named: data.image ?? "")
-        self.screen.priceEthLabel.text = "\(data.priceEth ?? 0.0)ETH"
+        self.screen.priceEthLabel.text = "\(data.priceEth ?? 0.0) ETH"
         self.screen.valueInDollarLabel.text = "$\(data.valueDollar ?? 0.0)"
         self.screen.dateAndHourLabel.text = data.dateAndHour
         
@@ -51,6 +51,21 @@ class ListOfTransactionsTableViewCell: UITableViewCell {
         if isFinal {
             self.screen.roundCorners(cornerRadiuns: 20.0, typeCorners: [.bottomRight, .bottomLeft])
         }
+        
+        
+        if data.type == "exit" {
+            screen.priceEthLabel.text = "-\(data.priceEth ?? 0.0) ETH"
+            screen.priceEthLabel.textColor = UIColor(red: 69/255, green: 191/255, blue: 229/255, alpha: 1)
+            screen.valueInDollarLabel.textColor = UIColor(red: 122/255, green: 235/255, blue: 255/255, alpha: 1)
+            screen.dateAndHourLabel.textColor = UIColor(red: 122/255, green: 235/255, blue: 255/255, alpha: 1)
+            
+        } else if data.type == "entry" {
+            screen.priceEthLabel.text = "+\(data.priceEth ?? 0.0) ETH"
+            screen.priceEthLabel.textColor = UIColor(red: 183/255, green: 0/255, blue: 170/255, alpha: 1)
+            screen.valueInDollarLabel.textColor = UIColor(red: 255/255, green: 152/255, blue: 255/255, alpha: 1)
+            screen.dateAndHourLabel.textColor = UIColor(red: 255/255, green: 152/255, blue: 255/255, alpha: 1)
+        }
+                     
         
     }
     
