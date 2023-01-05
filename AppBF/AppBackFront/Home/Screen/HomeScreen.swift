@@ -34,7 +34,7 @@ class HomeScreen: UIView {
         search.translatesAutoresizingMaskIntoConstraints = false
         search.clipsToBounds = true
         search.layer.cornerRadius = 20
-        search.text = ElementsString.search.rawValue
+        search.placeholder = ElementsString.search.rawValue
         return search
     }()
     

@@ -35,10 +35,15 @@ class ListOfTransactionsTableViewCell: UITableViewCell {
     }
     
     public func setupCell(data: ListOfTransaction, isInicial: Bool, isFinal: Bool) {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "us_US")
+        formatter.maximumFractionDigits = 2
+        
         self.screen.idTransactionLabel.text = data.idTransaction
         self.screen.transactionImageView.image = UIImage(named: data.image ?? "")
         self.screen.priceEthLabel.text = "\(data.priceEth ?? 0.0) ETH"
-        self.screen.valueInDollarLabel.text = "$\(data.valueDollar ?? 0.0)"
+        self.screen.valueInDollarLabel.text = formatter.string(from: (data.valueDollar ?? 0.0) as NSNumber) ?? ""
         self.screen.dateAndHourLabel.text = data.dateAndHour
         
         self.screen.layer.borderColor = UIColor.white.cgColor

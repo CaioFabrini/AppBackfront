@@ -38,10 +38,17 @@ class QuotationEthTableViewCell: UITableViewCell {
     }
     
     public func setupCell(data: QuotationEthereum) {
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "US_us")
+        formatter.maximumFractionDigits = 2
+        
         screen.logoBFImageView.image = UIImage(named: "vector")
         screen.ethValueLabel.text = "\(data.ethValue ?? 0.0) ETH"
-        screen.ethValueInDollarsLabel.text = "$ \(data.valueInDollars ?? 0.0 )"
+        screen.ethValueInDollarsLabel.text = formatter.string(from: (data.valueInDollars ?? 0.0) as NSNumber) ?? ""
         screen.coinEthImageView.image = UIImage(named: data.coinEthImage ?? "" )
+
     }
     
     private func setupConstraints() {
